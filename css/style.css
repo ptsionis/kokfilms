@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+/* Color variables */
+:root {
+    --clr-primary: #1a1a1a;
+    --clr-secondary: #fafafa;
+    --clr-alternative: #ff8f2e;
+}
+
+/* FullPage.js changes */
+.fp-warning,
+.fp-watermark {
+    display: none;
+}
+
+#fp-nav, .fp-slidesNav {
+    display: none;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: var(--clr-secondary);
+}
+
+/* HTML and Body changes */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--clr-primary);
+}
+
+/* Preloader */
+
+#preloader {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-primary);
+    z-index: 1;
+    transition: opacity .5s ease;
+}
+
+#preloader-outer-img, #preloader-inner-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: top left;
+}
+
+#preloader-outer-img {
+    animation-name: preloader;
+    animation-duration: 1.75s;
+    animation-iteration-count: 2;
+}
+
+@keyframes preloader {
+    0% {
+        transform: rotate(0turn) translate(-50%, -50%);
+    }
+    50% {
+        transform: rotate(.75turn) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(0turn) translate(-50%, -50%);
+    }
+}
+
+.preloader-finish {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#fullpage-wrapper {
+    display: none;
+}
+
+#welcome-title {
+    text-align: center;
+}
+
+#welcome-title {
+    width: fit-content;
+    margin: auto;
+    letter-spacing: 5px;
+    font-size: 10rem;
+    font-family: 'Nabla', cursive;
+    animation-name: title;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: all .3s ease;
+}
+
+#welcome-title:hover {
+    letter-spacing: 35px;
+}
+
+@keyframes title {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

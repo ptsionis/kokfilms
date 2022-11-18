@@ -1,0 +1,5 @@
+@media screen and (max-width: 900px) {
+    #welcome-title {
+        font-size: 5rem;
+    }
+}
