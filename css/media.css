@@ -1,4 +1,11 @@
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1150px) {
+    #music-title1, #music-title2 {
+        font-size: 1.75rem;
+        letter-spacing: 2.5px;
+    }
+}
+
+@media screen and (max-width: 850px) {
     #welcome-title {
         font-size: 5rem;
     }
@@ -7,23 +14,18 @@
         letter-spacing: 0px;
     }
 
-    #music-title {
-        font-size: 1.75rem;
-        letter-spacing: 2.5px;
+    #music-title1, #music-title2 {
+        font-size: 1.25rem;
+        letter-spacing: .5px;
     }
 }
 
-@media screen and (max-width: 500px) {
-    #welcome-title {
-        font-size: 3rem;
+@media screen and (max-width: 650px) {
+    .fp-arrow.fp-prev {
+        margin-left: 25px;
     }
 
-    #welcome-title:hover {
-        letter-spacing: 0px;
-    }
-
-    #music-title {
-        font-size: 1.5rem;
-        letter-spacing: 1px;
+    .fp-arrow.fp-next {
+        margin-right: 25px;
     }
 }

@@ -5,9 +5,6 @@
     --clr-primary: #1a1a1a;
     --clr-secondary: #fafafa;
     --clr-alternative: #ff8f2e;
-
-    --neon-text-color: #f40;
-  --neon-border-color: #08f;
 }
 
 /* FullPage.js changes */
@@ -23,6 +20,38 @@
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     background: var(--clr-secondary);
+}
+
+.fp-arrow.fp-prev {
+    margin-left: 100px;
+    scale: .65;
+    border-color: transparent var(--clr-alternative) transparent transparent;
+    animation-name: slideArrow;
+    animation-iteration-count: infinite;
+    animation-duration: .85s;
+    transition: all .3 ease;
+}
+
+.fp-arrow.fp-next {
+    margin-right: 100px;
+    scale: .65;
+    border-color: transparent transparent transparent var(--clr-alternative);
+    animation-name: slideArrow;
+    animation-iteration-count: infinite;
+    animation-duration: .85s;
+    transition: all .3 ease;
+}
+
+@keyframes slideArrow {
+    0% {
+        scale: .65;
+    }
+    50% {
+        scale: .85;
+    }
+    100% {
+        scale: .65;
+    }
 }
 
 /* HTML and Body changes */
@@ -152,7 +181,7 @@ body {
     }
 }
 
-#music-video {
+#music-video1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -161,61 +190,94 @@ body {
     object-fit: cover;
 }
 
-#music-title {
+#music-video2 {
+    position: absolute;
+    top: 0;
+    left: 33.333%;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#music-title1, #music-title2 {
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: fit-content;
+    left: 16.25%;
     transform: translate(-50%, -50%);
+    width: fit-content;
     text-align: center;
     font-size: 2.5rem;
     letter-spacing: 5px;
     font-family: 'Bad Script', cursive;
     color: var(--clr-alternative);
-    /* border: 0.2rem solid var(--clr-secondary);
-    border-radius: 1rem; */
-    text-transform: uppercase;
-    animation: flicker 1.5s infinite alternate;
+    animation: flicker1 1.5s infinite alternate;
     opacity: .9;
 }
 
-#music-title::-moz-selection {
-    background-color: var(--neon-border-color);
-    color: var(--neon-text-color);
-  }
+#music-title2 {
+    left: 49.25%;
+    color: dodgerblue;
+    animation: flicker2 1.5s infinite alternate;
+}
 
-  #music-title::selection {
+#music-title1::-moz-selection {
     background-color: var(--neon-border-color);
-    color: var(--neon-text-color);
-  }
+    color: var(--clr-alternative);
+}
+
+#music-title1::selection {
+    background-color: var(--neon-border-color);
+    color: var(--clr-alternative);
+}
   
-  #music-title:focus {
+#music-title1:focus {
     outline: none;
-  }
+}
 
-@keyframes flicker {
-    
+#music-title1::-moz-selection {
+    background-color: var(--neon-border-color);
+    color: dodgerblue;
+}
+
+#music-title1::selection {
+    background-color: var(--neon-border-color);
+    color: dodgerblue;
+}
+  
+#music-title1:focus {
+    outline: none;
+}
+
+@keyframes flicker1 {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     text-shadow:
         -0.2rem -0.2rem 1rem var(--clr-alternative),
         0.2rem 0.2rem 1rem var(--clr-alternative),
-        0 0 2rem var(--neon-text-color),
-        0 0 4rem var(--neon-text-color),
-        0 0 6rem var(--neon-text-color),
-        0 0 8rem var(--neon-text-color),
-        0 0 10rem var(--neon-text-color);
-        
-    /* box-shadow:
-        0 0 .5rem var(--clr-alternative),
-        inset 0 0 .5rem var(--clr-alternative),
-        0 0 2rem var(--neon-border-color),
-        inset 0 0 2rem var(--neon-border-color),
-        0 0 4rem var(--neon-border-color),
-        inset 0 0 4rem var(--neon-border-color);         */
+        0 0 2rem var(--clr-alternative),
+        0 0 4rem var(--clr-alternative),
+        0 0 6rem var(--clr-alternative),
+        0 0 8rem var(--clr-alternative),
+        0 0 200rem var(--clr-alternative);
     }
     
     20%, 24%, 55% {        
         text-shadow: none;
-        box-shadow: none;
+    }    
+}
+
+@keyframes flicker2 {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+        -0.2rem -0.2rem 1rem rgb(20, 50, 180),
+        0.2rem 0.2rem 1rem rgb(20, 50, 180),
+        0 0 2rem rgb(20, 50, 180),
+        0 0 4rem rgb(20, 50, 180),
+        0 0 6rem rgb(20, 50, 180),
+        0 0 8rem rgb(20, 50, 180),
+        0 0 200rem rgb(20, 50, 180);
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
     }    
 }
