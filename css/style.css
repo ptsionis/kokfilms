@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Nabla&display=swap');
 
 /* Color variables */
 :root {
     --clr-primary: #1a1a1a;
     --clr-secondary: #fafafa;
     --clr-alternative: #ff8f2e;
+
+    --neon-text-color: #f40;
+  --neon-border-color: #08f;
 }
 
 /* FullPage.js changes */
@@ -108,4 +111,112 @@ body {
     100% {
         transform: translateY(0%);
     }
+}
+
+#indicator {
+    position: absolute;
+    bottom: 7.5%;
+    left: 50%;
+    width: 25px; 
+    height: 43px;
+    border: 2px solid var(--clr-secondary);
+    border-radius: 50px;
+    transition: all .5s ease;
+}
+
+#indicator:hover {
+    border-color: var(--clr-alternative);
+}
+
+#indicator:before {
+    content: ""; 
+    position: absolute;
+    width: 8px; 
+    height: 8px;
+    background: var(--clr-alternative); 
+    margin: auto;
+    left: 0; 
+    right: 0;
+    top: 30px; 
+    border-radius: 50%;
+    animation: scrollDown 1s linear infinite; 
+}
+
+@keyframes scrollDown {
+    0% {
+        opacity: 1; top: 8px;
+    }
+    100% {
+        opacity: 0; top: 25px;
+        transform: scale(0.8);
+    }
+}
+
+#music-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#music-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    font-family: 'Bad Script', cursive;
+    color: var(--clr-alternative);
+    padding: 2rem 7rem 2.25rem;
+    /* border: 0.2rem solid var(--clr-secondary);
+    border-radius: 1rem; */
+    text-transform: uppercase;
+    animation: flicker 1.5s infinite alternate;
+    opacity: .9;
+}
+
+#music-title::-moz-selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+  }
+
+  #music-title::selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+  }
+  
+  #music-title:focus {
+    outline: none;
+  }
+
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+        -0.2rem -0.2rem 1rem var(--clr-alternative),
+        0.2rem 0.2rem 1rem var(--clr-alternative),
+        0 0 2rem var(--neon-text-color),
+        0 0 4rem var(--neon-text-color),
+        0 0 6rem var(--neon-text-color),
+        0 0 8rem var(--neon-text-color),
+        0 0 10rem var(--neon-text-color);
+        
+    /* box-shadow:
+        0 0 .5rem var(--clr-alternative),
+        inset 0 0 .5rem var(--clr-alternative),
+        0 0 2rem var(--neon-border-color),
+        inset 0 0 2rem var(--neon-border-color),
+        0 0 4rem var(--neon-border-color),
+        inset 0 0 4rem var(--neon-border-color);         */
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
 }
