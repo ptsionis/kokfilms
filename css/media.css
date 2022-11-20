@@ -1,5 +1,5 @@
 @media screen and (max-width: 1150px) {
-    #music-title1, #music-title2 {
+    #music-title1, #music-title2, #music-title3 {
         font-size: 1.75rem;
         letter-spacing: 2.5px;
     }
@@ -14,7 +14,7 @@
         letter-spacing: 0px;
     }
 
-    #music-title1, #music-title2 {
+    #music-title1, #music-title2, #music-title3 {
         font-size: 1.25rem;
         letter-spacing: .5px;
     }

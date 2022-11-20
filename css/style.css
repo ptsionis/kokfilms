@@ -5,6 +5,8 @@
     --clr-primary: #1a1a1a;
     --clr-secondary: #fafafa;
     --clr-alternative: #ff8f2e;
+    --clr-music-1: #fa0f0f;
+    --clr-music-2: #1478cd;
 }
 
 /* FullPage.js changes */
@@ -120,26 +122,11 @@ body {
     letter-spacing: 5px;
     font-size: 10rem;
     font-family: 'Nabla', cursive;
-    animation-name: title;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
     transition: all .3s ease;
 }
 
 #welcome-title:hover {
     letter-spacing: 35px;
-}
-
-@keyframes title {
-    0% {
-        transform: translateY(0%);
-    }
-    50% {
-        transform: translateY(-10%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
 }
 
 #indicator {
@@ -199,56 +186,78 @@ body {
     object-fit: cover;
 }
 
-#music-title1, #music-title2 {
+#music-video3 {
+    position: absolute;
+    top: 0;
+    left: 66.666%;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#music-title1, #music-title2, #music-title3 {
     position: absolute;
     top: 50%;
-    left: 16.25%;
     transform: translate(-50%, -50%);
     width: fit-content;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     letter-spacing: 5px;
     font-family: 'Bad Script', cursive;
-    color: var(--clr-alternative);
-    animation: flicker1 1.5s infinite alternate;
     opacity: .9;
 }
 
+#music-title1 {
+    left: 16.66%;
+    color: #dc1414;
+    animation: flicker1 1.5s infinite alternate;
+}
+
 #music-title2 {
-    left: 49.25%;
+    left: 49.98%;
     color: dodgerblue;
     animation: flicker2 1.5s infinite alternate;
 }
 
-#music-title1::-moz-selection {
-    background-color: var(--neon-border-color);
+#music-title3 {
+    left: 83.3%;
     color: var(--clr-alternative);
-}
-
-#music-title1::selection {
-    background-color: var(--neon-border-color);
-    color: var(--clr-alternative);
-}
-  
-#music-title1:focus {
-    outline: none;
-}
-
-#music-title1::-moz-selection {
-    background-color: var(--neon-border-color);
-    color: dodgerblue;
-}
-
-#music-title1::selection {
-    background-color: var(--neon-border-color);
-    color: dodgerblue;
-}
-  
-#music-title1:focus {
-    outline: none;
+    animation: flicker3 1.5s infinite alternate;
 }
 
 @keyframes flicker1 {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+        -0.2rem -0.2rem 1rem var(--clr-music-1),
+        0.2rem 0.2rem 1rem var(--clr-music-1),
+        0 0 2rem var(--clr-music-1),
+        0 0 4rem var(--clr-music-1),
+        0 0 6rem var(--clr-music-1),
+        0 0 8rem var(--clr-music-1),
+        0 0 200rem var(--clr-music-1);
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
+
+@keyframes flicker2 {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+        -0.2rem -0.2rem 1rem var(--clr-music-2),
+        0.2rem 0.2rem 1rem var(--clr-music-2),
+        0 0 2rem var(--clr-music-2),
+        0 0 4rem var(--clr-music-2),
+        0 0 6rem var(--clr-music-2),
+        0 0 8rem var(--clr-music-2),
+        0 0 200rem var(--clr-music-2);
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
+
+@keyframes flicker3 {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     text-shadow:
         -0.2rem -0.2rem 1rem var(--clr-alternative),
@@ -259,24 +268,6 @@ body {
         0 0 8rem var(--clr-alternative),
         0 0 200rem var(--clr-alternative);
     }
-    
-    20%, 24%, 55% {        
-        text-shadow: none;
-    }    
-}
-
-@keyframes flicker2 {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow:
-        -0.2rem -0.2rem 1rem rgb(20, 50, 180),
-        0.2rem 0.2rem 1rem rgb(20, 50, 180),
-        0 0 2rem rgb(20, 50, 180),
-        0 0 4rem rgb(20, 50, 180),
-        0 0 6rem rgb(20, 50, 180),
-        0 0 8rem rgb(20, 50, 180),
-        0 0 200rem rgb(20, 50, 180);
-    }
-    
     20%, 24%, 55% {        
         text-shadow: none;
     }    
