@@ -1,8 +1,10 @@
 "use strict";
 
+//A list that contains all video objects from section 2
 const musicVideoList = document.querySelectorAll(".music-video");
 
 window.addEventListener('load', () => {
+    //When document finishes loading, display page and fade out preloader. After 500ms do not display preloader.
     document.getElementById("fullpage-wrapper").style.display = "block";
     document.getElementById("preloader").classList.add("preloader-finish");
     document.querySelector("#fp-nav").style.display = "block";
@@ -35,10 +37,12 @@ function prevMusicSlide() {
 
     musicVideoOrder--;
     if (musicVideoOrder < 0) {
+        musicVideoList[musicVideoList.length-1].load();
         musicVideoList[musicVideoList.length-1].play();
         musicVideoOrder = 2;
     }
     else {
+        musicVideoList[musicVideoOrder].load();
         musicVideoList[musicVideoOrder].play();
     }
 }

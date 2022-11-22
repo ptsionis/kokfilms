@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Nabla&display=swap');
+
+$clrPrimary: #1a1a1a;
+$clrSecondary: #fafafa;
+$clrAlternative: #ff8f2e;
+
+$ffMusicVideo: 'Bad Script', cursive;
+
+$numOfMusicPages: 3;
+$pctOfMusicPages: calc(100% / $numOfMusicPages);
+
+//Used to fade out preloader
+.preloader-finish {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* FullPage.js changes */
+.fp-warning,
+.fp-watermark {
+    display: none;
+}
+
+.fp-slidesNav {
+    display: none;
+}
+
+#fp-nav ul li a span {
+    background: $clrSecondary;
+}
+
+.fp-arrow-extend {
+    scale: .65;
+    animation-name: slideArrow;
+    animation-iteration-count: infinite;
+    animation-duration: .85s;
+    transition: all .3 ease;
+}
+
+.fp-arrow.fp-prev {
+    margin-left: 100px;
+    border-color: transparent $clrAlternative transparent transparent;
+    @extend .fp-arrow-extend;
+}
+
+.fp-arrow.fp-next {
+    margin-right: 100px;
+    border-color: transparent transparent transparent $clrAlternative;
+    @extend .fp-arrow-extend;
+}
+
+@keyframes slideArrow {
+    0%, 50%, 100% {
+        scale: .65, .85, .65;
+    }
+}
+
+//Document and body changes
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $clrPrimary;
+
+    //Preloader changes
+    #preloader {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: $clrPrimary;
+        z-index: 1;
+        transition: opacity .5s ease;
+
+        //Preloader inner image
+        #preloader-inner-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: top left;
+        }
+    
+        //Preloader outer image
+        #preloader-outer-img {
+            @extend #preloader-inner-img;
+            animation: preloader-animation 1.75s infinite;
+        }
+    
+        //Preloader outer image animation
+        @keyframes preloader-animation {
+            0% {transform: rotate(0turn) translate(-50%, -50%);}
+            50% {transform: rotate(.75turn) translate(-50%, -50%);}
+            100% {transform: rotate(0turn) translate(-50%, -50%);}
+        }
+    }
+
+    //Main content
+    #fullpage-wrapper {
+        display: none;
+
+        //Section1 changes
+        #section1 {
+            //Welcome title "KokFilms"
+            #welcome-title {
+                width: fit-content;
+                margin: auto;
+                transition: all .3s ease;
+                color: $clrAlternative;
+                text: {
+                    align: center;
+                }
+                font: {
+                    size: 10rem;
+                    family: 'Nabla', cursive;
+                }
+                &:hover {
+                    letter-spacing: 35px;
+                }
+            }
+    
+            //Mouse scroll down wheel element
+            #welcome-down-indicator {
+                position: absolute;
+                bottom: 7.5%;
+                left: 50%;
+                width: 25px; 
+                height: 43px;
+                transition: all .5s ease;
+                border: {
+                    width: 2px;
+                    style: solid;
+                    color: $clrSecondary;
+                    radius: 50px;
+                }
+    
+                &:before {
+                    content: ""; 
+                    position: absolute;
+                    width: 8px; 
+                    height: 8px;
+                    background: $clrAlternative; 
+                    margin: auto;
+                    left: 0; 
+                    right: 0;
+                    top: 30px; 
+                    border-radius: 50%;
+                    animation: scrollDown 1s linear infinite;
+    
+                    @keyframes scrollDown {
+                        0% {opacity: 1; top: 8px;}
+                        100% {opacity: 0; top: 25px; transform: scale(0.8);}
+                    }
+                }
+    
+                &:hover {
+                    border: {
+                        color: $clrAlternative;
+                    }
+                }
+            }
+        }
+
+        //Section2 changes
+        #section2 {
+            //A mixin of music videos
+            @mixin music-video($left-value) {
+                position: absolute;
+                top: 0;
+                left: $left-value;
+                height: 100vh;
+                width: 100vw;
+                object-fit: cover;
+            }
+
+            //A mixin of music titles
+            @mixin music-title($left-value, $color-value, $flicker-name) {
+                position: absolute;
+                width: fit-content;
+                top: 50%;
+                left: $left-value;
+                color: $color-value;
+                transform: translate(-50%, -50%);
+                animation: $flicker-name 1.5s infinite alternate;
+                text: {
+                    align: center;
+                }
+                font: {
+                    size: 2rem;
+                }
+                font: {
+                    family: 'Bad Script', cursive;
+                }
+            }
+
+            //A mixin of music title flicker animation
+            @mixin flicker($name, $flicker-color-value) {
+                @keyframes #{$name} {
+                    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                        text-shadow:
+                            -0.2rem -0.2rem 1rem $flicker-color-value,
+                            0.2rem 0.2rem 1rem $flicker-color-value,
+                            0 0 2rem $flicker-color-value,
+                            0 0 4rem $flicker-color-value,
+                            0 0 6rem $flicker-color-value,
+                            0 0 8rem $flicker-color-value,
+                            0 0 200rem $flicker-color-value;
+                    }
+                    20%, 24%, 55% {        
+                        text-shadow: none;
+                    }   
+                } 
+            }
+
+            //creation of 3 keyframes, one for each slide
+            @include flicker(flicker1, #fa0f0f);
+            @include flicker(flicker2, #1478cd);
+            @include flicker(flicker3, #ff8f2e);
+
+            //Section 2 slide 1 changes
+            #slide-2-1 {
+                #music-video1 {
+                    @include music-video(calc($pctOfMusicPages*0));
+                }
+                #music-title1 {
+                    @include music-title(calc(16.66%*1), #dc1414, flicker1);
+                }
+            }
+
+            //Section 2 slide 1 changes
+            #slide-2-2 {
+                #music-video2 {
+                    @include music-video(calc($pctOfMusicPages*1));
+                }
+                #music-title2 {
+                    @include music-title(calc(16.66%*3), #1e90ff, flicker2);
+                }
+            }
+
+            //Section 2 slide 1 changes
+            #slide-2-3 {
+                #music-video3 {
+                    @include music-video(calc($pctOfMusicPages*2));
+                }
+                #music-title3 {
+                    @include music-title(calc(16.66%*5), #ff8f2e, flicker3);
+                }
+            }
+        }
+    }
+}
