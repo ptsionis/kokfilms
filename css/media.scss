@@ -1,0 +1,64 @@
+//Section 1
+@mixin welcome-title($fs-welcome) {
+    font: {
+        size: $fs-welcome;
+    }
+}
+
+@mixin section1($fs-welcome) {
+    #section1 {
+        #welcome-title {
+            @include welcome-title($fs-welcome);
+        }
+    }
+}
+
+//Section 2
+@mixin music-title($fs-music-title) {
+    font: {
+        size: $fs-music-title;
+    }
+}
+
+@mixin section2($fs-music-title) {
+    #section2 {
+        #slide-2-1 {
+            #music-title1 {
+                @include music-title($fs-music-title);
+            }
+        }
+    
+        #slide-2-2 {
+            #music-title2 {
+                @include music-title($fs-music-title);
+            }
+        }
+    
+        #slide-2-3 {
+            #music-title3 {
+                @include music-title($fs-music-title);
+            }
+        }
+    }
+}
+
+//Fullpage wrapper
+@mixin fullpage-wrapper($welcome-title, $music-title) {
+    #fullpage-wrapper {
+        @include section1($welcome-title);
+        @include section2($music-title);
+    }
+}
+
+//Body
+@mixin body($fs-welcome, $fs-music-title) {
+    body {
+        @include fullpage-wrapper($fs-welcome, $fs-music-title);
+    }
+}
+
+//Media
+@media screen and (max-width:1150px) {
+    @include body(5rem, 1rem); //$fs-welcome, $fs-music-title
+}
+
