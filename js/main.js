@@ -31,33 +31,31 @@ document.addEventListener("keydown", (e) => {
 });
 
 function prevMusicSlide() {
+    //Pauses all music videos
     musicVideoList.forEach(element => {
         element.pause();
     });
 
+    //Index of the video that should be played decrements, if it goes to -1, last video is played and index goes to length-1
     musicVideoOrder--;
     if (musicVideoOrder < 0) {
-        musicVideoList[musicVideoList.length-1].load();
-        musicVideoList[musicVideoList.length-1].play();
-        musicVideoOrder = 2;
+        musicVideoOrder = musicVideoList.length-1;
     }
-    else {
-        musicVideoList[musicVideoOrder].load();
-        musicVideoList[musicVideoOrder].play();
-    }
+    musicVideoList[musicVideoOrder].load();
+    musicVideoList[musicVideoOrder].play();
 }
 
 function nextMusicSlide() {
+    //Pauses all music videos
     musicVideoList.forEach(element => {
         element.pause();
     });
 
+    //Index of the video that should be played increments, if it goes to length, first video is played and index goes to 0
     musicVideoOrder++;
-    if (musicVideoOrder < 0) {
-        musicVideoList[0].play();
+    if (musicVideoOrder > musicVideoList.length-1) {
         musicVideoOrder = 0;
     }
-    else {
-        musicVideoList[musicVideoOrder].play();
-    }
+    musicVideoList[musicVideoOrder].load();
+    musicVideoList[musicVideoOrder].play();
 }
