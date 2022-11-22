@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Nabla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Poppins&display=swap");
 .preloader-finish {
   opacity: 0;
   pointer-events: none;
@@ -111,7 +111,6 @@ body #fullpage-wrapper #section1 #welcome-title {
   color: #ff8f2e;
   text-align: center;
   font-size: 10rem;
-  font-family: "Nabla", cursive;
 }
 body #fullpage-wrapper #section1 #welcome-title:hover {
   letter-spacing: 35px;
@@ -239,6 +238,12 @@ body #fullpage-wrapper #section2 #slide-2-1 #music-title1 {
   font-size: 2rem;
   font-family: "Bad Script", cursive;
 }
+body #fullpage-wrapper #section2 #slide-2-1 #music-link1 {
+  position: absolute;
+  top: 85%;
+  left: 16.66%;
+  transform: translate(-50%, -50%);
+}
 body #fullpage-wrapper #section2 #slide-2-2 #music-video2 {
   position: absolute;
   top: 0;
@@ -263,6 +268,12 @@ body #fullpage-wrapper #section2 #slide-2-2 #music-title2 {
   font-size: 2rem;
   font-family: "Bad Script", cursive;
 }
+body #fullpage-wrapper #section2 #slide-2-2 #music-link2 {
+  position: absolute;
+  top: 85%;
+  left: 49.98%;
+  transform: translate(-50%, -50%);
+}
 body #fullpage-wrapper #section2 #slide-2-3 #music-video3 {
   position: absolute;
   top: 0;
@@ -286,4 +297,10 @@ body #fullpage-wrapper #section2 #slide-2-3 #music-title3 {
   text-align: center;
   font-size: 2rem;
   font-family: "Bad Script", cursive;
+}
+body #fullpage-wrapper #section2 #slide-2-3 #music-link3 {
+  position: absolute;
+  top: 85%;
+  left: 83.3%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=style.css.map */

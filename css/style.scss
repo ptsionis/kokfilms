@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Poppins&display=swap');
 
 $clrPrimary: #1a1a1a;
 $clrSecondary: #fafafa;
@@ -114,7 +114,6 @@ body {
                 }
                 font: {
                     size: 10rem;
-                    family: 'Nabla', cursive;
                 }
                 &:hover {
                     letter-spacing: 35px;
@@ -219,6 +218,13 @@ body {
             @include flicker(flicker2, #1478cd);
             @include flicker(flicker3, #ff8f2e);
 
+            @mixin music-link($left-value) {
+                position: absolute;
+                top: 85%;
+                left: $left-value;
+                transform: translate(-50%, -50%);
+            }
+
             //Section 2 slide 1 changes
             #slide-2-1 {
                 #music-video1 {
@@ -226,6 +232,9 @@ body {
                 }
                 #music-title1 {
                     @include music-title(calc(16.66%*1), #dc1414, flicker1);
+                }
+                #music-link1 {
+                    @include music-link(calc(16.66%*1));
                 }
             }
 
@@ -237,6 +246,9 @@ body {
                 #music-title2 {
                     @include music-title(calc(16.66%*3), #1e90ff, flicker2);
                 }
+                #music-link2 {
+                    @include music-link(calc(16.66%*3));
+                }
             }
 
             //Section 2 slide 1 changes
@@ -246,6 +258,9 @@ body {
                 }
                 #music-title3 {
                     @include music-title(calc(16.66%*5), #ff8f2e, flicker3);
+                }
+                #music-link3 {
+                    @include music-link(calc(16.66%*5));
                 }
             }
         }
