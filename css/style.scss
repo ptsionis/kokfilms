@@ -214,13 +214,13 @@ body {
             }
 
             //creation of 3 keyframes, one for each slide
-            @include flicker(flicker1, #fa0f0f);
-            @include flicker(flicker2, #1478cd);
-            @include flicker(flicker3, #ff8f2e);
+            @include flicker(flicker1, #de1dc4);
+            @include flicker(flicker2, #aa0707);
+            @include flicker(flicker3, #1478cd);
 
             @mixin music-link($left-value) {
                 position: absolute;
-                top: 85%;
+                top: 56.5%;
                 left: $left-value;
                 transform: translate(-50%, -50%);
             }
@@ -231,20 +231,20 @@ body {
                     @include music-video(calc($pctOfMusicPages*0));
                 }
                 #music-title1 {
-                    @include music-title(calc(16.66%*1), #dc1414, flicker1);
+                    @include music-title(calc(16.66%*1), #f229d7, flicker1);
                 }
                 #music-link1 {
                     @include music-link(calc(16.66%*1));
                 }
             }
-
+            
             //Section 2 slide 1 changes
             #slide-2-2 {
                 #music-video2 {
                     @include music-video(calc($pctOfMusicPages*1));
                 }
                 #music-title2 {
-                    @include music-title(calc(16.66%*3), #1e90ff, flicker2);
+                    @include music-title(calc(16.66%*3), #ff2626, flicker2);
                 }
                 #music-link2 {
                     @include music-link(calc(16.66%*3));
@@ -257,7 +257,7 @@ body {
                     @include music-video(calc($pctOfMusicPages*2));
                 }
                 #music-title3 {
-                    @include music-title(calc(16.66%*5), #ff8f2e, flicker3);
+                    @include music-title(calc(16.66%*5), #1e90ff, flicker3);
                 }
                 #music-link3 {
                     @include music-link(calc(16.66%*5));
