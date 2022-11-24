@@ -5,6 +5,7 @@ $clrSecondary: #fafafa;
 $clrAlternative: #ff8f2e;
 
 $ffMusicVideo: 'Bad Script', cursive;
+$ffAdVideo: 'Poppins', sans-serif;
 
 $numOfMusicPages: 3;
 $pctOfMusicPages: calc(100% / $numOfMusicPages);
@@ -21,38 +22,25 @@ $pctOfMusicPages: calc(100% / $numOfMusicPages);
     display: none;
 }
 
-.fp-slidesNav {
-    display: none;
+.fp-slidesNav.fp-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.fp-slidesNav ul li a span {
+    background-color: $clrSecondary
 }
 
 #fp-nav ul li a span {
     background: $clrSecondary;
 }
 
-.fp-arrow-extend {
-    scale: .65;
-    animation-name: slideArrow;
-    animation-iteration-count: infinite;
-    animation-duration: .85s;
-    transition: all .3 ease;
+fp-arrow-extend {
+    display: none;
 }
 
-.fp-arrow.fp-prev {
-    margin-left: 100px;
-    border-color: transparent $clrAlternative transparent transparent;
-    @extend .fp-arrow-extend;
-}
-
-.fp-arrow.fp-next {
-    margin-right: 100px;
-    border-color: transparent transparent transparent $clrAlternative;
-    @extend .fp-arrow-extend;
-}
-
-@keyframes slideArrow {
-    0%, 50%, 100% {
-        scale: .65, .85, .65;
-    }
+.fp-arrow.fp-prev, .fp-arrow.fp-next {
+    @extend fp-arrow-extend;
 }
 
 //Document and body changes
@@ -218,11 +206,23 @@ body {
             @include flicker(flicker2, #aa0707);
             @include flicker(flicker3, #1478cd);
 
-            @mixin music-link($left-value) {
+            @mixin svg-path($clr-value) {
+                    fill: $clr-value;
+            }
+
+            @mixin music-link($left-value, $clr-value) {
                 position: absolute;
-                top: 56.5%;
+                top: 57.5%;
                 left: $left-value;
                 transform: translate(-50%, -50%);
+                transition: all .5s ease;
+                &:hover {
+                    scale: 1.15;
+                }
+                &:hover > svg .music-path {
+                    transition: all .75s ease;
+                    @include svg-path($clr-value);
+                }
             }
 
             //Section 2 slide 1 changes
@@ -234,7 +234,7 @@ body {
                     @include music-title(calc(16.66%*1), #f229d7, flicker1);
                 }
                 #music-link1 {
-                    @include music-link(calc(16.66%*1));
+                    @include music-link(calc(16.66%*1), #f229d7);
                 }
             }
             
@@ -247,7 +247,7 @@ body {
                     @include music-title(calc(16.66%*3), #ff2626, flicker2);
                 }
                 #music-link2 {
-                    @include music-link(calc(16.66%*3));
+                    @include music-link(calc(16.66%*3), #ff2626);
                 }
             }
 
@@ -260,7 +260,65 @@ body {
                     @include music-title(calc(16.66%*5), #1e90ff, flicker3);
                 }
                 #music-link3 {
-                    @include music-link(calc(16.66%*5));
+                    @include music-link(calc(16.66%*5), #1e90ff);
+                }
+            }
+        }
+
+        //Section 3
+        #section3 {
+            ad-wrapper {
+                height: 100vh;
+                width: 80vw;
+                margin: 0 auto;
+                display: flex;
+                align-items: center
+            }
+
+            @mixin ad-text-wrapper($m-top, $m-right, $m-bottom, $m-left) {
+                margin: $m-top $m-right $m-bottom $m-left;
+            }
+
+            ad-title {
+                color: $clrAlternative;
+                margin: 0 0 20px 0;
+                font: {
+                    family: $ffAdVideo;
+                    size: 3.5rem;
+                }
+                text: {
+                    align: end;
+                }
+            }
+
+            ad-text {
+                color: $clrSecondary;
+                font: {
+                    family: $ffAdVideo;
+                    size: 1.25rem;
+                }
+                text: {
+                    align: end;
+                }
+            }
+
+            .ad-wrapper {
+                @extend ad-wrapper;
+
+                #ad-video1 {
+                    height: fit-content;
+                }
+
+                .ad-text-wrapper {
+                    @include ad-text-wrapper(0, 0, 0, 80px);
+
+                    #ad-title1 {
+                        @extend ad-title;
+                    }
+
+                    #ad-text1 {
+                        @extend ad-text;
+                    }
                 }
             }
         }

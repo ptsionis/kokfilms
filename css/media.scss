@@ -52,13 +52,16 @@
 
 //Body
 @mixin body($fs-welcome, $fs-music-title) {
-    body {
-        @include fullpage-wrapper($fs-welcome, $fs-music-title);
-    }
+    @include fullpage-wrapper($fs-welcome, $fs-music-title);
 }
 
 //Media
-@media screen and (max-width:1150px) {
-    @include body(5rem, 1rem); //$fs-welcome, $fs-music-title
+@media screen and (max-width:767px) {
+    body {
+        @include body(5rem, 1rem); //$fs-welcome, $fs-music-title
+    }
 }
 
+@media screen and (max-width:1023px) {
+    
+}

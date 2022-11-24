@@ -19,8 +19,6 @@ window.addEventListener('load', () => {
 
 let musicVideoOrder = 0;
 
-document.querySelector(".fp-arrow.fp-prev").addEventListener('click', function() {prevMusicSlide()});
-document.querySelector(".fp-arrow.fp-next").addEventListener('click', function() {nextMusicSlide()});
 document.addEventListener("keydown", (e) => {
     if (e.keyCode == 37) {
         prevMusicSlide();
@@ -59,3 +57,53 @@ function nextMusicSlide() {
     musicVideoList[musicVideoOrder].load();
     musicVideoList[musicVideoOrder].play();
 }
+
+//Detect touch swipes in section2 and changes music video accordingly
+//Code from: https://www.folkstalk.com/2022/07/detect-swipe-left-right-javascript-with-code-examples.html
+document.getElementById("section2").addEventListener('touchstart', handleTouchStart, false);        
+document.getElementById("section2").addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;                                                        
+var yDown = null;
+
+function getTouches(evt) {
+  return evt.touches ||             // browser API
+         evt.originalEvent.touches; // jQuery
+}                                                     
+
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* left swipe */
+            nextMusicSlide();
+        } else {
+            /* right swipe */
+            prevMusicSlide();
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* up swipe */ 
+        } else { 
+            /* down swipe */
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};

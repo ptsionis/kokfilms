@@ -10,46 +10,23 @@
   display: none;
 }
 
-.fp-slidesNav {
-  display: none;
+.fp-slidesNav.fp-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.fp-slidesNav ul li a span {
+  background-color: #fafafa;
 }
 
 #fp-nav ul li a span {
   background: #fafafa;
 }
 
-.fp-arrow-extend, .fp-arrow.fp-next, .fp-arrow.fp-prev {
-  scale: 0.65;
-  -webkit-animation-name: slideArrow;
-          animation-name: slideArrow;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 0.85s;
-          animation-duration: 0.85s;
-  transition: all 0.3 ease;
+fp-arrow-extend, .fp-arrow.fp-prev, .fp-arrow.fp-next {
+  display: none;
 }
 
-.fp-arrow.fp-prev {
-  margin-left: 100px;
-  border-color: transparent #ff8f2e transparent transparent;
-}
-
-.fp-arrow.fp-next {
-  margin-right: 100px;
-  border-color: transparent transparent transparent #ff8f2e;
-}
-
-@-webkit-keyframes slideArrow {
-  0%, 50%, 100% {
-    scale: 0.65, 0.85, 0.65;
-  }
-}
-
-@keyframes slideArrow {
-  0%, 50%, 100% {
-    scale: 0.65, 0.85, 0.65;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -240,9 +217,17 @@ body #fullpage-wrapper #section2 #slide-2-1 #music-title1 {
 }
 body #fullpage-wrapper #section2 #slide-2-1 #music-link1 {
   position: absolute;
-  top: 56.5%;
+  top: 57.5%;
   left: 16.66%;
   transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+body #fullpage-wrapper #section2 #slide-2-1 #music-link1:hover {
+  scale: 1.15;
+}
+body #fullpage-wrapper #section2 #slide-2-1 #music-link1:hover > svg .music-path {
+  transition: all 0.75s ease;
+  fill: #f229d7;
 }
 body #fullpage-wrapper #section2 #slide-2-2 #music-video2 {
   position: absolute;
@@ -270,9 +255,17 @@ body #fullpage-wrapper #section2 #slide-2-2 #music-title2 {
 }
 body #fullpage-wrapper #section2 #slide-2-2 #music-link2 {
   position: absolute;
-  top: 56.5%;
+  top: 57.5%;
   left: 49.98%;
   transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+body #fullpage-wrapper #section2 #slide-2-2 #music-link2:hover {
+  scale: 1.15;
+}
+body #fullpage-wrapper #section2 #slide-2-2 #music-link2:hover > svg .music-path {
+  transition: all 0.75s ease;
+  fill: #ff2626;
 }
 body #fullpage-wrapper #section2 #slide-2-3 #music-video3 {
   position: absolute;
@@ -300,7 +293,43 @@ body #fullpage-wrapper #section2 #slide-2-3 #music-title3 {
 }
 body #fullpage-wrapper #section2 #slide-2-3 #music-link3 {
   position: absolute;
-  top: 56.5%;
+  top: 57.5%;
   left: 83.3%;
   transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+body #fullpage-wrapper #section2 #slide-2-3 #music-link3:hover {
+  scale: 1.15;
+}
+body #fullpage-wrapper #section2 #slide-2-3 #music-link3:hover > svg .music-path {
+  transition: all 0.75s ease;
+  fill: #1e90ff;
+}
+body #fullpage-wrapper #section3 ad-wrapper, body #fullpage-wrapper #section3 .ad-wrapper {
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+body #fullpage-wrapper #section3 ad-title, body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper #ad-title1 {
+  color: #ff8f2e;
+  margin: 0 0 20px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5rem;
+  text-align: end;
+}
+body #fullpage-wrapper #section3 ad-text, body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper #ad-text1 {
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  text-align: end;
+}
+body #fullpage-wrapper #section3 .ad-wrapper #ad-video1 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper {
+  margin: 0 0 0 80px;
 }/*# sourceMappingURL=style.css.map */
