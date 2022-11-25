@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&display=swap');
 
 $clrPrimary: #1a1a1a;
 $clrSecondary: #fafafa;
 $clrAlternative: #ff8f2e;
 
-$ffMusicVideo: 'Bad Script', cursive;
-$ffAdVideo: 'Poppins', sans-serif;
+$ffHeader: 'Bad Script', cursive;
+$ffText: 'Chakra Petch', sans-serif;
 
 $numOfMusicPages: 3;
 $pctOfMusicPages: calc(100% / $numOfMusicPages);
@@ -275,30 +275,41 @@ body {
                 align-items: center
             }
 
+            ad-image {
+                width: auto;
+                height: 65px;
+                margin-right: 20px;
+            }
+
             @mixin ad-text-wrapper($m-top, $m-right, $m-bottom, $m-left) {
                 margin: $m-top $m-right $m-bottom $m-left;
             }
 
             ad-title {
-                color: $clrAlternative;
+                color: #f229d7;
                 margin: 0 0 20px 0;
                 font: {
-                    family: $ffAdVideo;
-                    size: 3.5rem;
+                    family: $ffHeader;
+                    size: 4rem;
                 }
                 text: {
                     align: end;
+                    shadow: 1px 1px 10px #f229d7;
                 }
             }
 
             ad-text {
                 color: $clrSecondary;
                 font: {
-                    family: $ffAdVideo;
+                    family: $ffText;
                     size: 1.25rem;
                 }
                 text: {
                     align: end;
+                    shadow: 2px 2px 4px $clrPrimary;
+                }
+                line: {
+                    height: 1.75;
                 }
             }
 
@@ -307,6 +318,7 @@ body {
 
                 #ad-video1 {
                     height: fit-content;
+                    border-radius: 20px;
                 }
 
                 .ad-text-wrapper {
@@ -314,6 +326,10 @@ body {
 
                     #ad-title1 {
                         @extend ad-title;
+
+                        #ad-image1 {
+                            @extend ad-image;
+                        }
                     }
 
                     #ad-text1 {

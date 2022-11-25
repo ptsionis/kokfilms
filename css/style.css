@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&display=swap");
 .preloader-finish {
   opacity: 0;
   pointer-events: none;
@@ -312,23 +312,32 @@ body #fullpage-wrapper #section3 ad-wrapper, body #fullpage-wrapper #section3 .a
   display: flex;
   align-items: center;
 }
+body #fullpage-wrapper #section3 ad-image, body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper #ad-title1 #ad-image1 {
+  width: auto;
+  height: 65px;
+  margin-right: 20px;
+}
 body #fullpage-wrapper #section3 ad-title, body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper #ad-title1 {
-  color: #ff8f2e;
+  color: #f229d7;
   margin: 0 0 20px 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 3.5rem;
+  font-family: "Bad Script", cursive;
+  font-size: 4rem;
   text-align: end;
+  text-shadow: 1px 1px 10px #f229d7;
 }
 body #fullpage-wrapper #section3 ad-text, body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper #ad-text1 {
   color: #fafafa;
-  font-family: "Poppins", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   font-size: 1.25rem;
   text-align: end;
+  text-shadow: 2px 2px 4px #1a1a1a;
+  line-height: 1.75;
 }
 body #fullpage-wrapper #section3 .ad-wrapper #ad-video1 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  border-radius: 20px;
 }
 body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper {
   margin: 0 0 0 80px;
