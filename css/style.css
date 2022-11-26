@@ -305,19 +305,32 @@ body #fullpage-wrapper #section2 #slide-2-3 #music-link3:hover > svg .music-path
   transition: all 0.75s ease;
   fill: #1e90ff;
 }
-body #fullpage-wrapper #section3 ad-wrapper, body #fullpage-wrapper #section3 .ad-wrapper {
+body #fullpage-wrapper #section3 ad-wrapper, body #fullpage-wrapper #section3 #slide-3-2 .ad-wrapper, body #fullpage-wrapper #section3 #slide-3-1 .ad-wrapper {
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
   display: flex;
   align-items: center;
 }
-body #fullpage-wrapper #section3 ad-image, body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper #ad-title1 #ad-image1 {
-  width: auto;
-  height: 65px;
-  margin-right: 20px;
+body #fullpage-wrapper #section3 #slide-3-1 .ad-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  z-index: -1;
+  opacity: 0.15;
+  transform: scaleX(-1);
 }
-body #fullpage-wrapper #section3 ad-title, body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper #ad-title1 {
+body #fullpage-wrapper #section3 #slide-3-1 .ad-wrapper #ad-video1 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+}
+body #fullpage-wrapper #section3 #slide-3-1 .ad-wrapper .ad-text-wrapper {
+  margin: 0 0 0 80px;
+}
+body #fullpage-wrapper #section3 #slide-3-1 .ad-wrapper .ad-text-wrapper #ad-title1 {
   color: #f229d7;
   margin: 0 0 20px 0;
   font-family: "Bad Script", cursive;
@@ -325,7 +338,13 @@ body #fullpage-wrapper #section3 ad-title, body #fullpage-wrapper #section3 .ad-
   text-align: end;
   text-shadow: 1px 1px 10px #f229d7;
 }
-body #fullpage-wrapper #section3 ad-text, body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper #ad-text1 {
+body #fullpage-wrapper #section3 #slide-3-1 .ad-wrapper .ad-text-wrapper #ad-title1 #ad-image1 {
+  width: auto;
+  height: 65px;
+  margin-left: 0;
+  margin-right: 20px;
+}
+body #fullpage-wrapper #section3 #slide-3-1 .ad-wrapper .ad-text-wrapper #ad-text1 {
   color: #fafafa;
   font-family: "Chakra Petch", sans-serif;
   font-size: 1.25rem;
@@ -333,12 +352,43 @@ body #fullpage-wrapper #section3 ad-text, body #fullpage-wrapper #section3 .ad-w
   text-shadow: 2px 2px 4px #1a1a1a;
   line-height: 1.75;
 }
-body #fullpage-wrapper #section3 .ad-wrapper #ad-video1 {
+body #fullpage-wrapper #section3 #slide-3-2 .ad-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-size: contain;
+  z-index: -1;
+  opacity: 0.15;
+  transform: scaleX(1);
+}
+body #fullpage-wrapper #section3 #slide-3-2 .ad-wrapper #ad-video2 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 20px;
 }
-body #fullpage-wrapper #section3 .ad-wrapper .ad-text-wrapper {
-  margin: 0 0 0 80px;
+body #fullpage-wrapper #section3 #slide-3-2 .ad-wrapper .ad-text-wrapper {
+  margin: 0 80px 0 0;
+}
+body #fullpage-wrapper #section3 #slide-3-2 .ad-wrapper .ad-text-wrapper #ad-title2 {
+  color: #ff8f2e;
+  margin: 0 0 20px 0;
+  font-family: "Bad Script", cursive;
+  font-size: 4rem;
+  text-align: start;
+  text-shadow: 1px 1px 10px #ff8f2e;
+}
+body #fullpage-wrapper #section3 #slide-3-2 .ad-wrapper .ad-text-wrapper #ad-title2 #ad-image2 {
+  width: auto;
+  height: 65px;
+  margin-left: 20px;
+  margin-right: 0;
+}
+body #fullpage-wrapper #section3 #slide-3-2 .ad-wrapper .ad-text-wrapper #ad-text2 {
+  color: #fafafa;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.25rem;
+  text-align: start;
+  text-shadow: 2px 2px 4px #1a1a1a;
+  line-height: 1.75;
 }/*# sourceMappingURL=style.css.map */
