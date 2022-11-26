@@ -42,26 +42,96 @@
     }
 }
 
+//Section 3
+@mixin ad-video($ad-width) {
+    width: $ad-width;
+}
+
+@mixin music-slide($flex-d, $ad-width) {
+    .ad-bg {
+        display: none;
+    }
+
+    .ad-wrapper {
+        flex-direction: $flex-d;
+        justify-content: center !important;
+        align-items: center !important;
+
+        .ad-video {
+            @include ad-video($ad-width);
+        }
+
+        .ad-text-wrapper {
+            margin: 0;
+
+            .ad-title {
+                text-align: center !important;
+                font-size: 2rem !important;
+
+                .ad-image {
+                    height: 40px !important;
+                    width: auto;
+                }
+            }
+
+            .ad-text {
+                text-align: center !important;
+                font-size: 1.1rem !important;
+                margin-bottom: 30px !important;
+            }
+        }
+    }
+}
+
+@mixin section3($ad-width) {
+    #section3 {
+        #slide-3-1 {
+            @include music-slide(column-reverse, $ad-width);
+        }
+        #slide-3-2 {
+            @include music-slide(column, $ad-width);
+        }
+        #slide-3-3 {
+            @include music-slide(column-reverse, $ad-width);
+        }
+    }
+}
+
 //Fullpage wrapper
-@mixin fullpage-wrapper($welcome-title, $music-title) {
+@mixin fullpage-wrapper($welcome-title, $music-title, $ad-width) {
     #fullpage-wrapper {
         @include section1($welcome-title);
         @include section2($music-title);
+        @include section3($ad-width);
     }
 }
 
 //Body
-@mixin body($fs-welcome, $fs-music-title) {
-    @include fullpage-wrapper($fs-welcome, $fs-music-title);
+@mixin body($fs-welcome, $fs-music-title, $ad-width) {
+    @include fullpage-wrapper($fs-welcome, $fs-music-title, $ad-width);
 }
 
 //Media
-@media screen and (max-width:767px) {
+@media screen and (max-width:1600px) {
     body {
-        @include body(5rem, 1rem); //$fs-welcome, $fs-music-title
+        @include body(5rem, 1rem, 720px !important); //$fs-welcome, $fs-music-title, $ad-width
     }
 }
 
-@media screen and (max-width:1023px) {
-    
+@media screen and (max-width:1200px) {
+    body {
+        @include body(5rem, 1rem, 480px !important); //$fs-welcome, $fs-music-title, $ad-width
+    }
+}
+
+@media screen and (max-width:767px) {
+    body {
+        @include body(5rem, 1rem, 360px !important); //$fs-welcome, $fs-music-title, $ad-width
+    }
+}
+
+@media screen and (max-width:400px) {
+    body {
+        @include body(5rem, 1rem, 240px !important); //$fs-welcome, $fs-music-title, $ad-width
+    }
 }
