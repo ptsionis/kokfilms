@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&family=Poppins&display=swap");
 .preloader-finish {
   opacity: 0;
   pointer-events: none;
@@ -305,13 +305,6 @@ body #fullpage-wrapper #section2 #slide-2-3 #music-link3:hover > svg .music-path
   transition: all 0.75s ease;
   fill: #1e90ff;
 }
-body #fullpage-wrapper #section3 ad-wrapper, body #fullpage-wrapper #section3 #slide-3-3 .ad-wrapper, body #fullpage-wrapper #section3 #slide-3-2 .ad-wrapper, body #fullpage-wrapper #section3 #slide-3-1 .ad-wrapper {
-  height: 100vh;
-  width: 80vw;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-}
 body #fullpage-wrapper #section3 #slide-3-1 .ad-bg {
   position: absolute;
   top: 0;
@@ -320,6 +313,15 @@ body #fullpage-wrapper #section3 #slide-3-1 .ad-bg {
   z-index: -1;
   opacity: 0.15;
   transform: scaleX(-1);
+}
+body #fullpage-wrapper #section3 #slide-3-1 .ad-wrapper {
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 body #fullpage-wrapper #section3 #slide-3-1 .ad-wrapper #ad-video1 {
   height: -webkit-fit-content;
@@ -361,6 +363,15 @@ body #fullpage-wrapper #section3 #slide-3-2 .ad-bg {
   opacity: 0.15;
   transform: scaleX(1);
 }
+body #fullpage-wrapper #section3 #slide-3-2 .ad-wrapper {
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 body #fullpage-wrapper #section3 #slide-3-2 .ad-wrapper #ad-video2 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -401,6 +412,15 @@ body #fullpage-wrapper #section3 #slide-3-3 .ad-bg {
   opacity: 0.15;
   transform: scaleX(-1);
 }
+body #fullpage-wrapper #section3 #slide-3-3 .ad-wrapper {
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 body #fullpage-wrapper #section3 #slide-3-3 .ad-wrapper #ad-video3 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -431,4 +451,57 @@ body #fullpage-wrapper #section3 #slide-3-3 .ad-wrapper .ad-text-wrapper #ad-tex
   text-align: end;
   text-shadow: 2px 2px 4px #1a1a1a;
   line-height: 1.75;
+}
+body #fullpage-wrapper #section4 .yt-slide {
+  height: 100vh;
+}
+body #fullpage-wrapper #section4 .yt-slide #yt-bg1 {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  z-index: -1;
+}
+body #fullpage-wrapper #section4 .yt-slide #yt-bg2 {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+}
+body #fullpage-wrapper #section4 .yt-slide .yt-wrapper {
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-title {
+  width: 100%;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 3px 3px 4px #1a1a1a, 3px 3px 4px #1a1a1a;
+}
+body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link {
+  padding: 10px 30px;
+  color: #1a1a1a;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a;
+  border-radius: 20px;
+  background-color: #ff8f2e;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+}
+body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link:hover {
+  color: #ff8f2e;
+  background-color: #1a1a1a;
 }/*# sourceMappingURL=style.css.map */

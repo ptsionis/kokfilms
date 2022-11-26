@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&family=Poppins&display=swap');
 
 $clrPrimary: #1a1a1a;
 $clrSecondary: #fafafa;
 $clrAlternative: #ff8f2e;
 
 $ffHeader: 'Bad Script', cursive;
+$ffYt: 'Poppins', sans-serif;
 $ffText: 'Chakra Petch', sans-serif;
 
 $numOfMusicPages: 3;
 $pctOfMusicPages: calc(100% / $numOfMusicPages);
 $numOfAdPages: 3;
 $pctOfAdPages: calc(100% / $numOfAdPages);
+$numOfYtPages: 2;
+$pctOfYtPages: calc(100% / $numOfYtPages);
 
 //Used to fade out preloader
 .preloader-finish {
@@ -90,6 +93,16 @@ body {
     //Main content
     #fullpage-wrapper {
         display: none;
+
+        @mixin section-wrapper($flex-d) {
+            height: 100vh;
+            width: 80vw;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: $flex-d;
+            justify-content: center;
+            align-items: center;
+        }
 
         //Section1 changes
         #section1 {
@@ -279,14 +292,6 @@ body {
                 transform: scaleX($scale-value);
             }
 
-            ad-wrapper {
-                height: 100vh;
-                width: 80vw;
-                margin: 0 auto;
-                display: flex;
-                align-items: center;
-            }
-
             @mixin ad-image($m-left, $m-right) {
                 width: auto;
                 height: 65px;
@@ -335,7 +340,7 @@ body {
                 }
 
                 .ad-wrapper {
-                    @extend ad-wrapper;
+                    @include section-wrapper(row);
     
                     #ad-video1 {
                         height: fit-content;
@@ -367,7 +372,7 @@ body {
                 }
 
                 .ad-wrapper {
-                    @extend ad-wrapper;
+                    @include section-wrapper(row);
     
                     #ad-video2 {
                         height: fit-content;
@@ -399,7 +404,7 @@ body {
                 }
 
                 .ad-wrapper {
-                    @extend ad-wrapper;
+                    @include section-wrapper(row);
     
                     #ad-video3 {
                         height: fit-content;
@@ -419,6 +424,74 @@ body {
     
                         #ad-text3 {
                             @include ad-text(end);
+                        }
+                    }
+                }
+            }
+        }
+
+        //Section 4
+        #section4 {
+            @mixin yt-bg($left-value) {
+                height: 100vh;
+                width: 100vw;
+                position: absolute;
+                top: 0;
+                left: $left-value;
+                z-index: -1;
+            }
+
+            //Section 4 Slide 1
+            .yt-slide {
+                height: 100vh;
+                #yt-bg1 {
+                    @include yt-bg($pctOfYtPages*0);
+                }
+
+                #yt-bg2 {
+                    @include yt-bg($pctOfYtPages*1);
+                }
+
+                .yt-wrapper {
+                    @include section-wrapper(column);
+    
+                    .yt-title {
+                        width: 100%;
+                        color: $clrSecondary;
+                        font: {
+                            family: $ffYt;
+                            size: 2.5rem;
+                        }
+                        text: {
+                            align: center;
+                            shadow: 3px 3px 4px $clrPrimary, 3px 3px 4px $clrPrimary;
+                        }
+                    }
+
+                    .yt-link {
+                        padding: 10px 30px;
+                        color: $clrPrimary;
+                        margin-top: 20px;
+                        transition: all .3s ease;
+                        box-shadow: 1px 1px 4px $clrPrimary, 1px 1px 4px $clrPrimary, 1px 1px 4px $clrPrimary, 1px 1px 4px $clrPrimary, 1px 1px 4px $clrPrimary;
+                        border: {
+                            radius: 20px;
+                        }
+                        background: {
+                            color: $clrAlternative;
+                        }
+                        text: {
+                            decoration: none;
+                            align: center;
+                        }
+                        font: {
+                            size: 1.25rem;
+                            family: $ffYt;
+                        }
+
+                        &:hover {
+                            color: $clrAlternative;
+                            background-color: $clrPrimary;
                         }
                     }
                 }
