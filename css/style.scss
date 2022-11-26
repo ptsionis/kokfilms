@@ -9,6 +9,8 @@ $ffText: 'Chakra Petch', sans-serif;
 
 $numOfMusicPages: 3;
 $pctOfMusicPages: calc(100% / $numOfMusicPages);
+$numOfAdPages: 3;
+$pctOfAdPages: calc(100% / $numOfAdPages);
 
 //Used to fade out preloader
 .preloader-finish {
@@ -329,7 +331,7 @@ body {
             //Section 3 slide 1
             #slide-3-1 {
                 .ad-bg {
-                    @include ad-bg(0, -1);
+                    @include ad-bg($pctOfAdPages*0, -1);
                 }
 
                 .ad-wrapper {
@@ -361,7 +363,7 @@ body {
             //Section 3 slide 2
             #slide-3-2 {
                 .ad-bg {
-                    @include ad-bg(50%, 1);
+                    @include ad-bg($pctOfAdPages*1, 1);
                 }
 
                 .ad-wrapper {
@@ -385,6 +387,38 @@ body {
     
                         #ad-text2 {
                             @include ad-text(start);
+                        }
+                    }
+                }
+            }
+
+            //Section 3 slide 3
+            #slide-3-3 {
+                .ad-bg {
+                    @include ad-bg($pctOfAdPages*2, -1);
+                }
+
+                .ad-wrapper {
+                    @extend ad-wrapper;
+    
+                    #ad-video3 {
+                        height: fit-content;
+                        border-radius: 20px;
+                    }
+    
+                    .ad-text-wrapper {
+                        @include ad-text-wrapper(0, 0, 0, 80px);
+    
+                        #ad-title3 {
+                            @include ad-title(#966018, end);
+    
+                            #ad-image3 {
+                                @include ad-image(0, 20px);
+                            }
+                        }
+    
+                        #ad-text3 {
+                            @include ad-text(end);
                         }
                     }
                 }
