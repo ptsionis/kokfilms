@@ -19,6 +19,7 @@ window.addEventListener('load', () => {
 
 let musicVideoOrder = 0;
 
+//If user presses left or right arrow on keyboard, change slide accordingly
 document.addEventListener("keydown", (e) => {
     if (e.keyCode == 37) {
         prevMusicSlide();

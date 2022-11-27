@@ -282,6 +282,7 @@ body {
 
         //Section 3
         #section3 {
+            //Curved lines background image
             @mixin ad-bg($left-value, $scale-value) {
                 position: absolute;
                 top: 0;
@@ -292,6 +293,7 @@ body {
                 transform: scaleX($scale-value);
             }
 
+            // Neon images next to header
             @mixin ad-image($m-left, $m-right) {
                 width: auto;
                 height: 65px;
@@ -497,6 +499,7 @@ body {
                 }
             }
 
+            //Section 4 slide 3
             #slide-4-3 {
                 background: {
                     image: url('../images/yt-images/yt-bg-final.jpg');
