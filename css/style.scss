@@ -12,7 +12,7 @@ $numOfMusicPages: 3;
 $pctOfMusicPages: calc(100% / $numOfMusicPages);
 $numOfAdPages: 3;
 $pctOfAdPages: calc(100% / $numOfAdPages);
-$numOfYtPages: 2;
+$numOfYtPages: 3;
 $pctOfYtPages: calc(100% / $numOfYtPages);
 
 //Used to fade out preloader
@@ -441,7 +441,7 @@ body {
                 z-index: -1;
             }
 
-            //Section 4 Slide 1
+            //Section 4 Slide 1 & 2
             .yt-slide {
                 height: 100vh;
                 #yt-bg1 {
@@ -494,6 +494,14 @@ body {
                             background-color: $clrPrimary;
                         }
                     }
+                }
+            }
+
+            #slide-4-3 {
+                background: {
+                    image: url('../images/yt-images/yt-bg-final.jpg');
+                    size: cover;
+                    position: center;
                 }
             }
         }

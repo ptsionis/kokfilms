@@ -468,7 +468,7 @@ body #fullpage-wrapper #section4 .yt-slide #yt-bg2 {
   width: 100vw;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 33.3333333333%;
   z-index: -1;
 }
 body #fullpage-wrapper #section4 .yt-slide .yt-wrapper {
@@ -504,4 +504,9 @@ body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link {
 body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link:hover {
   color: #ff8f2e;
   background-color: #1a1a1a;
+}
+body #fullpage-wrapper #section4 #slide-4-3 {
+  background-image: url("../images/yt-images/yt-bg-final.jpg");
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=style.css.map */
