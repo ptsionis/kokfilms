@@ -97,41 +97,66 @@
     }
 }
 
+@mixin section4($content-url1, $content-url2) {
+    #section4 {
+        .yt-slide {
+            #yt-bg1 {
+                content: url($content-url1);
+            }
+    
+            #yt-bg2 {
+                content: url($content-url2);
+            }
+
+            .yt-wrapper {
+                .yt-title {
+                    font-size: 1.25rem;
+                }
+
+                .yt-link {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
 //Fullpage wrapper
-@mixin fullpage-wrapper($welcome-title, $music-title, $ad-width) {
+@mixin fullpage-wrapper($welcome-title, $music-title, $ad-width, $content-url1, $content-url2) {
     #fullpage-wrapper {
         @include section1($welcome-title);
         @include section2($music-title);
         @include section3($ad-width);
+        @include section4($content-url1, $content-url2);
     }
 }
 
 //Body
-@mixin body($fs-welcome, $fs-music-title, $ad-width) {
-    @include fullpage-wrapper($fs-welcome, $fs-music-title, $ad-width);
+@mixin body($fs-welcome, $fs-music-title, $ad-width, $content-url1, $content-url2) {
+    @include fullpage-wrapper($fs-welcome, $fs-music-title, $ad-width, $content-url1, $content-url2);
 }
 
 //Media
 @media screen and (max-width:1600px) {
     body {
-        @include body(5rem, 1rem, 720px !important); //$fs-welcome, $fs-music-title, $ad-width
+        @include body(5rem, 1rem, 720px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg'); //$fs-welcome, $fs-music-title, $ad-width
     }
 }
 
 @media screen and (max-width:1200px) {
     body {
-        @include body(5rem, 1rem, 480px !important); //$fs-welcome, $fs-music-title, $ad-width
+        @include body(5rem, 1rem, 480px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg'); //$fs-welcome, $fs-music-title, $ad-width
     }
 }
 
 @media screen and (max-width:767px) {
     body {
-        @include body(5rem, 1rem, 360px !important); //$fs-welcome, $fs-music-title, $ad-width
+        @include body(5rem, 1rem, 360px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg'); //$fs-welcome, $fs-music-title, $ad-width
     }
 }
 
 @media screen and (max-width:400px) {
     body {
-        @include body(5rem, 1rem, 240px !important); //$fs-welcome, $fs-music-title, $ad-width
+        @include body(5rem, 1rem, 240px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg'); //$fs-welcome, $fs-music-title, $ad-width
     }
 }
