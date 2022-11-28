@@ -230,10 +230,8 @@ body {
                 top: 57.5%;
                 left: $left-value;
                 transform: translate(-50%, -50%);
-                transition: all .5s ease;
-                &:hover {
-                    scale: 1.15;
-                }
+                transition: all .3s ease;
+
                 &:hover > svg .music-path {
                     transition: all .75s ease;
                     @include svg-path($clr-value);
@@ -505,6 +503,104 @@ body {
                     image: url('../images/yt-images/yt-bg-final.jpg');
                     size: cover;
                     position: center;
+                }
+            }
+        }
+
+        //Section 5
+        #section5 {
+            .photos-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100vw;
+                object-fit: cover;
+            }
+        }
+
+        //Section 6
+        #section6 {
+            .contact-wrapper {
+                @include section-wrapper(column);
+                height: 80vh;
+
+                #contact-image {
+                    border: {
+                        radius: 100%;
+                        style: solid;
+                        color: $clrAlternative;
+                        width: 5px;
+                    }
+                }
+
+                #contact-title {
+                    margin: 35px 0;
+                    color: $clrAlternative;
+                    font: {
+                        family: $ffHeader;
+                        size: 2rem;
+                    }
+                    text: {
+                        shadow: 0 0 1rem $clrAlternative, 0 0 1rem $clrAlternative, 2px 2px 4px #000000, 2px 2px 4px #000000, 2px 2px 4px #000000;
+                    }
+                }
+
+                #contact-social-wrapper {
+                    display: flex;
+
+                    .social-svg-wrapper {
+                        margin: 0 10px;
+                        cursor: pointer;
+
+                        &:hover > svg path {
+                            transition: all .3s ease;
+                            fill: $clrAlternative !important;
+                        }
+                    }
+                }
+            }
+
+            .footer {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100vw;
+                height: auto;
+                padding: 22.5px 0;
+                background-color: $clrAlternative;
+
+                @mixin footer-p($left-value) {
+                    position: absolute;
+                    top: 50%;
+                    left: $left-value;
+                    transform: translate(-50%, -50%);
+                    color: $clrPrimary;
+                    font: {
+                        family: $ffText;
+                    }
+                }
+
+                #footer-credits {
+                    @include footer-p(10%);
+
+                    a {
+                        text-decoration: none;
+                        color: $clrPrimary;
+
+                        &:hover {
+                            color: $clrSecondary;
+                            transition: all .3s ease;
+                        }
+                    }
+                }
+
+                #footer-copy {
+                    @include footer-p(50%);
+                }
+
+                #footer-address {
+                    @include footer-p(90%);
                 }
             }
         }

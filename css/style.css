@@ -220,10 +220,7 @@ body #fullpage-wrapper #section2 #slide-2-1 #music-link1 {
   top: 57.5%;
   left: 16.66%;
   transform: translate(-50%, -50%);
-  transition: all 0.5s ease;
-}
-body #fullpage-wrapper #section2 #slide-2-1 #music-link1:hover {
-  scale: 1.15;
+  transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section2 #slide-2-1 #music-link1:hover > svg .music-path {
   transition: all 0.75s ease;
@@ -258,10 +255,7 @@ body #fullpage-wrapper #section2 #slide-2-2 #music-link2 {
   top: 57.5%;
   left: 49.98%;
   transform: translate(-50%, -50%);
-  transition: all 0.5s ease;
-}
-body #fullpage-wrapper #section2 #slide-2-2 #music-link2:hover {
-  scale: 1.15;
+  transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section2 #slide-2-2 #music-link2:hover > svg .music-path {
   transition: all 0.75s ease;
@@ -296,10 +290,7 @@ body #fullpage-wrapper #section2 #slide-2-3 #music-link3 {
   top: 57.5%;
   left: 83.3%;
   transform: translate(-50%, -50%);
-  transition: all 0.5s ease;
-}
-body #fullpage-wrapper #section2 #slide-2-3 #music-link3:hover {
-  scale: 1.15;
+  transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section2 #slide-2-3 #music-link3:hover > svg .music-path {
   transition: all 0.75s ease;
@@ -509,4 +500,88 @@ body #fullpage-wrapper #section4 #slide-4-3 {
   background-image: url("../images/yt-images/yt-bg-final.jpg");
   background-size: cover;
   background-position: center;
+}
+body #fullpage-wrapper #section5 .photos-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #fullpage-wrapper #section6 .contact-wrapper {
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+body #fullpage-wrapper #section6 .contact-wrapper #contact-image {
+  border-radius: 100%;
+  border-style: solid;
+  border-color: #ff8f2e;
+  border-width: 5px;
+}
+body #fullpage-wrapper #section6 .contact-wrapper #contact-title {
+  margin: 35px 0;
+  color: #ff8f2e;
+  font-family: "Bad Script", cursive;
+  font-size: 2rem;
+  text-shadow: 0 0 1rem #ff8f2e, 0 0 1rem #ff8f2e, 2px 2px 4px #000000, 2px 2px 4px #000000, 2px 2px 4px #000000;
+}
+body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper {
+  display: flex;
+}
+body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper .social-svg-wrapper {
+  margin: 0 10px;
+  cursor: pointer;
+}
+body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper .social-svg-wrapper:hover > svg path {
+  transition: all 0.3s ease;
+  fill: #ff8f2e !important;
+}
+body #fullpage-wrapper #section6 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  padding: 22.5px 0;
+  background-color: #ff8f2e;
+}
+body #fullpage-wrapper #section6 .footer #footer-credits {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  color: #1a1a1a;
+  font-family: "Chakra Petch", sans-serif;
+}
+body #fullpage-wrapper #section6 .footer #footer-credits a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+body #fullpage-wrapper #section6 .footer #footer-credits a:hover {
+  color: #fafafa;
+  transition: all 0.3s ease;
+}
+body #fullpage-wrapper #section6 .footer #footer-copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #1a1a1a;
+  font-family: "Chakra Petch", sans-serif;
+}
+body #fullpage-wrapper #section6 .footer #footer-address {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  color: #1a1a1a;
+  font-family: "Chakra Petch", sans-serif;
 }/*# sourceMappingURL=style.css.map */

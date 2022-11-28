@@ -122,42 +122,83 @@
     }
 }
 
+//Section 6
+@mixin footer-p {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: translate(0, 0);
+    margin: 2.5px 0;
+}
+
+@mixin section6($img-size, $title-size) {
+    #section6 {
+        .contact-wrapper {
+            #contact-image {
+                height: $img-size;
+                width: auto;
+            }
+
+            #contact-title {
+                font-size: $title-size;
+            }
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+    
+            #footer-credits, #footer-copy {
+                @include footer-p();
+            }
+
+            #footer-address {
+                display: none;
+            }
+        }
+    }
+}
+
 //Fullpage wrapper
-@mixin fullpage-wrapper($welcome-title, $music-title, $ad-width, $content-url1, $content-url2) {
+@mixin fullpage-wrapper($welcome-title, $music-title, $ad-width, $content-url1, $content-url2, $img-size, $title-size) {
     #fullpage-wrapper {
         @include section1($welcome-title);
         @include section2($music-title);
         @include section3($ad-width);
         @include section4($content-url1, $content-url2);
+        @include section6($img-size, $title-size);
     }
 }
 
 //Body
-@mixin body($fs-welcome, $fs-music-title, $ad-width, $content-url1, $content-url2) {
-    @include fullpage-wrapper($fs-welcome, $fs-music-title, $ad-width, $content-url1, $content-url2);
+@mixin body($fs-welcome, $fs-music-title, $ad-width, $content-url1, $content-url2, $img-size, $title-size) {
+    @include fullpage-wrapper($fs-welcome, $fs-music-title, $ad-width, $content-url1, $content-url2, $img-size, $title-size);
 }
 
 //Media
 @media screen and (max-width:1600px) {
     body {
-        @include body(5rem, 1rem, 720px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg'); //$fs-welcome, $fs-music-title, $ad-width
+        @include body(5rem, 1rem, 720px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg', 125px, 2rem);
     }
 }
 
 @media screen and (max-width:1200px) {
     body {
-        @include body(5rem, 1rem, 480px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg'); //$fs-welcome, $fs-music-title, $ad-width
+        @include body(5rem, 1rem, 480px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg', 75px, 1rem);
     }
 }
 
 @media screen and (max-width:767px) {
     body {
-        @include body(5rem, 1rem, 360px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg'); //$fs-welcome, $fs-music-title, $ad-width
+        @include body(5rem, 1rem, 360px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg', 75px, 1rem);
     }
 }
 
 @media screen and (max-width:400px) {
     body {
-        @include body(5rem, 1rem, 240px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg'); //$fs-welcome, $fs-music-title, $ad-width
+        @include body(5rem, 1rem, 240px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg', 75px, 1rem);
     }
 }
