@@ -178,7 +178,7 @@ body {
             }
 
             //A mixin of music titles
-            @mixin music-title($left-value, $color-value) {
+            @mixin music-title($left-value, $color-value, $flicker-value) {
                 position: absolute;
                 width: fit-content;
                 top: 50%;
@@ -187,6 +187,7 @@ body {
                 transform: translate(-50%, -50%);
                 text: {
                     align: center;
+                    shadow: 0 0 1rem $flicker-value, 0 0 1rem $flicker-value, 2px 2px 4px #000000, 2px 2px 4px #000000, 2px 2px 4px #000000;
                 }
                 font: {
                     size: 2rem;
@@ -219,7 +220,7 @@ body {
                     @include music-video(calc($pctOfMusicPages*0));
                 }
                 #music-title1 {
-                    @include music-title(calc(16.66%*1), #f229d7);
+                    @include music-title(calc(16.66%*1), #f229d7, #de1dc4);
                 }
                 #music-link1 {
                     @include music-link(calc(16.66%*1), #f229d7);
@@ -232,7 +233,7 @@ body {
                     @include music-video(calc($pctOfMusicPages*1));
                 }
                 #music-title2 {
-                    @include music-title(calc(16.66%*3), #ff2626);
+                    @include music-title(calc(16.66%*3), #ff2626, #aa0707);
                 }
                 #music-link2 {
                     @include music-link(calc(16.66%*3), #ff2626);
@@ -245,7 +246,7 @@ body {
                     @include music-video(calc($pctOfMusicPages*2));
                 }
                 #music-title3 {
-                    @include music-title(calc(16.66%*5), #1e90ff);
+                    @include music-title(calc(16.66%*5), #1e90ff, #1478cd);
                 }
                 #music-link3 {
                     @include music-link(calc(16.66%*5), #1e90ff);

@@ -162,6 +162,7 @@ body #fullpage-wrapper #section2 #slide-2-1 #music-title1 {
   color: #f229d7;
   transform: translate(-50%, -50%);
   text-align: center;
+  text-shadow: 0 0 1rem #de1dc4, 0 0 1rem #de1dc4, 2px 2px 4px #000000, 2px 2px 4px #000000, 2px 2px 4px #000000;
   font-size: 2rem;
   font-family: "Bad Script", cursive;
 }
@@ -195,6 +196,7 @@ body #fullpage-wrapper #section2 #slide-2-2 #music-title2 {
   color: #ff2626;
   transform: translate(-50%, -50%);
   text-align: center;
+  text-shadow: 0 0 1rem #aa0707, 0 0 1rem #aa0707, 2px 2px 4px #000000, 2px 2px 4px #000000, 2px 2px 4px #000000;
   font-size: 2rem;
   font-family: "Bad Script", cursive;
 }
@@ -228,6 +230,7 @@ body #fullpage-wrapper #section2 #slide-2-3 #music-title3 {
   color: #1e90ff;
   transform: translate(-50%, -50%);
   text-align: center;
+  text-shadow: 0 0 1rem #1478cd, 0 0 1rem #1478cd, 2px 2px 4px #000000, 2px 2px 4px #000000, 2px 2px 4px #000000;
   font-size: 2rem;
   font-family: "Bad Script", cursive;
 }
