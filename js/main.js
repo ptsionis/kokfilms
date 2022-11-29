@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
     }, 500);
 
     if (!musicVideoList.length==0) {
+        musicVideoList[0].load();
         musicVideoList[0].play();
     }
 });

@@ -143,54 +143,6 @@ body #fullpage-wrapper #section1 #welcome-down-indicator:before {
 body #fullpage-wrapper #section1 #welcome-down-indicator:hover {
   border-color: #ff8f2e;
 }
-@-webkit-keyframes flicker1 {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: -0.2rem -0.2rem 1rem #de1dc4, 0.2rem 0.2rem 1rem #de1dc4, 0 0 2rem #de1dc4, 0 0 4rem #de1dc4, 0 0 6rem #de1dc4, 0 0 8rem #de1dc4, 0 0 200rem #de1dc4;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
-  }
-}
-@keyframes flicker1 {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: -0.2rem -0.2rem 1rem #de1dc4, 0.2rem 0.2rem 1rem #de1dc4, 0 0 2rem #de1dc4, 0 0 4rem #de1dc4, 0 0 6rem #de1dc4, 0 0 8rem #de1dc4, 0 0 200rem #de1dc4;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
-  }
-}
-@-webkit-keyframes flicker2 {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: -0.2rem -0.2rem 1rem #aa0707, 0.2rem 0.2rem 1rem #aa0707, 0 0 2rem #aa0707, 0 0 4rem #aa0707, 0 0 6rem #aa0707, 0 0 8rem #aa0707, 0 0 200rem #aa0707;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
-  }
-}
-@keyframes flicker2 {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: -0.2rem -0.2rem 1rem #aa0707, 0.2rem 0.2rem 1rem #aa0707, 0 0 2rem #aa0707, 0 0 4rem #aa0707, 0 0 6rem #aa0707, 0 0 8rem #aa0707, 0 0 200rem #aa0707;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
-  }
-}
-@-webkit-keyframes flicker3 {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: -0.2rem -0.2rem 1rem #1478cd, 0.2rem 0.2rem 1rem #1478cd, 0 0 2rem #1478cd, 0 0 4rem #1478cd, 0 0 6rem #1478cd, 0 0 8rem #1478cd, 0 0 200rem #1478cd;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
-  }
-}
-@keyframes flicker3 {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: -0.2rem -0.2rem 1rem #1478cd, 0.2rem 0.2rem 1rem #1478cd, 0 0 2rem #1478cd, 0 0 4rem #1478cd, 0 0 6rem #1478cd, 0 0 8rem #1478cd, 0 0 200rem #1478cd;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
-  }
-}
 body #fullpage-wrapper #section2 #slide-2-1 #music-video1 {
   position: absolute;
   top: 0;
@@ -209,8 +161,6 @@ body #fullpage-wrapper #section2 #slide-2-1 #music-title1 {
   left: 16.66%;
   color: #f229d7;
   transform: translate(-50%, -50%);
-  -webkit-animation: flicker1 1.5s infinite alternate;
-          animation: flicker1 1.5s infinite alternate;
   text-align: center;
   font-size: 2rem;
   font-family: "Bad Script", cursive;
@@ -244,8 +194,6 @@ body #fullpage-wrapper #section2 #slide-2-2 #music-title2 {
   left: 49.98%;
   color: #ff2626;
   transform: translate(-50%, -50%);
-  -webkit-animation: flicker2 1.5s infinite alternate;
-          animation: flicker2 1.5s infinite alternate;
   text-align: center;
   font-size: 2rem;
   font-family: "Bad Script", cursive;
@@ -279,8 +227,6 @@ body #fullpage-wrapper #section2 #slide-2-3 #music-title3 {
   left: 83.3%;
   color: #1e90ff;
   transform: translate(-50%, -50%);
-  -webkit-animation: flicker3 1.5s infinite alternate;
-          animation: flicker3 1.5s infinite alternate;
   text-align: center;
   font-size: 2rem;
   font-family: "Bad Script", cursive;
