@@ -43,38 +43,38 @@
 }
 
 //Section 3
-@mixin ad-video($ad-width) {
-    width: $ad-width;
+@mixin corpo-video($corpo-width) {
+    width: $corpo-width;
 }
 
-@mixin music-slide($flex-d, $ad-width) {
+@mixin music-slide($flex-d, $corpo-width) {
     .ad-bg {
         display: none;
     }
 
-    .ad-wrapper {
+    .corpo-wrapper {
         flex-direction: $flex-d;
         justify-content: center !important;
         align-items: center !important;
 
-        .ad-video {
-            @include ad-video($ad-width);
+        .corpo-video {
+            @include corpo-video($corpo-width);
         }
 
-        .ad-text-wrapper {
+        .corpo-text-wrapper {
             margin: 0;
 
-            .ad-title {
+            .corpo-title {
                 text-align: center !important;
                 font-size: 2rem !important;
 
-                .ad-image {
+                .corpo-image {
                     height: 40px !important;
                     width: auto;
                 }
             }
 
-            .ad-text {
+            .corpo-text {
                 text-align: center !important;
                 font-size: 1.1rem !important;
                 margin-bottom: 30px !important;
@@ -83,16 +83,16 @@
     }
 }
 
-@mixin section3($ad-width) {
+@mixin section3($corpo-width) {
     #section3 {
         #slide-3-1 {
-            @include music-slide(column-reverse, $ad-width);
+            @include music-slide(column-reverse, $corpo-width);
         }
         #slide-3-2 {
-            @include music-slide(column, $ad-width);
+            @include music-slide(column, $corpo-width);
         }
         #slide-3-3 {
-            @include music-slide(column-reverse, $ad-width);
+            @include music-slide(column-reverse, $corpo-width);
         }
     }
 }
@@ -163,19 +163,19 @@
 }
 
 //Fullpage wrapper
-@mixin fullpage-wrapper($welcome-title, $music-title, $ad-width, $content-url1, $content-url2, $img-size, $title-size) {
+@mixin fullpage-wrapper($welcome-title, $music-title, $corpo-width, $content-url1, $content-url2, $img-size, $title-size) {
     #fullpage-wrapper {
         @include section1($welcome-title);
         @include section2($music-title);
-        @include section3($ad-width);
+        @include section3($corpo-width);
         @include section4($content-url1, $content-url2);
         @include section6($img-size, $title-size);
     }
 }
 
 //Body
-@mixin body($fs-welcome, $fs-music-title, $ad-width, $content-url1, $content-url2, $img-size, $title-size) {
-    @include fullpage-wrapper($fs-welcome, $fs-music-title, $ad-width, $content-url1, $content-url2, $img-size, $title-size);
+@mixin body($fs-welcome, $fs-music-title, $corpo-width, $content-url1, $content-url2, $img-size, $title-size) {
+    @include fullpage-wrapper($fs-welcome, $fs-music-title, $corpo-width, $content-url1, $content-url2, $img-size, $title-size);
 }
 
 //Media

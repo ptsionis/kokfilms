@@ -10,8 +10,8 @@ $ffText: 'Chakra Petch', sans-serif;
 
 $numOfMusicPages: 3;
 $pctOfMusicPages: calc(100% / $numOfMusicPages);
-$numOfAdPages: 3;
-$pctOfAdPages: calc(100% / $numOfAdPages);
+$numOfCorpoPages: 3;
+$pctOfCorpoPages: calc(100% / $numOfCorpoPages);
 $numOfYtPages: 3;
 $pctOfYtPages: calc(100% / $numOfYtPages);
 
@@ -281,7 +281,7 @@ body {
         //Section 3
         #section3 {
             //Curved lines background image
-            @mixin ad-bg($left-value, $scale-value) {
+            @mixin corpo-bg($left-value, $scale-value) {
                 position: absolute;
                 top: 0;
                 left: $left-value;
@@ -292,7 +292,7 @@ body {
             }
 
             // Neon images next to header
-            @mixin ad-image($m-left, $m-right) {
+            @mixin corpo-image($m-left, $m-right) {
                 width: auto;
                 height: 65px;
                 margin: {
@@ -301,11 +301,11 @@ body {
                 }
             }
 
-            @mixin ad-text-wrapper($m-top, $m-right, $m-bottom, $m-left) {
+            @mixin corpo-text-wrapper($m-top, $m-right, $m-bottom, $m-left) {
                 margin: $m-top $m-right $m-bottom $m-left;
             }
 
-            @mixin ad-title($clr-value, $align-value) {
+            @mixin corpo-title($clr-value, $align-value) {
                 color: $clr-value;
                 margin: 0 0 20px 0;
                 font: {
@@ -318,7 +318,7 @@ body {
                 }
             }
 
-            @mixin ad-text($align-value) {
+            @mixin corpo-text($align-value) {
                 color: $clrSecondary;
                 font: {
                     family: $ffText;
@@ -335,31 +335,31 @@ body {
 
             //Section 3 slide 1
             #slide-3-1 {
-                .ad-bg {
-                    @include ad-bg($pctOfAdPages*0, -1);
+                .corpo-bg {
+                    @include corpo-bg($pctOfCorpoPages*0, -1);
                 }
 
-                .ad-wrapper {
+                .corpo-wrapper {
                     @include section-wrapper(row);
     
-                    #ad-video1 {
+                    #corpo-video1 {
                         height: fit-content;
                         border-radius: 20px;
                     }
     
-                    .ad-text-wrapper {
-                        @include ad-text-wrapper(0, 0, 0, 80px);
+                    .corpo-text-wrapper {
+                        @include corpo-text-wrapper(0, 0, 0, 80px);
     
-                        #ad-title1 {
-                            @include ad-title(#f229d7, end);
+                        #corpo-title1 {
+                            @include corpo-title(#f229d7, end);
     
-                            #ad-image1 {
-                                @include ad-image(0, 20px);
+                            #corpo-image1 {
+                                @include corpo-image(0, 20px);
                             }
                         }
     
-                        #ad-text1 {
-                            @include ad-text(end);
+                        #corpo-text1 {
+                            @include corpo-text(end);
                         }
                     }
                 }
@@ -367,31 +367,31 @@ body {
 
             //Section 3 slide 2
             #slide-3-2 {
-                .ad-bg {
-                    @include ad-bg($pctOfAdPages*1, 1);
+                .corpo-bg {
+                    @include corpo-bg($pctOfCorpoPages*1, 1);
                 }
 
-                .ad-wrapper {
+                .corpo-wrapper {
                     @include section-wrapper(row);
     
-                    #ad-video2 {
+                    #corpo-video2 {
                         height: fit-content;
                         border-radius: 20px;
                     }
     
-                    .ad-text-wrapper {
-                        @include ad-text-wrapper(0, 80px, 0, 0);
+                    .corpo-text-wrapper {
+                        @include corpo-text-wrapper(0, 80px, 0, 0);
     
-                        #ad-title2 {
-                            @include ad-title(#ff8f2e, start);
+                        #corpo-title2 {
+                            @include corpo-title(#ff8f2e, start);
     
-                            #ad-image2 {
-                                @include ad-image(20px, 0);
+                            #corpo-image2 {
+                                @include corpo-image(20px, 0);
                             }
                         }
     
-                        #ad-text2 {
-                            @include ad-text(start);
+                        #corpo-text2 {
+                            @include corpo-text(start);
                         }
                     }
                 }
@@ -399,31 +399,31 @@ body {
 
             //Section 3 slide 3
             #slide-3-3 {
-                .ad-bg {
-                    @include ad-bg($pctOfAdPages*2, -1);
+                .corpo-bg {
+                    @include corpo-bg($pctOfCorpoPages*2, -1);
                 }
 
-                .ad-wrapper {
+                .corpo-wrapper {
                     @include section-wrapper(row);
     
-                    #ad-video3 {
+                    #corpo-video3 {
                         height: fit-content;
                         border-radius: 20px;
                     }
     
-                    .ad-text-wrapper {
-                        @include ad-text-wrapper(0, 0, 0, 80px);
+                    .corpo-text-wrapper {
+                        @include corpo-text-wrapper(0, 0, 0, 80px);
     
-                        #ad-title3 {
-                            @include ad-title(#966018, end);
+                        #corpo-title3 {
+                            @include corpo-title(#966018, end);
     
-                            #ad-image3 {
-                                @include ad-image(0, 20px);
+                            #corpo-image3 {
+                                @include corpo-image(0, 20px);
                             }
                         }
     
-                        #ad-text3 {
-                            @include ad-text(end);
+                        #corpo-text3 {
+                            @include corpo-text(end);
                         }
                     }
                 }
