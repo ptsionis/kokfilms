@@ -696,4 +696,9 @@
   body #fullpage-wrapper #section3 .corpo-wrapper .corpo-text-wrapper .corpo-text {
     display: none;
   }
+}
+@media screen and (orientation: portrait) {
+  body #fullpage-wrapper #section5 .photos-image {
+    content: url("../images/photos/photography-portrait.jpg");
+  }
 }/*# sourceMappingURL=media.css.map */

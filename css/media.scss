@@ -299,3 +299,16 @@ $content-url2, $img-size, $title-size, $contact-width, $contact-height) {
         }
     }
 }
+
+//Media for Photography section
+@media screen and (orientation: portrait) {
+    body {
+        #fullpage-wrapper {
+            #section5 {
+                .photos-image {
+                    content: url('../images/photos/photography-portrait.jpg');
+                }
+            }
+        }
+    }
+}
