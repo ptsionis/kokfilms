@@ -73,11 +73,9 @@
 }
 
 @mixin corpo-slide($flex-d, $corpo-width) {
-    .ad-bg {
-        display: none;
-    }
-
     .corpo-wrapper {
+        height: 90vh;
+        margin: auto;
         flex-direction: $flex-d;
         justify-content: center !important;
         align-items: center !important;
@@ -101,7 +99,7 @@
 
             .corpo-text {
                 text-align: center !important;
-                font-size: 1.1rem !important;
+                font-size: 1rem !important;
                 margin-bottom: 30px !important;
             }
         }
@@ -186,11 +184,11 @@
                 }
 
                 #social-svg-wrapper2 {
-                    @include social-svg-wrapper($contact-width, $contact-height);
+                    @include social-svg-wrapper(calc($contact-width / 1.098), calc($contact-height / 1.098));
                 }
 
                 #social-svg-wrapper3 {
-                    @include social-svg-wrapper($contact-width, $contact-height);
+                    @include social-svg-wrapper(calc($contact-width / 1.037), calc($contact-height / 1.037));
                 }
             }
         }
