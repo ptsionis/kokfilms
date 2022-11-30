@@ -1,4 +1,14 @@
 @media screen and (max-width: 1600px) {
+  body .fp-arrow.fp-prev, body .fp-arrow.fp-next {
+    display: block;
+  }
+  body #nav-wrapper {
+    display: block;
+    padding: 15px 0;
+  }
+  body #nav-wrapper nav #nav-ul .nav-li .nav-a {
+    font-size: 1rem;
+  }
   body #fullpage-wrapper #section1 #welcome-title {
     font-size: 5rem;
   }
@@ -161,6 +171,16 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  body .fp-arrow.fp-prev, body .fp-arrow.fp-next {
+    display: block;
+  }
+  body #nav-wrapper {
+    display: block;
+    padding: 15px 0;
+  }
+  body #nav-wrapper nav #nav-ul .nav-li .nav-a {
+    font-size: 0.75rem;
+  }
   body #fullpage-wrapper #section1 #welcome-title {
     font-size: 5rem;
   }
@@ -323,6 +343,16 @@
   }
 }
 @media screen and (max-width: 767px) {
+  body .fp-arrow.fp-prev, body .fp-arrow.fp-next {
+    display: none;
+  }
+  body #nav-wrapper {
+    display: none;
+    padding: 15px 0;
+  }
+  body #nav-wrapper nav #nav-ul .nav-li .nav-a {
+    font-size: 1rem;
+  }
   body #fullpage-wrapper #section1 #welcome-title {
     font-size: 5rem;
   }
@@ -485,6 +515,16 @@
   }
 }
 @media screen and (max-width: 400px) {
+  body .fp-arrow.fp-prev, body .fp-arrow.fp-next {
+    display: none;
+  }
+  body #nav-wrapper {
+    display: none;
+    padding: 15px 0;
+  }
+  body #nav-wrapper nav #nav-ul .nav-li .nav-a {
+    font-size: 1rem;
+  }
   body #fullpage-wrapper #section1 #welcome-title {
     font-size: 5rem;
   }

@@ -1,7 +1,7 @@
 "use strict";
 
 //A list that contains all video objects from section 2
-const musicVideoList = document.querySelectorAll(".music-video");
+let musicVideoList;
 
 window.addEventListener('load', () => {
     //When document finishes loading, display page and fade out preloader. After 500ms do not display preloader.
@@ -12,6 +12,8 @@ window.addEventListener('load', () => {
         document.getElementById("preloader").style.display = 'none';
     }, 500);
 
+    musicVideoList = document.querySelectorAll(".music-video");
+    console.log(musicVideoList);
     if (!musicVideoList.length==0) {
         musicVideoList[0].load();
         musicVideoList[0].play();
@@ -19,6 +21,9 @@ window.addEventListener('load', () => {
 });
 
 let musicVideoOrder = 0;
+
+document.querySelector(".fp-arrow.fp-prev").addEventListener('click', function() {prevMusicSlide()});
+document.querySelector(".fp-arrow.fp-next").addEventListener('click', function() {nextMusicSlide()});
 
 //If user presses left or right arrow on keyboard, change slide accordingly
 document.addEventListener("keydown", (e) => {

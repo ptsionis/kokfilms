@@ -39,12 +39,25 @@ $pctOfYtPages: calc(100% / $numOfYtPages);
     background: $clrSecondary;
 }
 
-fp-arrow-extend {
-    display: none;
+@mixin fp-arrow($img-url) {
+    display: block;
+    border: none;
+    width: 31px;
+    height: 39px;
+    background: url($img-url) no-repeat;
+    cursor: pointer;
 }
 
-.fp-arrow.fp-prev, .fp-arrow.fp-next {
-    @extend fp-arrow-extend;
+.fp-arrow.fp-prev {
+    left: 0;
+    margin-left: 6vw;
+    @include fp-arrow('../images/arrow-prev.png');
+}
+
+.fp-arrow.fp-next {
+    right: 0;
+    margin-right: 6vw;
+    @include fp-arrow('../images/arrow-next.png');
 }
 
 //Document and body changes
@@ -86,6 +99,51 @@ body {
             0% {transform: rotate(0turn) translate(-50%, -50%);}
             50% {transform: rotate(.75turn) translate(-50%, -50%);}
             100% {transform: rotate(0turn) translate(-50%, -50%);}
+        }
+    }
+
+    // Top Nav
+    #nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        padding: 25px 0;
+        background-color: $clrPrimary;
+        z-index: 99;
+
+        nav {
+            width: 80vw;
+            margin: 0 auto;
+            
+            #nav-ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+
+                .nav-li {
+                    margin: 0 10px;
+
+                    .nav-a {
+                        color: $clrSecondary;
+                        
+                        font: {
+                            size: 1.2rem;
+                            family: $ffText;
+                        }
+
+                        text: {
+                            decoration: none;
+                            align: center;
+                        }
+
+                        &:hover {
+                            transition: all .3s ease;
+                            color: $clrAlternative;
+                        }
+                    }
+                }
+            }
         }
     }
 
