@@ -20,11 +20,28 @@
     }
 }
 
-@mixin section2($fs-music-title) {
+@mixin music-link-svg($music-width, $music-height) {
+    width: $music-width;
+    height: $music-height;
+}
+
+@mixin music-link($music-width, $music-height) {
+    margin: 15px 0;
+    
+    svg {
+        @include music-link-svg($music-width, $music-height);
+    }
+}
+
+@mixin section2($fs-music-title, $music-width, $music-height) {
     #section2 {
         #slide-2-1 {
             #music-title1 {
                 @include music-title($fs-music-title);
+            }
+
+            #music-link1 {
+                @include music-link($music-width, $music-height);
             }
         }
     
@@ -32,11 +49,19 @@
             #music-title2 {
                 @include music-title($fs-music-title);
             }
+
+            #music-link2 {
+                @include music-link($music-width, $music-height);
+            }
         }
     
         #slide-2-3 {
             #music-title3 {
                 @include music-title($fs-music-title);
+            }
+
+            #music-link3 {
+                @include music-link($music-width, $music-height);
             }
         }
     }
@@ -47,7 +72,7 @@
     width: $corpo-width;
 }
 
-@mixin music-slide($flex-d, $corpo-width) {
+@mixin corpo-slide($flex-d, $corpo-width) {
     .ad-bg {
         display: none;
     }
@@ -86,13 +111,13 @@
 @mixin section3($corpo-width) {
     #section3 {
         #slide-3-1 {
-            @include music-slide(column-reverse, $corpo-width);
+            @include corpo-slide(column-reverse, $corpo-width);
         }
         #slide-3-2 {
-            @include music-slide(column, $corpo-width);
+            @include corpo-slide(column, $corpo-width);
         }
         #slide-3-3 {
-            @include music-slide(column-reverse, $corpo-width);
+            @include corpo-slide(column-reverse, $corpo-width);
         }
     }
 }
@@ -131,7 +156,18 @@
     margin: 2.5px 0;
 }
 
-@mixin section6($img-size, $title-size) {
+@mixin contact-links-svg($contact-width, $contact-height) {
+    width: $contact-width;
+    height: $contact-height;
+}
+
+@mixin social-svg-wrapper($contact-width, $contact-height) {
+    svg {
+        @include contact-links-svg($contact-width, $contact-height);
+    }
+}
+
+@mixin section6($img-size, $title-size, $contact-width, $contact-height) {
     #section6 {
         .contact-wrapper {
             #contact-image {
@@ -141,6 +177,21 @@
 
             #contact-title {
                 font-size: $title-size;
+                margin: 10px 0;
+            }
+
+            #contact-social-wrapper {
+                #social-svg-wrapper1 {
+                    @include social-svg-wrapper($contact-width, $contact-height);
+                }
+
+                #social-svg-wrapper2 {
+                    @include social-svg-wrapper($contact-width, $contact-height);
+                }
+
+                #social-svg-wrapper3 {
+                    @include social-svg-wrapper($contact-width, $contact-height);
+                }
             }
         }
 
@@ -163,42 +214,65 @@
 }
 
 //Fullpage wrapper
-@mixin fullpage-wrapper($welcome-title, $music-title, $corpo-width, $content-url1, $content-url2, $img-size, $title-size) {
+@mixin fullpage-wrapper($welcome-title, $music-title, $music-width, $music-height, $corpo-width, $content-url1, $content-url2, $img-size, $title-size, $contact-width, $contact-height) {
     #fullpage-wrapper {
         @include section1($welcome-title);
-        @include section2($music-title);
+        @include section2($music-title, $music-width, $music-height);
         @include section3($corpo-width);
         @include section4($content-url1, $content-url2);
-        @include section6($img-size, $title-size);
+        @include section6($img-size, $title-size, $contact-width, $contact-height);
     }
 }
 
 //Body
-@mixin body($fs-welcome, $fs-music-title, $corpo-width, $content-url1, $content-url2, $img-size, $title-size) {
-    @include fullpage-wrapper($fs-welcome, $fs-music-title, $corpo-width, $content-url1, $content-url2, $img-size, $title-size);
+@mixin body($fs-welcome, $fs-music-title, $music-width, $music-height, $corpo-width, $content-url1, $content-url2, $img-size, $title-size, $contact-width, $contact-height) {
+    @include fullpage-wrapper($fs-welcome, $fs-music-title, $music-width, $music-height, $corpo-width, $content-url1, $content-url2, $img-size, $title-size, $contact-width, $contact-height);
 }
 
 //Media
 @media screen and (max-width:1600px) {
     body {
-        @include body(5rem, 1rem, 720px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg', 125px, 2rem);
+        @include body(5rem, 1rem, 64px, 44px, 720px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg', 125px, 2rem, 56px, 56px);
     }
 }
 
 @media screen and (max-width:1200px) {
     body {
-        @include body(5rem, 1rem, 480px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg', 75px, 1rem);
+        @include body(5rem, 1rem, 64px, 44px, 480px !important, '../images/yt-images/yt-bg1.jpg', '../images/yt-images/yt-bg2.jpg', 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:767px) {
     body {
-        @include body(5rem, 1rem, 360px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg', 75px, 1rem);
+        @include body(5rem, 1rem, 48px, 33px, 360px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg', 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:400px) {
     body {
-        @include body(5rem, 1rem, 240px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg', 75px, 1rem);
+        @include body(5rem, 1rem, 48px, 33px, 240px !important, '../images/yt-images/yt-bg1-mobile.jpg', '../images/yt-images/yt-bg2-mobile.jpg', 75px, 1rem, 42px, 42px);
+    }
+}
+
+//Media for Corpo section, when user's screen is on landscape orientation
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    body {
+        #fullpage-wrapper {
+            #section3 {
+                .corpo-wrapper {
+                    .corpo-text-wrapper {
+                        margin: 0;
+
+                        .corpo-title {
+                            display: none;
+                        }
+                        
+                        .corpo-text {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

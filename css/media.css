@@ -5,11 +5,32 @@
   body #fullpage-wrapper #section2 #slide-2-1 #music-title1 {
     font-size: 1rem;
   }
+  body #fullpage-wrapper #section2 #slide-2-1 #music-link1 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-1 #music-link1 svg {
+    width: 64px;
+    height: 44px;
+  }
   body #fullpage-wrapper #section2 #slide-2-2 #music-title2 {
     font-size: 1rem;
   }
+  body #fullpage-wrapper #section2 #slide-2-2 #music-link2 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-2 #music-link2 svg {
+    width: 64px;
+    height: 44px;
+  }
   body #fullpage-wrapper #section2 #slide-2-3 #music-title3 {
     font-size: 1rem;
+  }
+  body #fullpage-wrapper #section2 #slide-2-3 #music-link3 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-3 #music-link3 svg {
+    width: 64px;
+    height: 44px;
   }
   body #fullpage-wrapper #section3 #slide-3-1 .ad-bg {
     display: none;
@@ -110,6 +131,19 @@
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-title {
     font-size: 2rem;
+    margin: 10px 0;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper1 svg {
+    width: 56px;
+    height: 56px;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper2 svg {
+    width: 56px;
+    height: 56px;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper3 svg {
+    width: 56px;
+    height: 56px;
   }
   body #fullpage-wrapper #section6 .footer {
     display: flex;
@@ -136,11 +170,32 @@
   body #fullpage-wrapper #section2 #slide-2-1 #music-title1 {
     font-size: 1rem;
   }
+  body #fullpage-wrapper #section2 #slide-2-1 #music-link1 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-1 #music-link1 svg {
+    width: 64px;
+    height: 44px;
+  }
   body #fullpage-wrapper #section2 #slide-2-2 #music-title2 {
     font-size: 1rem;
   }
+  body #fullpage-wrapper #section2 #slide-2-2 #music-link2 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-2 #music-link2 svg {
+    width: 64px;
+    height: 44px;
+  }
   body #fullpage-wrapper #section2 #slide-2-3 #music-title3 {
     font-size: 1rem;
+  }
+  body #fullpage-wrapper #section2 #slide-2-3 #music-link3 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-3 #music-link3 svg {
+    width: 64px;
+    height: 44px;
   }
   body #fullpage-wrapper #section3 #slide-3-1 .ad-bg {
     display: none;
@@ -241,6 +296,19 @@
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-title {
     font-size: 1rem;
+    margin: 10px 0;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper1 svg {
+    width: 42px;
+    height: 42px;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper2 svg {
+    width: 42px;
+    height: 42px;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper3 svg {
+    width: 42px;
+    height: 42px;
   }
   body #fullpage-wrapper #section6 .footer {
     display: flex;
@@ -267,11 +335,32 @@
   body #fullpage-wrapper #section2 #slide-2-1 #music-title1 {
     font-size: 1rem;
   }
+  body #fullpage-wrapper #section2 #slide-2-1 #music-link1 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-1 #music-link1 svg {
+    width: 48px;
+    height: 33px;
+  }
   body #fullpage-wrapper #section2 #slide-2-2 #music-title2 {
     font-size: 1rem;
   }
+  body #fullpage-wrapper #section2 #slide-2-2 #music-link2 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-2 #music-link2 svg {
+    width: 48px;
+    height: 33px;
+  }
   body #fullpage-wrapper #section2 #slide-2-3 #music-title3 {
     font-size: 1rem;
+  }
+  body #fullpage-wrapper #section2 #slide-2-3 #music-link3 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-3 #music-link3 svg {
+    width: 48px;
+    height: 33px;
   }
   body #fullpage-wrapper #section3 #slide-3-1 .ad-bg {
     display: none;
@@ -372,6 +461,19 @@
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-title {
     font-size: 1rem;
+    margin: 10px 0;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper1 svg {
+    width: 42px;
+    height: 42px;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper2 svg {
+    width: 42px;
+    height: 42px;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper3 svg {
+    width: 42px;
+    height: 42px;
   }
   body #fullpage-wrapper #section6 .footer {
     display: flex;
@@ -398,11 +500,32 @@
   body #fullpage-wrapper #section2 #slide-2-1 #music-title1 {
     font-size: 1rem;
   }
+  body #fullpage-wrapper #section2 #slide-2-1 #music-link1 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-1 #music-link1 svg {
+    width: 48px;
+    height: 33px;
+  }
   body #fullpage-wrapper #section2 #slide-2-2 #music-title2 {
     font-size: 1rem;
   }
+  body #fullpage-wrapper #section2 #slide-2-2 #music-link2 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-2 #music-link2 svg {
+    width: 48px;
+    height: 33px;
+  }
   body #fullpage-wrapper #section2 #slide-2-3 #music-title3 {
     font-size: 1rem;
+  }
+  body #fullpage-wrapper #section2 #slide-2-3 #music-link3 {
+    margin: 15px 0;
+  }
+  body #fullpage-wrapper #section2 #slide-2-3 #music-link3 svg {
+    width: 48px;
+    height: 33px;
   }
   body #fullpage-wrapper #section3 #slide-3-1 .ad-bg {
     display: none;
@@ -503,6 +626,19 @@
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-title {
     font-size: 1rem;
+    margin: 10px 0;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper1 svg {
+    width: 42px;
+    height: 42px;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper2 svg {
+    width: 42px;
+    height: 42px;
+  }
+  body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper3 svg {
+    width: 42px;
+    height: 42px;
   }
   body #fullpage-wrapper #section6 .footer {
     display: flex;
@@ -519,6 +655,17 @@
     margin: 2.5px 0;
   }
   body #fullpage-wrapper #section6 .footer #footer-address {
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  body #fullpage-wrapper #section3 .corpo-wrapper .corpo-text-wrapper {
+    margin: 0;
+  }
+  body #fullpage-wrapper #section3 .corpo-wrapper .corpo-text-wrapper .corpo-title {
+    display: none;
+  }
+  body #fullpage-wrapper #section3 .corpo-wrapper .corpo-text-wrapper .corpo-text {
     display: none;
   }
 }/*# sourceMappingURL=media.css.map */

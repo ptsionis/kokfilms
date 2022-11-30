@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&display=swap');
 
 $clrPrimary: #1a1a1a;
 $clrSecondary: #fafafa;
 $clrAlternative: #ff8f2e;
 
 $ffHeader: 'Bad Script', cursive;
-$ffYt: 'Poppins', sans-serif;
 $ffText: 'Chakra Petch', sans-serif;
 
 $numOfMusicPages: 3;
@@ -96,7 +95,7 @@ body {
 
         @mixin section-wrapper($flex-d) {
             height: 100vh;
-            width: 80vw;
+            width: 70vw;
             margin: 0 auto;
             display: flex;
             flex-direction: $flex-d;
@@ -256,18 +255,19 @@ body {
 
         //Section 3
         #section3 {
-            //Curved lines background image
-            @mixin corpo-bg($left-value, $scale-value) {
-                position: absolute;
-                top: 0;
-                left: $left-value;
-                background-size: contain;
-                z-index: -1;
-                opacity: .15;
-                transform: scaleX($scale-value);
+            @mixin slide-3($bg-url) {
+                background-image: url($bg-url);
+                background: {
+                    position: center;
+                    repeat: no-repeat;
+                    size: cover;
+                }
             }
 
-            // Neon images next to header
+            @mixin corpo-wrapper($flex-d) {
+                @include section-wrapper($flex-d);
+            }
+
             @mixin corpo-image($m-left, $m-right) {
                 width: auto;
                 height: 65px;
@@ -302,7 +302,7 @@ body {
                 }
                 text: {
                     align: $align-value;
-                    shadow: 2px 2px 4px $clrPrimary;
+                    shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
                 }
                 line: {
                     height: 1.75;
@@ -311,12 +311,10 @@ body {
 
             //Section 3 slide 1
             #slide-3-1 {
-                .corpo-bg {
-                    @include corpo-bg($pctOfCorpoPages*0, -1);
-                }
+                @include slide-3('../images/corpo-images/background-lines.png');
 
                 .corpo-wrapper {
-                    @include section-wrapper(row);
+                    @include corpo-wrapper(row);
     
                     #corpo-video1 {
                         height: fit-content;
@@ -343,12 +341,10 @@ body {
 
             //Section 3 slide 2
             #slide-3-2 {
-                .corpo-bg {
-                    @include corpo-bg($pctOfCorpoPages*1, 1);
-                }
+                @include slide-3('../images/corpo-images/background-lines-reversed.png');
 
                 .corpo-wrapper {
-                    @include section-wrapper(row);
+                    @include corpo-wrapper(row);
     
                     #corpo-video2 {
                         height: fit-content;
@@ -375,12 +371,10 @@ body {
 
             //Section 3 slide 3
             #slide-3-3 {
-                .corpo-bg {
-                    @include corpo-bg($pctOfCorpoPages*2, -1);
-                }
+                @include slide-3('../images/corpo-images/background-lines.png');
 
                 .corpo-wrapper {
-                    @include section-wrapper(row);
+                    @include corpo-wrapper(row);
     
                     #corpo-video3 {
                         height: fit-content;
@@ -391,7 +385,7 @@ body {
                         @include corpo-text-wrapper(0, 0, 0, 80px);
     
                         #corpo-title3 {
-                            @include corpo-title(#966018, end);
+                            @include corpo-title(#fafafa, end);
     
                             #corpo-image3 {
                                 @include corpo-image(0, 20px);
@@ -435,12 +429,12 @@ body {
                         width: 100%;
                         color: $clrSecondary;
                         font: {
-                            family: $ffYt;
+                            family: $ffText;
                             size: 2.5rem;
                         }
                         text: {
                             align: center;
-                            shadow: 3px 3px 4px $clrPrimary, 3px 3px 4px $clrPrimary;
+                            shadow: 3px 3px 4px #000000, 3px 3px 4px #000000;
                         }
                     }
 
@@ -462,7 +456,7 @@ body {
                         }
                         font: {
                             size: 1.25rem;
-                            family: $ffYt;
+                            family: $ffText;
                         }
 
                         &:hover {

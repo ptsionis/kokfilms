@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&display=swap");
 .preloader-finish {
   opacity: 0;
   pointer-events: none;
@@ -245,18 +245,15 @@ body #fullpage-wrapper #section2 #slide-2-3 #music-link3:hover > svg .music-path
   transition: all 0.75s ease;
   fill: #1e90ff;
 }
-body #fullpage-wrapper #section3 #slide-3-1 .corpo-bg {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  background-size: contain;
-  z-index: -1;
-  opacity: 0.15;
-  transform: scaleX(-1);
+body #fullpage-wrapper #section3 #slide-3-1 {
+  background-image: url("../images/corpo-images/background-lines.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body #fullpage-wrapper #section3 #slide-3-1 .corpo-wrapper {
   height: 100vh;
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -291,21 +288,18 @@ body #fullpage-wrapper #section3 #slide-3-1 .corpo-wrapper .corpo-text-wrapper #
   font-family: "Chakra Petch", sans-serif;
   font-size: 1.25rem;
   text-align: end;
-  text-shadow: 2px 2px 4px #1a1a1a;
+  text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
   line-height: 1.75;
 }
-body #fullpage-wrapper #section3 #slide-3-2 .corpo-bg {
-  position: absolute;
-  top: 0;
-  left: 33.3333333333%;
-  background-size: contain;
-  z-index: -1;
-  opacity: 0.15;
-  transform: scaleX(1);
+body #fullpage-wrapper #section3 #slide-3-2 {
+  background-image: url("../images/corpo-images/background-lines-reversed.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body #fullpage-wrapper #section3 #slide-3-2 .corpo-wrapper {
   height: 100vh;
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -340,21 +334,18 @@ body #fullpage-wrapper #section3 #slide-3-2 .corpo-wrapper .corpo-text-wrapper #
   font-family: "Chakra Petch", sans-serif;
   font-size: 1.25rem;
   text-align: start;
-  text-shadow: 2px 2px 4px #1a1a1a;
+  text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
   line-height: 1.75;
 }
-body #fullpage-wrapper #section3 #slide-3-3 .corpo-bg {
-  position: absolute;
-  top: 0;
-  left: 66.6666666667%;
-  background-size: contain;
-  z-index: -1;
-  opacity: 0.15;
-  transform: scaleX(-1);
+body #fullpage-wrapper #section3 #slide-3-3 {
+  background-image: url("../images/corpo-images/background-lines.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper {
   height: 100vh;
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -371,12 +362,12 @@ body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper {
   margin: 0 0 0 80px;
 }
 body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper #corpo-title3 {
-  color: #966018;
+  color: #fafafa;
   margin: 0 0 20px 0;
   font-family: "Bad Script", cursive;
   font-size: 4rem;
   text-align: end;
-  text-shadow: 1px 1px 10px #966018;
+  text-shadow: 1px 1px 10px #fafafa;
 }
 body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper #corpo-title3 #corpo-image3 {
   width: auto;
@@ -389,7 +380,7 @@ body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper #
   font-family: "Chakra Petch", sans-serif;
   font-size: 1.25rem;
   text-align: end;
-  text-shadow: 2px 2px 4px #1a1a1a;
+  text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
   line-height: 1.75;
 }
 body #fullpage-wrapper #section4 .yt-slide {
@@ -413,7 +404,7 @@ body #fullpage-wrapper #section4 .yt-slide #yt-bg2 {
 }
 body #fullpage-wrapper #section4 .yt-slide .yt-wrapper {
   height: 100vh;
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -423,10 +414,10 @@ body #fullpage-wrapper #section4 .yt-slide .yt-wrapper {
 body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-title {
   width: 100%;
   color: #fafafa;
-  font-family: "Poppins", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   font-size: 2.5rem;
   text-align: center;
-  text-shadow: 3px 3px 4px #1a1a1a, 3px 3px 4px #1a1a1a;
+  text-shadow: 3px 3px 4px #000000, 3px 3px 4px #000000;
 }
 body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link {
   padding: 10px 30px;
@@ -439,7 +430,7 @@ body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link {
   text-decoration: none;
   text-align: center;
   font-size: 1.25rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
 }
 body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link:hover {
   color: #ff8f2e;
@@ -461,7 +452,7 @@ body #fullpage-wrapper #section5 .photos-image {
 }
 body #fullpage-wrapper #section6 .contact-wrapper {
   height: 100vh;
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
