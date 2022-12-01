@@ -459,7 +459,7 @@ body {
                         @include corpo-text-wrapper(0, 0, 0, 80px);
     
                         #corpo-title3 {
-                            @include corpo-title(#fafafa, end);
+                            @include corpo-title(#f229d7, end);
     
                             #corpo-image3 {
                                 @include corpo-image(0, 20px);
@@ -468,6 +468,35 @@ body {
     
                         #corpo-text3 {
                             @include corpo-text(end);
+                        }
+                    }
+                }
+            }
+
+            #slide-3-4 {
+                @include slide-3('../images/corpo-images/background-lines-reversed.png');
+
+                .corpo-wrapper {
+                    @include corpo-wrapper(row-reverse);
+    
+                    #corpo-video4 {
+                        height: fit-content;
+                        border-radius: 20px;
+                    }
+    
+                    .corpo-text-wrapper {
+                        @include corpo-text-wrapper(0, 80px, 0, 0);
+    
+                        #corpo-title4 {
+                            @include corpo-title(#fafafa, start);
+    
+                            #corpo-image4 {
+                                @include corpo-image(20px, 0);
+                            }
+                        }
+    
+                        #corpo-text4 {
+                            @include corpo-text(start);
                         }
                     }
                 }

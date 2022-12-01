@@ -408,12 +408,12 @@ body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper {
   margin: 0 0 0 80px;
 }
 body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper #corpo-title3 {
-  color: #fafafa;
+  color: #f229d7;
   margin: 0 0 20px 0;
   font-family: "Bad Script", cursive;
   font-size: 4rem;
   text-align: end;
-  text-shadow: 1px 1px 10px #fafafa;
+  text-shadow: 1px 1px 10px #f229d7;
 }
 body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper #corpo-title3 #corpo-image3 {
   width: auto;
@@ -426,6 +426,52 @@ body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper #
   font-family: "Chakra Petch", sans-serif;
   font-size: 1.25rem;
   text-align: end;
+  text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
+  line-height: 1.75;
+}
+body #fullpage-wrapper #section3 #slide-3-4 {
+  background-image: url("../images/corpo-images/background-lines-reversed.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #fullpage-wrapper #section3 #slide-3-4 .corpo-wrapper {
+  height: 90vh;
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+body #fullpage-wrapper #section3 #slide-3-4 .corpo-wrapper #corpo-video4 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+}
+body #fullpage-wrapper #section3 #slide-3-4 .corpo-wrapper .corpo-text-wrapper {
+  margin: 0 80px 0 0;
+}
+body #fullpage-wrapper #section3 #slide-3-4 .corpo-wrapper .corpo-text-wrapper #corpo-title4 {
+  color: #fafafa;
+  margin: 0 0 20px 0;
+  font-family: "Bad Script", cursive;
+  font-size: 4rem;
+  text-align: start;
+  text-shadow: 1px 1px 10px #fafafa;
+}
+body #fullpage-wrapper #section3 #slide-3-4 .corpo-wrapper .corpo-text-wrapper #corpo-title4 #corpo-image4 {
+  width: auto;
+  height: 65px;
+  margin-left: 20px;
+  margin-right: 0;
+}
+body #fullpage-wrapper #section3 #slide-3-4 .corpo-wrapper .corpo-text-wrapper #corpo-text4 {
+  color: #fafafa;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.25rem;
+  text-align: start;
   text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
   line-height: 1.75;
 }
