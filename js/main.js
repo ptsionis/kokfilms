@@ -1,7 +1,7 @@
 "use strict";
 
 //A list that contains all video objects from section 2
-let musicVideoList;
+const musicVideoList = document.querySelectorAll(".music-video");
 
 window.addEventListener('load', () => {
     //When document finishes loading, display page and fade out preloader. After 500ms do not display preloader.
@@ -12,8 +12,6 @@ window.addEventListener('load', () => {
         document.getElementById("preloader").style.display = 'none';
     }, 500);
 
-    musicVideoList = document.querySelectorAll(".music-video");
-    console.log(musicVideoList);
     if (!musicVideoList.length==0) {
         musicVideoList[0].load();
         musicVideoList[0].play();

@@ -99,25 +99,29 @@ body #nav-wrapper {
   top: 0;
   left: 0;
   width: 100vw;
-  padding: 20px 0;
+  padding: 15px 0;
   background-color: #1a1a1a;
+  outline: 1px solid #ff8f2e;
   z-index: 99;
 }
 body #nav-wrapper nav {
-  width: 80vw;
+  width: 85vw;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 body #nav-wrapper nav #nav-ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  transform: translateY(12.5%);
 }
 body #nav-wrapper nav #nav-ul .nav-li {
-  margin: 0 10px;
+  margin: 0 17.5px;
 }
 body #nav-wrapper nav #nav-ul .nav-li .nav-a {
   color: #fafafa;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Chakra Petch", sans-serif;
   text-decoration: none;
   text-align: center;
@@ -126,72 +130,54 @@ body #nav-wrapper nav #nav-ul .nav-li .nav-a:hover {
   transition: all 0.3s ease;
   color: #ff8f2e;
 }
+body #nav-wrapper nav #social-ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+body #nav-wrapper nav #social-ul .social-li {
+  margin: 0 5px;
+}
+body #nav-wrapper nav #social-ul .social-li .social-a {
+  text-decoration: none;
+}
+body #nav-wrapper nav #social-ul .social-li .social-a:hover > svg path {
+  transition: all 0.3s ease;
+  fill: #ff8f2e !important;
+}
 body #fullpage-wrapper {
   display: none;
 }
-body #fullpage-wrapper #section1 #welcome-title {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-  transition: all 0.3s ease;
-  color: #ff8f2e;
-  text-align: center;
-  font-size: 10rem;
+body #fullpage-wrapper #section1 {
+  background-image: url("../images/welcome/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-body #fullpage-wrapper #section1 #welcome-title:hover {
-  letter-spacing: 35px;
-}
-body #fullpage-wrapper #section1 #welcome-down-indicator {
+body #fullpage-wrapper #section1 #welcome-wrapper {
   position: absolute;
-  bottom: 7.5%;
+  top: 50%;
   left: 50%;
-  width: 25px;
-  height: 43px;
-  transition: all 0.5s ease;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #fafafa;
-  border-radius: 50px;
+  transform: translate(-50%, -50%);
 }
-body #fullpage-wrapper #section1 #welcome-down-indicator:before {
-  content: "";
+body #fullpage-wrapper #section1 #welcome-wrapper #welcome-title {
+  color: #ff8f2e;
+  font-family: "Bad Script", cursive;
+  font-size: 3.75rem;
+  text-align: center;
+  text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000, 0px 0px 7px #ff8f2e, 0px 0px 7px #ff8f2e;
+}
+body #fullpage-wrapper #section1 #welcome-wrapper #welcome-line {
+  color: #ff8f2e;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
+}
+body #fullpage-wrapper #section1 #explicit {
   position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #ff8f2e;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 30px;
-  border-radius: 50%;
-  -webkit-animation: scrollDown 1s linear infinite;
-          animation: scrollDown 1s linear infinite;
-}
-@-webkit-keyframes scrollDown {
-  0% {
-    opacity: 1;
-    top: 8px;
-  }
-  100% {
-    opacity: 0;
-    top: 25px;
-    transform: scale(0.8);
-  }
-}
-@keyframes scrollDown {
-  0% {
-    opacity: 1;
-    top: 8px;
-  }
-  100% {
-    opacity: 0;
-    top: 25px;
-    transform: scale(0.8);
-  }
-}
-body #fullpage-wrapper #section1 #welcome-down-indicator:hover {
-  border-color: #ff8f2e;
+  top: 90%;
+  right: 2%;
 }
 body #fullpage-wrapper #section2 #slide-2-1 #music-video1 {
   position: absolute;
@@ -302,7 +288,7 @@ body #fullpage-wrapper #section3 #slide-3-1 {
   background-size: cover;
 }
 body #fullpage-wrapper #section3 #slide-3-1 .corpo-wrapper {
-  height: 100vh;
+  height: 90vh;
   width: 70vw;
   margin: 0 auto;
   display: flex;
@@ -348,7 +334,7 @@ body #fullpage-wrapper #section3 #slide-3-2 {
   background-size: cover;
 }
 body #fullpage-wrapper #section3 #slide-3-2 .corpo-wrapper {
-  height: 100vh;
+  height: 90vh;
   width: 70vw;
   margin: 0 auto;
   display: flex;
@@ -394,7 +380,7 @@ body #fullpage-wrapper #section3 #slide-3-3 {
   background-size: cover;
 }
 body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper {
-  height: 100vh;
+  height: 90vh;
   width: 70vw;
   margin: 0 auto;
   display: flex;
@@ -453,7 +439,7 @@ body #fullpage-wrapper #section4 .yt-slide #yt-bg2 {
   z-index: -1;
 }
 body #fullpage-wrapper #section4 .yt-slide .yt-wrapper {
-  height: 100vh;
+  height: 90vh;
   width: 70vw;
   margin: 0 auto;
   display: flex;
@@ -501,7 +487,7 @@ body #fullpage-wrapper #section5 .photos-image {
      object-fit: cover;
 }
 body #fullpage-wrapper #section6 .contact-wrapper {
-  height: 100vh;
+  height: 90vh;
   width: 70vw;
   margin: 0 auto;
   display: flex;

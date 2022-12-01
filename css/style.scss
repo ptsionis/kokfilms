@@ -108,27 +108,31 @@ body {
         top: 0;
         left: 0;
         width: 100vw;
-        padding: 20px 0;
+        padding: 15px 0;
         background-color: $clrPrimary;
+        outline: 1px solid $clrAlternative;
         z-index: 99;
 
         nav {
-            width: 80vw;
+            width: 85vw;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
             
             #nav-ul {
                 list-style: none;
                 display: flex;
-                justify-content: space-around;
+                justify-content: center;
+                transform: translateY(12.5%);
 
                 .nav-li {
-                    margin: 0 10px;
+                    margin: 0 17.5px;
 
                     .nav-a {
                         color: $clrSecondary;
                         
                         font: {
-                            size: 1.2rem;
+                            size: 1rem;
                             family: $ffText;
                         }
 
@@ -144,6 +148,25 @@ body {
                     }
                 }
             }
+
+            #social-ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+
+                .social-li {
+                    margin: 0 5px;
+
+                    .social-a {
+                        text-decoration: none;
+                        
+                        &:hover > svg path {
+                            transition: all .3s ease;
+                            fill: $clrAlternative !important;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -152,7 +175,7 @@ body {
         display: none;
 
         @mixin section-wrapper($flex-d) {
-            height: 100vh;
+            height: 90vh;
             width: 70vw;
             margin: 0 auto;
             display: flex;
@@ -163,62 +186,44 @@ body {
 
         //Section1 changes
         #section1 {
-            //Welcome title "KokFilms"
-            #welcome-title {
-                width: fit-content;
-                margin: auto;
-                transition: all .3s ease;
-                color: $clrAlternative;
-                text: {
-                    align: center;
+            background: {
+                image: url('../images/welcome/background.jpg');
+                position: center;
+                size: cover;
+                repeat: no-repeat;
+            }
+
+            #welcome-wrapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                @mixin welcome-text($font-size, $font-family) {
+                    color: $clrAlternative;
+                    font: {
+                        family: $font-family;
+                        size: $font-size;
+                    }
+                    text: {
+                        align: center;
+                    }
                 }
-                font: {
-                    size: 10rem;
+
+                #welcome-title {
+                    @include welcome-text(3.75rem, $ffHeader);
+                    text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000, 0px 0px 7px $clrAlternative, 0px 0px 7px $clrAlternative;
                 }
-                &:hover {
-                    letter-spacing: 35px;
+
+                #welcome-line {
+                    @include welcome-text(1rem, $ffText);
+                    text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
                 }
             }
-    
-            //Mouse scroll down wheel element
-            #welcome-down-indicator {
+
+            #explicit {
                 position: absolute;
-                bottom: 7.5%;
-                left: 50%;
-                width: 25px; 
-                height: 43px;
-                transition: all .5s ease;
-                border: {
-                    width: 2px;
-                    style: solid;
-                    color: $clrSecondary;
-                    radius: 50px;
-                }
-    
-                &:before {
-                    content: ""; 
-                    position: absolute;
-                    width: 8px; 
-                    height: 8px;
-                    background: $clrAlternative; 
-                    margin: auto;
-                    left: 0; 
-                    right: 0;
-                    top: 30px; 
-                    border-radius: 50%;
-                    animation: scrollDown 1s linear infinite;
-    
-                    @keyframes scrollDown {
-                        0% {opacity: 1; top: 8px;}
-                        100% {opacity: 0; top: 25px; transform: scale(0.8);}
-                    }
-                }
-    
-                &:hover {
-                    border: {
-                        color: $clrAlternative;
-                    }
-                }
+                top: 90%;
+                right: 2%;
             }
         }
 

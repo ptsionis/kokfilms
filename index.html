@@ -19,22 +19,52 @@
     </div>
     <!-- Top Nav -->
     <div id="nav-wrapper">
+        <!-- Navigation Wrapper -->
         <nav>
+            <!-- Anchor Links to sections -->
             <ul id="nav-ul">
-                <li class="nav-li"><a href="#home" class="nav-a" id="nav-a1">HOME</a></li>
-                <li class="nav-li"><a href="#clips" class="nav-a" id="nav-a2">MUSIC CLIPS</a></li>
-                <li class="nav-li"><a href="#promos" class="nav-a" id="nav-a3">CORPORATE PROMOS</a></li>
-                <li class="nav-li"><a href="#youtube" class="nav-a" id="nav-a4">CINEMATIC VIDEOS</a></li>
-                <li class="nav-li"><a href="#photography" class="nav-a" id="nav-a5">PHOTOGRAPHY</a></li>
-                <li class="nav-li"><a href="#contact" class="nav-a" id="nav-a6">CONTACT</a></li>
+                <li class="nav-li"><a href="#home" class="nav-a" id="nav-a1">Home</a></li>
+                <li class="nav-li"><a href="#clips" class="nav-a" id="nav-a2">Music Clips</a></li>
+                <li class="nav-li"><a href="#promos" class="nav-a" id="nav-a3">Corporate Promos</a></li>
+                <li class="nav-li"><a href="#youtube" class="nav-a" id="nav-a4">Cinematic Videos</a></li>
+                <li class="nav-li"><a href="#photography" class="nav-a" id="nav-a5">Photography</a></li>
+                <li class="nav-li"><a href="#contact" class="nav-a" id="nav-a6">Contact</a></li>
+            </ul>
+
+            <!-- Links to social media -->
+            <ul id="social-ul">
+                <li class="social-li">
+                    <a href="https://www.facebook.com/profile.php?id=100022976925276" target="_blank" class="social-a">
+                        <svg height="28px" width="28px" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="67px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path  style="fill:#2d79d6;" d="M29.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-li">
+                    <a href="https://www.instagram.com/kok_films/" target="_blank" class="social-a">
+                        <svg width="26px" height="26px" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+                            <path style="fill: #e13065;" d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm-390 752h780c293 0 532 237 532 525v778c0 289-239 525-532 525h-780c-293 0-532-236-532-525v-778c0-289 240-525 532-525zm385 421c285 0 516 231 516 516s-231 516-516 516-516-231-516-516 231-516 516-516zm0 174c188 0 341 153 341 341s-153 341-341 341c-189 0-341-153-341-341s153-341 341-341zm499-246c46 0 84 37 84 84 0 46-37 84-84 84-46 0-84-37-84-84 0-46 37-84 84-84zm-820-200h652c245 0 445 199 445 443v656c0 244-200 443-445 443h-652c-245 0-445-199-445-443v-656c0-244 200-443 445-443z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-li">
+                    <a href="https://www.youtube.com/@kok_films" target="_blank" class="social-a">
+                        <svg width="27px" height="27px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path style="fill: #ff0000;" d="M11.603 9.833L9.357 8.785C9.161 8.694 9 8.796 9 9.013v1.974c0 .217.161.319.357.228l2.245-1.048c.197-.092.197-.242.001-.334zM10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm0 13.5c-4.914 0-5-.443-5-3.9s.086-3.9 5-3.9 5 .443 5 3.9-.086 3.9-5 3.9z"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
     <div id="fullpage-wrapper">
         <!-- Section 1 -->
         <div class="section" id="section1" data-anchor="home">
-            <h1 id="welcome-title">KoKFilms</h1>
-            <div id="welcome-down-indicator"></div>
+            <div id="welcome-wrapper">
+                <h1 id="welcome-title">KoKFilms</h1>
+                <p id="welcome-line">VIDEO PRODUCTIONS & PHOTOGRAPHY</p>
+            </div>
+            <img src="./images/welcome/explicit.jpg" alt="" id="explicit">
         </div>
         <!-- Section 2 -->
         <div class="section" id="section2" data-anchor="clips">
@@ -51,7 +81,7 @@
             </div>
             <!-- Slide 2.2 -->
             <div class="slide" id="slide-2-2">
-                <video src="./videos/music-clips/Ace.m4v" loop class="music-video" id="music-video2"></video>
+                <video src="./videos/music-clips/Ace.m4v" loop class="music-video" id="music-video2" data-autoplay></video>
                 <h1 id="music-title2">ACE - DAIMONES STON PARADEISO</h1>
                 <a href="https://www.youtube.com/watch?v=QA0QIOHI-Zo" target="_blank" id="music-link2">
                     <svg width="64" height="44" viewBox="0 0 159 110" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +92,7 @@
             </div>
             <!-- Slide 2.3 -->
             <div class="slide" id="slide-2-3">
-                <video src="./videos/music-clips/Remedy.m4v" loop class="music-video" id="music-video3"></video>
+                <video src="./videos/music-clips/Remedy.m4v" loop class="music-video" id="music-video3" data-autoplay></video>
                 <h1 id="music-title3">REMEDY - DEYTERA PAROUSIA</h1>
                 <a href="https://www.youtube.com/watch?v=hGYZ6nh9Jf4" target="_blank" id="music-link3">
                     <svg width="64" height="44" viewBox="0 0 159 110" xmlns="http://www.w3.org/2000/svg">
