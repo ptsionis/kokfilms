@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&display=swap");
+@import url("https://fonts.cdnfonts.com/css/a-dripping-marker");
 .preloader-finish {
   opacity: 0;
   pointer-events: none;
@@ -18,9 +19,17 @@
 .fp-slidesNav ul li a span {
   background-color: #fafafa;
 }
+.fp-slidesNav ul li a span:hover {
+  transition: all 0.3s ease;
+  background-color: #ff8f2e !important;
+}
 
 #fp-nav ul li a span {
   background: #fafafa;
+}
+#fp-nav ul li a span:hover {
+  transition: all 0.3s ease;
+  background: #ff8f2e !important;
 }
 
 .fp-arrow.fp-prev {
@@ -99,7 +108,7 @@ body #nav-wrapper {
   top: 0;
   left: 0;
   width: 100vw;
-  padding: 15px 0;
+  padding: 5px 0;
   background-color: #1a1a1a;
   outline: 1px solid #ff8f2e;
   z-index: 99;
@@ -114,10 +123,10 @@ body #nav-wrapper nav #nav-ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  transform: translateY(12.5%);
 }
 body #nav-wrapper nav #nav-ul .nav-li {
   margin: 0 17.5px;
+  transform: translateY(25%);
 }
 body #nav-wrapper nav #nav-ul .nav-li .nav-a {
   color: #fafafa;
@@ -137,6 +146,7 @@ body #nav-wrapper nav #social-ul {
 }
 body #nav-wrapper nav #social-ul .social-li {
   margin: 0 5px;
+  transform: translateY(25%);
 }
 body #nav-wrapper nav #social-ul .social-li .social-a {
   text-decoration: none;
@@ -161,14 +171,14 @@ body #fullpage-wrapper #section1 #welcome-wrapper {
   transform: translate(-50%, -50%);
 }
 body #fullpage-wrapper #section1 #welcome-wrapper #welcome-title {
-  color: #ff8f2e;
-  font-family: "Bad Script", cursive;
-  font-size: 3.75rem;
+  color: #fafafa;
+  font-family: "a dripping marker", sans-serif;
+  font-size: 5rem;
   text-align: center;
-  text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000, 0px 0px 7px #ff8f2e, 0px 0px 7px #ff8f2e;
+  text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
 }
 body #fullpage-wrapper #section1 #welcome-wrapper #welcome-line {
-  color: #ff8f2e;
+  color: #fafafa;
   font-family: "Chakra Petch", sans-serif;
   font-size: 1rem;
   text-align: center;
@@ -486,6 +496,17 @@ body #fullpage-wrapper #section5 .photos-image {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body #fullpage-wrapper #section5 #photography-text {
+  position: absolute;
+  top: 67.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fafafa;
+  font-size: 2rem;
+  font-family: "Chakra Petch", sans-serif;
+  text-align: center;
+  text-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000, 0px 0px 4px #000000, 0px 0px 4px #000000;
+}
 body #fullpage-wrapper #section6 .contact-wrapper {
   height: 90vh;
   width: 70vw;
@@ -520,29 +541,40 @@ body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper .socia
   transition: all 0.3s ease;
   fill: #ff8f2e !important;
 }
+body #fullpage-wrapper #section6 .contact-wrapper #back-top {
+  position: absolute;
+  bottom: 7.5vh;
+  right: 1.5vw;
+  cursor: pointer;
+}
+body #fullpage-wrapper #section6 .contact-wrapper #back-top:hover > a svg polygon, body #fullpage-wrapper #section6 .contact-wrapper #back-top:hover > a svg #rect {
+  transition: all 0.3s ease;
+  fill: #ff8f2e !important;
+}
 body #fullpage-wrapper #section6 .footer {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100vw;
   height: auto;
-  padding: 22.5px 0;
-  background-color: #ff8f2e;
+  padding: 25px 0;
+  background-color: #1a1a1a;
+  outline: 1px solid #ff8f2e;
 }
 body #fullpage-wrapper #section6 .footer #footer-credits {
   position: absolute;
   top: 50%;
   left: 10%;
   transform: translate(-50%, -50%);
-  color: #1a1a1a;
+  color: #fafafa;
   font-family: "Chakra Petch", sans-serif;
 }
 body #fullpage-wrapper #section6 .footer #footer-credits a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: #fafafa;
 }
 body #fullpage-wrapper #section6 .footer #footer-credits a:hover {
-  color: #fafafa;
+  color: #ff8f2e;
   transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section6 .footer #footer-copy {
@@ -550,7 +582,7 @@ body #fullpage-wrapper #section6 .footer #footer-copy {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #1a1a1a;
+  color: #fafafa;
   font-family: "Chakra Petch", sans-serif;
 }
 body #fullpage-wrapper #section6 .footer #footer-address {
@@ -558,6 +590,6 @@ body #fullpage-wrapper #section6 .footer #footer-address {
   top: 50%;
   left: 90%;
   transform: translate(-50%, -50%);
-  color: #1a1a1a;
+  color: #fafafa;
   font-family: "Chakra Petch", sans-serif;
 }/*# sourceMappingURL=style.css.map */

@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Chakra+Petch&display=swap');
+@import url('https://fonts.cdnfonts.com/css/a-dripping-marker');
 
 $clrPrimary: #1a1a1a;
 $clrSecondary: #fafafa;
 $clrAlternative: #ff8f2e;
 
+$ffTitle: 'a dripping marker', sans-serif;
 $ffHeader: 'Bad Script', cursive;
 $ffText: 'Chakra Petch', sans-serif;
 
@@ -32,11 +34,19 @@ $pctOfYtPages: calc(100% / $numOfYtPages);
 }
 
 .fp-slidesNav ul li a span {
-    background-color: $clrSecondary
+    background-color: $clrSecondary;
+    &:hover {
+        transition: all .3s ease;
+        background-color: $clrAlternative !important;
+    }
 }
 
 #fp-nav ul li a span {
     background: $clrSecondary;
+    &:hover {
+        transition: all .3s ease;
+        background: $clrAlternative !important;
+    }
 }
 
 @mixin fp-arrow($img-url) {
@@ -108,7 +118,7 @@ body {
         top: 0;
         left: 0;
         width: 100vw;
-        padding: 15px 0;
+        padding: 5px 0;
         background-color: $clrPrimary;
         outline: 1px solid $clrAlternative;
         z-index: 99;
@@ -123,10 +133,10 @@ body {
                 list-style: none;
                 display: flex;
                 justify-content: center;
-                transform: translateY(12.5%);
 
                 .nav-li {
                     margin: 0 17.5px;
+                    transform: translateY(25%);
 
                     .nav-a {
                         color: $clrSecondary;
@@ -156,6 +166,7 @@ body {
 
                 .social-li {
                     margin: 0 5px;
+                    transform: translateY(25%);
 
                     .social-a {
                         text-decoration: none;
@@ -199,7 +210,7 @@ body {
                 left: 50%;
                 transform: translate(-50%,-50%);
                 @mixin welcome-text($font-size, $font-family) {
-                    color: $clrAlternative;
+                    color: $clrSecondary;
                     font: {
                         family: $font-family;
                         size: $font-size;
@@ -210,8 +221,8 @@ body {
                 }
 
                 #welcome-title {
-                    @include welcome-text(3.75rem, $ffHeader);
-                    text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000, 0px 0px 7px $clrAlternative, 0px 0px 7px $clrAlternative;
+                    @include welcome-text(5rem, $ffTitle);
+                    text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
                 }
 
                 #welcome-line {
@@ -550,6 +561,22 @@ body {
                 width: 100vw;
                 object-fit: cover;
             }
+
+            #photography-text {
+                position: absolute;
+                top: 67.5%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $clrSecondary;
+                font: {
+                    size: 2rem;
+                    family: $ffText;
+                }
+                text: {
+                    align: center;
+                    shadow: 0px 0px 4px #000000, 0px 0px 4px #000000, 0px 0px 4px #000000, 0px 0px 4px #000000;
+                }
+            }
         }
 
         //Section 6
@@ -592,6 +619,18 @@ body {
                         }
                     }
                 }
+
+                #back-top {
+                    position: absolute;
+                    bottom: 7.5vh;
+                    right: 1.5vw;
+                    cursor: pointer;
+
+                    &:hover > a svg polygon, &:hover > a svg #rect {
+                        transition: all .3s ease;
+                        fill: $clrAlternative !important;
+                    }
+                }
             }
 
             .footer {
@@ -600,15 +639,16 @@ body {
                 left: 0;
                 width: 100vw;
                 height: auto;
-                padding: 22.5px 0;
-                background-color: $clrAlternative;
+                padding: 25px 0;
+                background-color: $clrPrimary;
+                outline: 1px solid $clrAlternative;
 
                 @mixin footer-p($left-value) {
                     position: absolute;
                     top: 50%;
                     left: $left-value;
                     transform: translate(-50%, -50%);
-                    color: $clrPrimary;
+                    color: $clrSecondary;
                     font: {
                         family: $ffText;
                     }
@@ -619,10 +659,10 @@ body {
 
                     a {
                         text-decoration: none;
-                        color: $clrPrimary;
+                        color: $clrSecondary;
 
                         &:hover {
-                            color: $clrSecondary;
+                            color: $clrAlternative;
                             transition: all .3s ease;
                         }
                     }
