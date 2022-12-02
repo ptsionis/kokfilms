@@ -791,7 +791,7 @@
   }
   body #nav-wrapper nav #social-ul {
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -840,7 +840,7 @@
   }
   body #nav-wrapper nav #social-ul {
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
