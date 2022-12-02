@@ -326,6 +326,12 @@ $corpo-fs-text, $yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-si
             #section5 {
                 .photos-image {
                     content: url('../images/photos/photography-portrait.jpg');
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100vh;
+                    width: 100vw;
+                    object-fit: cover;
                 }
             }
         }

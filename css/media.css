@@ -805,6 +805,13 @@
   }
   body #fullpage-wrapper #section5 .photos-image {
     content: url("../images/photos/photography-portrait.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (orientation: landscape) and (max-height: 500px) {
@@ -854,6 +861,13 @@
   }
   body #fullpage-wrapper #section5 .photos-image {
     content: url("../images/photos/photography-portrait.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   body #nav-wrapper nav #nav-ul #nav-li-img {
     display: none;

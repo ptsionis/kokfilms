@@ -648,7 +648,7 @@ body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper .socia
 body #fullpage-wrapper #section6 .contact-wrapper #back-top {
   position: absolute;
   bottom: 10vh;
-  right: 1.5vw;
+  right: 2.5vw;
   cursor: pointer;
 }
 body #fullpage-wrapper #section6 .contact-wrapper #back-top:hover > a svg polygon, body #fullpage-wrapper #section6 .contact-wrapper #back-top:hover > a svg #rect {
