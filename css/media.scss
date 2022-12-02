@@ -120,31 +120,6 @@
     }
 }
 
-//Section 4
-@mixin section4($content-url1, $content-url2) {
-    #section4 {
-        .yt-slide {
-            #yt-bg1 {
-                content: url($content-url1);
-            }
-    
-            #yt-bg2 {
-                content: url($content-url2);
-            }
-
-            .yt-wrapper {
-                .yt-title {
-                    font-size: 1.25rem;
-                }
-
-                .yt-link {
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-}
-
 //Section 6
 @mixin footer-p {
     position: relative;
@@ -212,20 +187,18 @@
 }
 
 //Fullpage wrapper
-@mixin fullpage-wrapper($welcome-title, $music-title, $music-width, $music-height, $corpo-width, $content-url1, 
-$content-url2, $img-size, $title-size, $contact-width, $contact-height) {
+@mixin fullpage-wrapper($welcome-title, $music-title, $music-width, $music-height, $corpo-width, $img-size, $title-size, $contact-width, $contact-height) {
     #fullpage-wrapper {
         @include section1($welcome-title);
         @include section2($music-title, $music-width, $music-height);
         @include section3($corpo-width);
-        @include section4($content-url1, $content-url2);
         @include section6($img-size, $title-size, $contact-width, $contact-height);
     }
 }
 
 //Body
-@mixin body($arrow-display, $nav-display, $nav-ff-size, $fs-welcome, $fs-music-title, $music-width, $music-height, $corpo-width, $content-url1, 
-$content-url2, $img-size, $title-size, $contact-width, $contact-height) {
+@mixin body($arrow-display, $nav-display, $nav-ff-size, $fs-welcome, $fs-music-title, $music-width, $music-height, $corpo-width, $img-size, 
+$title-size, $contact-width, $contact-height) {
     .fp-arrow.fp-prev, .fp-arrow.fp-next {
         display: $arrow-display;
     }
@@ -244,36 +217,31 @@ $content-url2, $img-size, $title-size, $contact-width, $contact-height) {
         }
     }
     
-    @include fullpage-wrapper($fs-welcome, $fs-music-title, $music-width, $music-height, $corpo-width, $content-url1, 
-    $content-url2, $img-size, $title-size, $contact-width, $contact-height);
+    @include fullpage-wrapper($fs-welcome, $fs-music-title, $music-width, $music-height, $corpo-width, $img-size, $title-size, $contact-width, $contact-height);
 }
 
 //Media
 @media screen and (max-width:1600px) {
     body {
-        @include body(block, block, 1rem, 5rem, 1rem, 64px, 44px, 720px !important, '../images/yt-images/yt-bg1.jpg', 
-        '../images/yt-images/yt-bg2.jpg', 125px, 2rem, 56px, 56px);
+        @include body(block, block, 1rem, 5rem, 1rem, 64px, 44px, 720px !important, 125px, 2rem, 56px, 56px);
     }
 }
 
 @media screen and (max-width:1200px) {
     body {
-        @include body(block, block, .75rem, 5rem, 1rem, 64px, 44px, 480px !important, '../images/yt-images/yt-bg1.jpg', 
-        '../images/yt-images/yt-bg2.jpg', 75px, 1rem, 42px, 42px);
+        @include body(block, block, .75rem, 5rem, 1rem, 64px, 44px, 480px !important, 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:767px) {
     body {
-        @include body(none, none, 1rem, 5rem, 1rem, 48px, 33px, 360px !important, '../images/yt-images/yt-bg1-mobile.jpg', 
-        '../images/yt-images/yt-bg2-mobile.jpg', 75px, 1rem, 42px, 42px);
+        @include body(none, none, 1rem, 5rem, 1rem, 48px, 33px, 360px !important, 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:400px) {
     body {
-        @include body(none, none, 1rem, 5rem, 1rem, 48px, 33px, 240px !important, '../images/yt-images/yt-bg1-mobile.jpg', 
-        '../images/yt-images/yt-bg2-mobile.jpg', 75px, 1rem, 42px, 42px);
+        @include body(none, none, 1rem, 5rem, 1rem, 48px, 33px, 240px !important, 75px, 1rem, 42px, 42px);
     }
 }
 

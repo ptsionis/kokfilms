@@ -32,26 +32,27 @@
   background: #ff8f2e !important;
 }
 
-.fp-arrow.fp-prev {
-  left: 0;
-  margin-left: 6vw;
+fp-arrow, .fp-arrow.fp-next, .fp-arrow.fp-prev {
   display: block;
   border: none;
   width: 31px;
   height: 39px;
-  background: url("../images/arrow-prev.png") no-repeat;
   cursor: pointer;
+  background: url("../images/left-arrow.svg") no-repeat;
+}
+fp-arrow:hover, .fp-arrow.fp-next:hover, .fp-arrow.fp-prev:hover {
+  background: url("../images/left-arrow-hover.svg");
+}
+
+.fp-arrow.fp-prev {
+  left: 0;
+  margin-left: 7.5vw;
 }
 
 .fp-arrow.fp-next {
   right: 0;
-  margin-right: 6vw;
-  display: block;
-  border: none;
-  width: 31px;
-  height: 39px;
-  background: url("../images/arrow-next.png") no-repeat;
-  cursor: pointer;
+  margin-right: 7.5vw;
+  transform: scaleX(-1);
 }
 
 * {
@@ -124,6 +125,9 @@ body #nav-wrapper nav #nav-ul {
   display: flex;
   justify-content: center;
 }
+body #nav-wrapper nav #nav-ul #nav-li-img {
+  margin-right: 17.5px;
+}
 body #nav-wrapper nav #nav-ul .nav-li {
   margin: 0 17.5px;
   transform: translateY(25%);
@@ -189,6 +193,9 @@ body #fullpage-wrapper #section1 #explicit {
   top: 90%;
   right: 2%;
 }
+body #fullpage-wrapper #section2 svg-path, body #fullpage-wrapper #section2 #slide-2-3 #music-link3:hover > svg .music-path, body #fullpage-wrapper #section2 #slide-2-2 #music-link2:hover > svg .music-path, body #fullpage-wrapper #section2 #slide-2-1 #music-link1:hover > svg .music-path {
+  fill: #ff8f2e;
+}
 body #fullpage-wrapper #section2 #slide-2-1 #music-video1 {
   position: absolute;
   top: 0;
@@ -220,8 +227,7 @@ body #fullpage-wrapper #section2 #slide-2-1 #music-link1 {
   transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section2 #slide-2-1 #music-link1:hover > svg .music-path {
-  transition: all 0.75s ease;
-  fill: #f229d7;
+  transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section2 #slide-2-2 #music-video2 {
   position: absolute;
@@ -254,8 +260,7 @@ body #fullpage-wrapper #section2 #slide-2-2 #music-link2 {
   transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section2 #slide-2-2 #music-link2:hover > svg .music-path {
-  transition: all 0.75s ease;
-  fill: #ff2626;
+  transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section2 #slide-2-3 #music-video3 {
   position: absolute;
@@ -288,8 +293,7 @@ body #fullpage-wrapper #section2 #slide-2-3 #music-link3 {
   transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section2 #slide-2-3 #music-link3:hover > svg .music-path {
-  transition: all 0.75s ease;
-  fill: #1e90ff;
+  transition: all 0.3s ease;
 }
 body #fullpage-wrapper #section3 #slide-3-1 {
   background-image: url("../images/corpo-images/background-lines.png");
@@ -408,12 +412,12 @@ body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper {
   margin: 0 0 0 80px;
 }
 body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper #corpo-title3 {
-  color: #f229d7;
+  color: #9177c1;
   margin: 0 0 20px 0;
   font-family: "Bad Script", cursive;
   font-size: 4rem;
   text-align: end;
-  text-shadow: 1px 1px 10px #f229d7;
+  text-shadow: 1px 1px 10px #9177c1;
 }
 body #fullpage-wrapper #section3 #slide-3-3 .corpo-wrapper .corpo-text-wrapper #corpo-title3 #corpo-image3 {
   width: auto;
@@ -475,26 +479,13 @@ body #fullpage-wrapper #section3 #slide-3-4 .corpo-wrapper .corpo-text-wrapper #
   text-shadow: 2px 2px 3px #000000, 2px 2px 3px #000000;
   line-height: 1.75;
 }
-body #fullpage-wrapper #section4 .yt-slide {
-  height: 100vh;
+body #fullpage-wrapper #section4 #slide-4-1 {
+  background-image: url("../images/yt-images/yt-bg1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-body #fullpage-wrapper #section4 .yt-slide #yt-bg1 {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0%;
-  z-index: -1;
-}
-body #fullpage-wrapper #section4 .yt-slide #yt-bg2 {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 33.3333333333%;
-  z-index: -1;
-}
-body #fullpage-wrapper #section4 .yt-slide .yt-wrapper {
+body #fullpage-wrapper #section4 #slide-4-1 .yt-wrapper {
   height: 90vh;
   width: 70vw;
   margin: 0 auto;
@@ -503,7 +494,7 @@ body #fullpage-wrapper #section4 .yt-slide .yt-wrapper {
   justify-content: center;
   align-items: center;
 }
-body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-title {
+body #fullpage-wrapper #section4 #slide-4-1 .yt-wrapper .yt-title {
   width: 100%;
   color: #fafafa;
   font-family: "Chakra Petch", sans-serif;
@@ -511,7 +502,7 @@ body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-title {
   text-align: center;
   text-shadow: 3px 3px 4px #000000, 3px 3px 4px #000000;
 }
-body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link {
+body #fullpage-wrapper #section4 #slide-4-1 .yt-wrapper .yt-link {
   padding: 10px 30px;
   color: #1a1a1a;
   margin-top: 25px;
@@ -524,14 +515,89 @@ body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link {
   font-size: 1.25rem;
   font-family: "Chakra Petch", sans-serif;
 }
-body #fullpage-wrapper #section4 .yt-slide .yt-wrapper .yt-link:hover {
+body #fullpage-wrapper #section4 #slide-4-1 .yt-wrapper .yt-link:hover {
+  color: #ff8f2e;
+  background-color: #1a1a1a;
+}
+body #fullpage-wrapper #section4 #slide-4-2 {
+  background-image: url("../images/yt-images/yt-bg2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body #fullpage-wrapper #section4 #slide-4-2 .yt-wrapper {
+  height: 90vh;
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #fullpage-wrapper #section4 #slide-4-2 .yt-wrapper .yt-title {
+  width: 100%;
+  color: #fafafa;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 3px 3px 4px #000000, 3px 3px 4px #000000;
+}
+body #fullpage-wrapper #section4 #slide-4-2 .yt-wrapper .yt-link {
+  padding: 10px 30px;
+  color: #1a1a1a;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a;
+  border-radius: 20px;
+  background-color: #ff8f2e;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "Chakra Petch", sans-serif;
+}
+body #fullpage-wrapper #section4 #slide-4-2 .yt-wrapper .yt-link:hover {
   color: #ff8f2e;
   background-color: #1a1a1a;
 }
 body #fullpage-wrapper #section4 #slide-4-3 {
   background-image: url("../images/yt-images/yt-bg-final.jpg");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body #fullpage-wrapper #section4 #slide-4-3 .yt-wrapper {
+  height: 90vh;
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #fullpage-wrapper #section4 #slide-4-3 .yt-wrapper .yt-title {
+  width: 100%;
+  color: #fafafa;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 3px 3px 4px #000000, 3px 3px 4px #000000;
+}
+body #fullpage-wrapper #section4 #slide-4-3 .yt-wrapper .yt-link {
+  padding: 10px 30px;
+  color: #1a1a1a;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a, 1px 1px 4px #1a1a1a;
+  border-radius: 20px;
+  background-color: #ff8f2e;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "Chakra Petch", sans-serif;
+}
+body #fullpage-wrapper #section4 #slide-4-3 .yt-wrapper .yt-link:hover {
+  color: #ff8f2e;
+  background-color: #1a1a1a;
 }
 body #fullpage-wrapper #section5 .photos-image {
   position: absolute;

@@ -49,25 +49,29 @@ $pctOfYtPages: calc(100% / $numOfYtPages);
     }
 }
 
-@mixin fp-arrow($img-url) {
+fp-arrow {
     display: block;
     border: none;
     width: 31px;
     height: 39px;
-    background: url($img-url) no-repeat;
     cursor: pointer;
+    background: url('../images/left-arrow.svg') no-repeat;
+    &:hover {
+        background: url('../images/left-arrow-hover.svg');
+    }
 }
 
 .fp-arrow.fp-prev {
     left: 0;
-    margin-left: 6vw;
-    @include fp-arrow('../images/arrow-prev.png');
+    margin-left: 7.5vw;
+    @extend fp-arrow;
 }
 
 .fp-arrow.fp-next {
     right: 0;
-    margin-right: 6vw;
-    @include fp-arrow('../images/arrow-next.png');
+    margin-right: 7.5vw;
+    @extend fp-arrow;
+    transform: scaleX(-1);
 }
 
 //Document and body changes
@@ -130,6 +134,10 @@ body {
             justify-content: space-between;
             
             #nav-ul {
+                #nav-li-img {
+                    margin-right: 17.5px;
+                }
+
                 list-style: none;
                 display: flex;
                 justify-content: center;
@@ -270,8 +278,8 @@ body {
                 }
             }
 
-            @mixin svg-path($clr-value) {
-                    fill: $clr-value;
+            svg-path {
+                    fill: $clrAlternative;
             }
 
             @mixin music-link($left-value, $clr-value) {
@@ -282,12 +290,11 @@ body {
                 transition: all .3s ease;
 
                 &:hover > svg .music-path {
-                    transition: all .75s ease;
-                    @include svg-path($clr-value);
+                    transition: all .3s ease;
+                    @extend svg-path;
                 }
             }
 
-            //Section 2 slide 1 changes
             #slide-2-1 {
                 #music-video1 {
                     @include music-video(calc($pctOfMusicPages*0));
@@ -300,7 +307,6 @@ body {
                 }
             }
             
-            //Section 2 slide 1 changes
             #slide-2-2 {
                 #music-video2 {
                     @include music-video(calc($pctOfMusicPages*1));
@@ -313,7 +319,6 @@ body {
                 }
             }
 
-            //Section 2 slide 1 changes
             #slide-2-3 {
                 #music-video3 {
                     @include music-video(calc($pctOfMusicPages*2));
@@ -459,7 +464,7 @@ body {
                         @include corpo-text-wrapper(0, 0, 0, 80px);
     
                         #corpo-title3 {
-                            @include corpo-title(#f229d7, end);
+                            @include corpo-title(#9177c1, end);
     
                             #corpo-image3 {
                                 @include corpo-image(0, 20px);
@@ -505,24 +510,12 @@ body {
 
         //Section 4
         #section4 {
-            @mixin yt-bg($left-value) {
-                height: 100vh;
-                width: 100vw;
-                position: absolute;
-                top: 0;
-                left: $left-value;
-                z-index: -1;
-            }
-
-            //Section 4 Slide 1 & 2
-            .yt-slide {
-                height: 100vh;
-                #yt-bg1 {
-                    @include yt-bg($pctOfYtPages*0);
-                }
-
-                #yt-bg2 {
-                    @include yt-bg($pctOfYtPages*1);
+            @mixin yt-slide($bg-url) {
+                background: {
+                    image: url($bg-url);
+                    position: center;
+                    size: cover;
+                    repeat: no-repeat;
                 }
 
                 .yt-wrapper {
@@ -570,13 +563,19 @@ body {
                 }
             }
 
+            //Section 4 slide 1
+            #slide-4-1 {
+                @include yt-slide('../images/yt-images/yt-bg1.jpg');
+            }
+
+            //Section 4 slide 2
+            #slide-4-2 {
+                @include yt-slide('../images/yt-images/yt-bg2.jpg');
+            }
+
             //Section 4 slide 3
             #slide-4-3 {
-                background: {
-                    image: url('../images/yt-images/yt-bg-final.jpg');
-                    size: cover;
-                    position: center;
-                }
+                @include yt-slide('../images/yt-images/yt-bg-final.jpg');
             }
         }
 
