@@ -647,7 +647,7 @@ body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper .socia
 }
 body #fullpage-wrapper #section6 .contact-wrapper #back-top {
   position: absolute;
-  bottom: 7.5vh;
+  bottom: 10vh;
   right: 1.5vw;
   cursor: pointer;
 }

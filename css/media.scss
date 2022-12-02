@@ -197,6 +197,8 @@
     
             #footer-credits, #footer-copy {
                 @include footer-p();
+                font-size: .75rem;
+                margin: 7.5px 0;
             }
 
             #footer-address {
