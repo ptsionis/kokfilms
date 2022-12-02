@@ -17,6 +17,12 @@
         <img id="preloader-outer-img" src="./images/preloader/outer-213.png" alt="Outer Preloader">
         <img id="preloader-inner-img" src="./images/preloader/inner-213.png" alt="Inner Preloader">
     </div>
+    <!-- Mobile Menu SVG -->
+    <div id="nav-icon">
+        <svg fill="none" height="28" width="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path id="menu-path" d="M4 6H20M4 12H20M4 18H20" stroke="#fafafa" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+    </div>
     <!-- Top Nav -->
     <div id="nav-wrapper">
         <!-- Navigation Wrapper -->
@@ -24,12 +30,12 @@
             <!-- Anchor Links to sections -->
             <ul id="nav-ul">
                 <li id="nav-li-img"><a href="#home" id="nav-a-img"><img src="./images/welcome/icon.png" alt=""></a></li>
-                <li class="nav-li"><a href="#home" class="nav-a">Home</a></li>
-                <li class="nav-li"><a href="#clips" class="nav-a">Music Clips</a></li>
-                <li class="nav-li"><a href="#promos" class="nav-a">Corporate Promos</a></li>
-                <li class="nav-li"><a href="#youtube" class="nav-a">Cinematic Videos</a></li>
-                <li class="nav-li"><a href="#photography" class="nav-a">Photography</a></li>
-                <li class="nav-li"><a href="#contact" class="nav-a">Contact</a></li>
+                <li class="nav-li" onclick="closeMenu()"><a href="#home" class="nav-a">Home</a></li>
+                <li class="nav-li" onclick="closeMenu()"><a href="#clips" class="nav-a">Music Clips</a></li>
+                <li class="nav-li" onclick="closeMenu()"><a href="#promos" class="nav-a">Corporate Promos</a></li>
+                <li class="nav-li" onclick="closeMenu()"><a href="#youtube" class="nav-a">Cinematic Videos</a></li>
+                <li class="nav-li" onclick="closeMenu()"><a href="#photography" class="nav-a">Photography</a></li>
+                <li class="nav-li" onclick="closeMenu()"><a href="#contact" class="nav-a">Contact</a></li>
             </ul>
 
             <!-- Links to social media -->
@@ -58,6 +64,7 @@
             </ul>
         </nav>
     </div>
+    <!-- Fullpage Wrapper -->
     <div id="fullpage-wrapper">
         <!-- Section 1 -->
         <div class="section" id="section1" data-anchor="home">
@@ -157,7 +164,7 @@
                         <source src="./videos/corpo-clips/3d-artist.m4v">
                     </video>
                     <div class="corpo-text-wrapper">
-                        <h2 class="corpo-title" id="corpo-title4"><img class="corpo-image" id="corpo-image4" src="./images/corpo-images/corpo-3d.png" alt="">3D D. Fisikas</h2>
+                        <h2 class="corpo-title" id="corpo-title4">3D D. Fisikas<img class="corpo-image" id="corpo-image4" src="./images/corpo-images/corpo-3d.png" alt=""></h2>
                         <p class="corpo-text" id="corpo-text4">
                             3D Car Pencil Art. A totally different type of promoting but still fascinating to produce. 
                             A collaboration with a self-taught pencil artist, D. Fisikas, aiming to promote his amazing pencil designs through a short video.

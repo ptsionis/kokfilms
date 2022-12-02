@@ -116,6 +116,10 @@ body {
         }
     }
 
+    #nav-icon {
+        display: none;
+    }
+
     // Top Nav
     #nav-wrapper {
         position: fixed;
@@ -592,7 +596,7 @@ body {
 
             #photography-text {
                 position: absolute;
-                top: 67.5%;
+                top: 62.5%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 color: $clrSecondary;

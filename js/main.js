@@ -112,3 +112,34 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;                                             
 };
+
+//Mobile Menu scripts
+const mobileMenu = document.getElementById("nav-icon");
+const mobileMenuPath = document.getElementById("menu-path");
+const navWrapper = document.getElementById("nav-wrapper");
+mobileMenu.addEventListener('click', toggleMenu);
+
+let toggleMenuBool = 0;
+
+function toggleMenu() {
+    if (toggleMenuBool == 0) {
+        openMenu();
+    }
+    else {
+        closeMenu();
+    }
+}
+
+function openMenu() {
+    mobileMenu.style.transform = 'rotate(90deg)';
+    mobileMenuPath.style.stroke = '#ff8f2e';
+    navWrapper.style.display = 'block';
+    toggleMenuBool = 1;
+}
+
+function closeMenu() {
+    mobileMenu.style.transform = 'rotate(0deg)';
+    mobileMenuPath.style.stroke = '#fafafa';
+    navWrapper.style.display = 'none';
+    toggleMenuBool = 0;
+}

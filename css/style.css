@@ -104,6 +104,9 @@ body #preloader #preloader-outer-img {
     transform: rotate(0turn) translate(-50%, -50%);
   }
 }
+body #nav-icon {
+  display: none;
+}
 body #nav-wrapper {
   position: fixed;
   top: 0;
@@ -610,7 +613,7 @@ body #fullpage-wrapper #section5 .photos-image {
 }
 body #fullpage-wrapper #section5 #photography-text {
   position: absolute;
-  top: 67.5%;
+  top: 62.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fafafa;
