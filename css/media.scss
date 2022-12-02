@@ -140,15 +140,6 @@
     }
 }
 
-//Section 5
-@mixin section5($photo-fs-header) {
-    #section5 {
-        #photography-text {
-            font-size: $photo-fs-header;
-        }
-    }
-}
-
 //Section 6
 @mixin footer-p {
     position: relative;
@@ -217,20 +208,19 @@
 
 //Fullpage wrapper
 @mixin fullpage-wrapper($welcome-title, $music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, $corpo-fs-text, 
-$yt-fs-header, $yt-fs-link, $photo-fs-header, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
+$yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
     #fullpage-wrapper {
         @include section1($welcome-title);
         @include section2($music-title, $music-link-width, $music-link-height);
         @include section3($corpo-video-width, $corpo-fs-header, $corpo-fs-text);
         @include section4($yt-fs-header, $yt-fs-link);
-        @include section5($photo-fs-header);
         @include section6($contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
     }
 }
 
 //Body
 @mixin body($arrow-display, $nav-ff-size, $fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, 
-$corpo-fs-text, $yt-fs-header, $yt-fs-link, $photo-fs-header, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
+$corpo-fs-text, $yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
     .fp-arrow.fp-prev, .fp-arrow.fp-next {
         display: $arrow-display;
     }
@@ -248,59 +238,36 @@ $corpo-fs-text, $yt-fs-header, $yt-fs-link, $photo-fs-header, $contact-img-size,
     }
     
     @include fullpage-wrapper($fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, 
-    $corpo-fs-text, $yt-fs-header, $yt-fs-link, $photo-fs-header, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
+    $corpo-fs-text, $yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
 }
 
 //Media
 @media screen and (max-width:1600px) {
     body {
-        @include body(block, 1rem, 5rem, 1rem, 64px, 44px, 480px !important, 3.5rem, 1.25rem, 2rem, 1.25rem, 2rem, 125px, 2rem, 56px, 56px);
+        @include body(block, 1rem, 5rem, 1rem, 64px, 44px, 480px !important, 3.5rem, 1.25rem, 2rem, 1.25rem, 125px, 2rem, 56px, 56px);
     }
 }
 
 @media screen and (max-width:1200px) {
     body {
-        @include body(block, .85rem, 5rem, 1rem, 64px, 44px, 360px !important, 3rem, 1.1rem, 1.75rem, 1rem, 1.75rem, 75px, 1rem, 42px, 42px);
+        @include body(block, .85rem, 5rem, 1rem, 64px, 44px, 360px !important, 3rem, 1.1rem, 1.75rem, 1rem, 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:767px) {
     body {
-        @include body(none, .85rem, 5rem, 1rem, 48px, 33px, 240px !important, 2rem, 1rem, 1.5rem, 1rem, 1.5rem, 75px, 1rem, 42px, 42px);
+        @include body(none, .85rem, 5rem, 1rem, 48px, 33px, 240px !important, 2rem, 1rem, 1.5rem, 1rem, 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:400px) {
     body {
-        @include body(none, .85rem, 5rem, 1rem, 48px, 33px, 240px !important, 1.5rem, .9rem, 1.25rem, 1rem, 1.25rem, 75px, 1rem, 42px, 42px);
-    }
-}
-
-//Media for Corpo section, when user's screen is on landscape orientation
-@media screen and (orientation: landscape) and (max-height: 500px) {
-    body {
-        #fullpage-wrapper {
-            #section3 {
-                .corpo-wrapper {
-                    .corpo-text-wrapper {
-                        margin: 0;
-
-                        .corpo-title {
-                            display: none;
-                        }
-                        
-                        .corpo-text {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
+        @include body(none, .85rem, 5rem, 1rem, 48px, 33px, 240px !important, 1.5rem, .9rem, 1.25rem, 1rem, 75px, 1rem, 42px, 42px);
     }
 }
 
 //Media for Mobile Menu & Photography section
-@media screen and (orientation: portrait) {
+@mixin mobile-menu() {
     body {
         #nav-icon {
             display: block;
@@ -318,6 +285,7 @@ $corpo-fs-text, $yt-fs-header, $yt-fs-link, $photo-fs-header, $contact-img-size,
             top: 0;
             left: 0;
             height: 100vh;
+            width: 100vw;
             background-color: rgba(26, 26, 26, .95);
 
             nav {
@@ -356,6 +324,52 @@ $corpo-fs-text, $yt-fs-header, $yt-fs-link, $photo-fs-header, $contact-img-size,
             #section5 {
                 .photos-image {
                     content: url('../images/photos/photography-portrait.jpg');
+                }
+            }
+        }
+    }
+}
+
+//Media for Portrait
+@media screen and (orientation: portrait) {
+    @include mobile-menu();
+}
+
+//Media for Landscape
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    @include mobile-menu();
+    
+    body {
+        #nav-wrapper {
+            nav {
+                #nav-ul {
+                    #nav-li-img {display: none;}
+                }
+
+                #social-ul {display: none;}
+            }
+        }
+
+        #fullpage-wrapper {
+            #section3 {
+                .corpo-wrapper {
+                    .corpo-text-wrapper {
+                        margin: 0;
+
+                        .corpo-title {
+                            display: none;
+                        }
+                        
+                        .corpo-text {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            #section5 {
+                .photos-image {
+                    content: url('../images/photos/photography-landscape.jpg');
                 }
             }
         }

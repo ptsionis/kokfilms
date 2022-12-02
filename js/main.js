@@ -122,7 +122,7 @@ mobileMenu.addEventListener('click', toggleMenu);
 let toggleMenuBool = 0;
 
 function toggleMenu() {
-    if (window.innerHeight > window.innerWidth) {
+    if ((window.innerHeight > window.innerWidth) || (window.innerHeight < window.innerWidth && window.innerHeight <= 500)) {
         if (toggleMenuBool == 0) {
             openMenu();
         }
