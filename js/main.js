@@ -122,11 +122,13 @@ mobileMenu.addEventListener('click', toggleMenu);
 let toggleMenuBool = 0;
 
 function toggleMenu() {
-    if (toggleMenuBool == 0) {
-        openMenu();
-    }
-    else {
-        closeMenu();
+    if (window.innerHeight > window.innerWidth) {
+        if (toggleMenuBool == 0) {
+            openMenu();
+        }
+        else {
+            closeMenu();
+        }
     }
 }
 

@@ -72,7 +72,7 @@
     width: $corpo-video-width;
 }
 
-@mixin corpo-slide($corpo-flex-d, $corpo-video-width) {
+@mixin corpo-slide($corpo-flex-d, $corpo-video-width, $corpo-fs-header, $corpo-fs-text) {
     .corpo-wrapper {
         height: 90vh;
         margin: auto;
@@ -89,7 +89,7 @@
 
             .corpo-title {
                 text-align: center !important;
-                font-size: 2rem !important;
+                font-size: $corpo-fs-header !important;
 
                 .corpo-image {
                     height: 40px !important;
@@ -99,37 +99,41 @@
 
             .corpo-text {
                 text-align: center !important;
-                font-size: 1rem !important;
+                font-size: $corpo-fs-text !important;
                 margin-bottom: 30px !important;
             }
         }
     }
 }
 
-@mixin section3($corpo-video-width) {
+@mixin section3($corpo-video-width, $corpo-fs-header, $corpo-fs-text) {
     #section3 {
         #slide-3-1 {
-            @include corpo-slide(column-reverse, $corpo-video-width);
+            @include corpo-slide(column-reverse, $corpo-video-width, $corpo-fs-header, $corpo-fs-text);
         }
         #slide-3-2 {
-            @include corpo-slide(column, $corpo-video-width);
+            @include corpo-slide(column, $corpo-video-width, $corpo-fs-header, $corpo-fs-text);
         }
         #slide-3-3 {
-            @include corpo-slide(column-reverse, $corpo-video-width);
+            @include corpo-slide(column-reverse, $corpo-video-width, $corpo-fs-header, $corpo-fs-text);
         }
         #slide-3-4 {
-            @include corpo-slide(column-reverse, $corpo-video-width);
+            @include corpo-slide(column-reverse, $corpo-video-width, $corpo-fs-header, $corpo-fs-text);
         }
     }
 }
 
 //Section 4
-@mixin section4($yt-fs-header) {
+@mixin section4($yt-fs-header, $yt-fs-link) {
     #section4 {
         .yt-slide {
             .yt-wrapper {
                 .yt-title {
                     font-size: $yt-fs-header !important;
+                }
+
+                .yt-link {
+                    font-size: $yt-fs-link !important;
                 }
             }
         }
@@ -212,21 +216,21 @@
 }
 
 //Fullpage wrapper
-@mixin fullpage-wrapper($welcome-title, $music-title, $music-link-width, $music-link-height, $corpo-video-width, $yt-fs-header, $photo-fs-header, $contact-img-size, 
-$contact-title-size, $contact-svg-width, $contact-svg-height) {
+@mixin fullpage-wrapper($welcome-title, $music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, $corpo-fs-text, 
+$yt-fs-header, $yt-fs-link, $photo-fs-header, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
     #fullpage-wrapper {
         @include section1($welcome-title);
         @include section2($music-title, $music-link-width, $music-link-height);
-        @include section3($corpo-video-width);
-        @include section4($yt-fs-header);
+        @include section3($corpo-video-width, $corpo-fs-header, $corpo-fs-text);
+        @include section4($yt-fs-header, $yt-fs-link);
         @include section5($photo-fs-header);
         @include section6($contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
     }
 }
 
 //Body
-@mixin body($arrow-display, $nav-ff-size, $fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $yt-fs-header, 
-$photo-fs-header, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
+@mixin body($arrow-display, $nav-ff-size, $fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, 
+$corpo-fs-text, $yt-fs-header, $yt-fs-link, $photo-fs-header, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
     .fp-arrow.fp-prev, .fp-arrow.fp-next {
         display: $arrow-display;
     }
@@ -243,37 +247,37 @@ $photo-fs-header, $contact-img-size, $contact-title-size, $contact-svg-width, $c
         }
     }
     
-    @include fullpage-wrapper($fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $yt-fs-header, $photo-fs-header, 
-    $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
+    @include fullpage-wrapper($fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, 
+    $corpo-fs-text, $yt-fs-header, $yt-fs-link, $photo-fs-header, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
 }
 
 //Media
 @media screen and (max-width:1600px) {
     body {
-        @include body(block, 1rem, 5rem, 1rem, 64px, 44px, 720px !important, 2rem, 2rem, 125px, 2rem, 56px, 56px);
+        @include body(block, 1rem, 5rem, 1rem, 64px, 44px, 480px !important, 3.5rem, 1.25rem, 2rem, 1.25rem, 2rem, 125px, 2rem, 56px, 56px);
     }
 }
 
 @media screen and (max-width:1200px) {
     body {
-        @include body(block, .85rem, 5rem, 1rem, 64px, 44px, 480px !important, 1.75rem, 1.75rem, 75px, 1rem, 42px, 42px);
+        @include body(block, .85rem, 5rem, 1rem, 64px, 44px, 360px !important, 3rem, 1.1rem, 1.75rem, 1rem, 1.75rem, 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:767px) {
     body {
-        @include body(none, 1rem, 5rem, 1rem, 48px, 33px, 360px !important, 1.5rem, 1.5rem, 75px, 1rem, 42px, 42px);
+        @include body(none, .85rem, 5rem, 1rem, 48px, 33px, 240px !important, 2rem, 1rem, 1.5rem, 1rem, 1.5rem, 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:400px) {
     body {
-        @include body(none, 1rem, 5rem, 1rem, 48px, 33px, 240px !important, 1.25rem, 1.25rem, 75px, 1rem, 42px, 42px);
+        @include body(none, .85rem, 5rem, 1rem, 48px, 33px, 240px !important, 1.5rem, .9rem, 1.25rem, 1rem, 1.25rem, 75px, 1rem, 42px, 42px);
     }
 }
 
 //Media for Corpo section, when user's screen is on landscape orientation
-@media screen and (orientation: landscape) and (max-height: 650px) {
+@media screen and (orientation: landscape) and (max-height: 500px) {
     body {
         #fullpage-wrapper {
             #section3 {
