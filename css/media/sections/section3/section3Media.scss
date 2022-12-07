@@ -4,7 +4,6 @@
 
 @mixin corpo-slide($corpo-flex-d, $corpo-video-width, $corpo-fs-header, $corpo-svg-width, $corpo-fs-text) {
     .corpo-wrapper {
-        height: 90vh;
         margin: auto;
         flex-direction: $corpo-flex-d !important;
         justify-content: center !important;

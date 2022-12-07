@@ -6,6 +6,9 @@
 $contactTextShadow: 0 0 1rem clr.$clrAlternative;
 
 #section6 {
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
     .contact-wrapper {
         @include wr.wrapperWidth70(column);
 

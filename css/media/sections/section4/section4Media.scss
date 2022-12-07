@@ -1,5 +1,7 @@
 @mixin section4($yt-fs-header, $yt-fs-link) {
     #section4 {
+        height: 100vh;
+        width: 100vw;
         .yt-slide {
             .yt-wrapper {
                 .yt-title {
