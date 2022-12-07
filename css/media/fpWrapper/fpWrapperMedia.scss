@@ -4,12 +4,17 @@
 @use '../sections/section4/section4Media' as s4;
 @use '../sections/section6/section6Media' as s6;
 
-@mixin fullpage-wrapper($fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, $corpo-fs-text, 
-$yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
+@mixin fullpage-wrapper(
+    $fs-welcome-h, $fs-welcome-p,
+    $fs-music-title, $music-link-width, $music-link-height, 
+    $corpo-video-width, $corpo-fs-header, $corpo-svg-width, $corpo-fs-text, 
+    $yt-fs-header, $yt-fs-link, 
+    $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) 
+{
     #fullpage-wrapper {
-        @include s1.section1($fs-welcome);
+        @include s1.section1($fs-welcome-h, $fs-welcome-p);
         @include s2.section2($fs-music-title, $music-link-width, $music-link-height);
-        @include s3.section3($corpo-video-width, $corpo-fs-header, $corpo-fs-text);
+        @include s3.section3($corpo-video-width, $corpo-fs-header, $corpo-svg-width, $corpo-fs-text);
         @include s4.section4($yt-fs-header, $yt-fs-link);
         @include s6.section6($contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
     }

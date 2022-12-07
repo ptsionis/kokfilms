@@ -1,13 +1,17 @@
-@mixin welcome-title($fs-welcome) {
-    font: {
-        size: $fs-welcome;
+@mixin welcome-wrapper($fs-welcome-h, $fs-welcome-p) {
+    #welcome-wrapper {
+        #welcome-title {
+            font-size: $fs-welcome-h;
+        }
+
+        #welcome-line {
+            font-size: $fs-welcome-p;
+        }
     }
 }
 
-@mixin section1($fs-welcome) {
+@mixin section1($fs-welcome-h, $fs-welcome-p) {
     #section1 {
-        #welcome-title {
-            @include welcome-title($fs-welcome);
-        }
+        @include welcome-wrapper($fs-welcome-h, $fs-welcome-p);
     }
 }

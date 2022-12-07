@@ -1,4 +1,4 @@
-@mixin fullpageChanges($arrow-display, $nav-ff-size) {
+@mixin fullpageChanges($arrow-display, $nav-fs-size) {
     .fp-arrow.fp-prev, .fp-arrow.fp-next {
         display: $arrow-display;
     }
@@ -8,7 +8,7 @@
             #nav-ul {
                 .nav-li {
                     .nav-a {
-                        font-size: $nav-ff-size
+                        font-size: $nav-fs-size
                     }
                 }
             }

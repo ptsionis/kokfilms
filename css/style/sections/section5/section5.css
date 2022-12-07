@@ -1,0 +1,9 @@
+#section5 .photos-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=section5.css.map */

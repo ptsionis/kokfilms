@@ -1,39 +1,62 @@
 @use './nav/navMedia' as nav;
 @use './body/bodyMedia' as bd;
 
-// Fullpage slide arrow display, Nav font size, Welcome font size, Music title font size, Music link width,
-// Music link height, Corpo video width, Corpo header font size, Corpo text font size, YT header font size,
-// YT link font size, Contact img size, Contact title size, Contact svg width, Contact svg height
+// Fullpage slide arrow display, Nav font size,
+// Welcome header font size, Welcome paragraph font size,
+// Music title font size, Music link width, Music link height, 
+// Corpo video width, Corpo header font size, Corpo svg width, Corpo text font size, 
+// YT header font size, YT link font size, 
+// Contact img size, Contact title size, Contact svg width, Contact svg height
 
 @media screen and (max-width:1600px) {
     body {
-        @include bd.body(block, 1rem, 5rem, 1rem, 64px, 
-        44px, 480px !important, 3.5rem, 1.25rem, 2rem, 
-        1.25rem, 125px, 2rem, 56px, 56px);
+        @include bd.body(
+            block, 1vw, 
+            12.5vw, 1.5vw,
+            1rem, 64px, 44px, 
+            37.5vw !important, 3.5rem, 4vw, 1.25rem, 
+            2rem, 1.25rem, 
+            125px, 2rem, 56px, 56px
+        );
     }
 }
 
 @media screen and (max-width:1200px) {
     body {
-        @include bd.body(block, .85rem, 5rem, 1rem, 64px, 
-        44px, 360px !important, 3rem, 1.1rem, 1.75rem, 
-        1rem, 75px, 1rem, 42px, 42px);
+        @include bd.body(
+            block, 1.25vw, 
+            12.5vw, 2vw,
+            1rem, 64px, 44px, 
+            40vw !important, 3rem, 4.5vw, 1.1rem, 
+            1.75rem, 1rem, 
+            75px, 1rem, 42px, 42px
+        );
     }
 }
 
 @media screen and (max-width:767px) {
     body {
-        @include bd.body(none, .85rem, 5rem, 1rem, 48px, 
-        33px, 240px !important, 2rem, 1rem, 1.5rem, 
-        1rem, 75px, 1rem, 42px, 42px);
+        @include bd.body(
+            none, 1rem, 
+            15vw, 2.75vw,
+            1rem, 48px, 33px, 
+            47.5vw !important, 2rem, 6.5vw, 1rem, 
+            1.5rem, 1rem, 
+            75px, 1rem, 42px, 42px
+        );
     }
 }
 
 @media screen and (max-width:400px) {
     body {
-        @include bd.body(none, .85rem, 5rem, 1rem, 48px, 
-        33px, 240px !important, 1.5rem, .9rem, 1.25rem, 
-        1rem, 75px, 1rem, 42px, 42px);
+        @include bd.body(
+            none, 1rem, 
+            17.5vw, 3vw,
+            1rem, 48px, 33px, 
+            55vw !important, 1.5rem, 8vw, .9rem, 
+            1.25rem, 1rem, 
+            75px, 1rem, 42px, 42px
+        );
     }
 }
 
@@ -41,10 +64,16 @@
 @media screen and (orientation: portrait) {
     body {
         @include nav.nav();
+
+        #fullpage-wrapper {
+            #section5 {
+                img {content: url('../../images/photos/photography-portrait.jpg');}
+            }
+        }
     }
 }
 
-//Media for Landscape
+//Media for Mobile Landscape
 @media screen and (orientation: landscape) and (max-height: 500px) {
     body {
         @include nav.nav();
