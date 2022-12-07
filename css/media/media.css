@@ -803,16 +803,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  body #fullpage-wrapper #section5 .photos-image {
-    content: url("../images/photos/photography-portrait.jpg");
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }
 @media screen and (orientation: landscape) and (max-height: 500px) {
   body #nav-icon {
@@ -858,33 +848,5 @@
     bottom: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  body #fullpage-wrapper #section5 .photos-image {
-    content: url("../images/photos/photography-portrait.jpg");
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  body #nav-wrapper nav #nav-ul #nav-li-img {
-    display: none;
-  }
-  body #nav-wrapper nav #social-ul {
-    display: none;
-  }
-  body #fullpage-wrapper #section3 .corpo-wrapper .corpo-text-wrapper {
-    margin: 0;
-  }
-  body #fullpage-wrapper #section3 .corpo-wrapper .corpo-text-wrapper .corpo-title {
-    display: none;
-  }
-  body #fullpage-wrapper #section3 .corpo-wrapper .corpo-text-wrapper .corpo-text {
-    display: none;
-  }
-  body #fullpage-wrapper #section5 .photos-image {
-    content: url("../images/photos/photography-landscape.jpg");
   }
 }/*# sourceMappingURL=media.css.map */

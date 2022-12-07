@@ -1,0 +1,10 @@
+@use '../fpWrapper/fpWrapperMedia' as fp;
+@use '../fullpageChanges/fullpageChangesMedia' as fpc;
+
+@mixin body($arrow-display, $nav-ff-size, $fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, 
+$corpo-fs-text, $yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
+    @include fpc.fullpageChanges($arrow-display, $nav-ff-size);
+    
+    @include fp.fullpage-wrapper($fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, $corpo-fs-text, 
+    $yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
+}

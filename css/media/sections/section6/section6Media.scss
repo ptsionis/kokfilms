@@ -1,0 +1,66 @@
+@mixin footer-p {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: translate(0, 0);
+    margin: 2.5px 0;
+}
+
+@mixin contact-links-svg($contact-svg-width, $contact-svg-height) {
+    width: $contact-svg-width;
+    height: $contact-svg-height;
+}
+
+@mixin social-svg-wrapper($contact-svg-width, $contact-svg-height) {
+    svg {
+        @include contact-links-svg($contact-svg-width, $contact-svg-height);
+    }
+}
+
+@mixin section6($contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
+    #section6 {
+        .contact-wrapper {
+            #contact-image {
+                height: $contact-img-size;
+                width: auto;
+            }
+
+            #contact-title {
+                font-size: $contact-title-size;
+                margin: 10px 0;
+            }
+
+            #contact-social-wrapper {
+                #social-svg-wrapper1 {
+                    @include social-svg-wrapper($contact-svg-width, $contact-svg-height);
+                }
+
+                #social-svg-wrapper2 {
+                    @include social-svg-wrapper(calc($contact-svg-width / 1.098), calc($contact-svg-height / 1.098));
+                }
+
+                #social-svg-wrapper3 {
+                    @include social-svg-wrapper(calc($contact-svg-width / 1.037), calc($contact-svg-height / 1.037));
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+    
+            #footer-credits, #footer-copy {
+                @include footer-p();
+                font-size: .75rem;
+                margin: 7.5px 0;
+            }
+
+            #footer-address {
+                display: none;
+            }
+        }
+    }
+}

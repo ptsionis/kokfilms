@@ -1,0 +1,13 @@
+@mixin welcome-title($fs-welcome) {
+    font: {
+        size: $fs-welcome;
+    }
+}
+
+@mixin section1($fs-welcome) {
+    #section1 {
+        #welcome-title {
+            @include welcome-title($fs-welcome);
+        }
+    }
+}

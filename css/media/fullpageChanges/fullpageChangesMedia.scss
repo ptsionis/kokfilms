@@ -1,0 +1,17 @@
+@mixin fullpageChanges($arrow-display, $nav-ff-size) {
+    .fp-arrow.fp-prev, .fp-arrow.fp-next {
+        display: $arrow-display;
+    }
+    
+    #nav-wrapper {
+        nav {
+            #nav-ul {
+                .nav-li {
+                    .nav-a {
+                        font-size: $nav-ff-size
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@mixin music-title($fs-music-title) {
+    font: {
+        size: $fs-music-title;
+    }
+}
+
+@mixin music-link-svg($music-link-width, $music-link-height) {
+    width: $music-link-width;
+    height: $music-link-height;
+}
+
+@mixin music-link($music-link-width, $music-link-height) {
+    margin: 15px 0;
+    
+    svg {
+        @include music-link-svg($music-link-width, $music-link-height);
+    }
+}
+
+@mixin section2($fs-music-title, $music-link-width, $music-link-height) {
+    #section2 {
+        #slide-2-1 {
+            #music-title1 {
+                @include music-title($fs-music-title);
+            }
+
+            #music-link1 {
+                @include music-link($music-link-width, $music-link-height);
+            }
+        }
+    
+        #slide-2-2 {
+            #music-title2 {
+                @include music-title($fs-music-title);
+            }
+
+            #music-link2 {
+                @include music-link($music-link-width, $music-link-height);
+            }
+        }
+    
+        #slide-2-3 {
+            #music-title3 {
+                @include music-title($fs-music-title);
+            }
+
+            #music-link3 {
+                @include music-link($music-link-width, $music-link-height);
+            }
+        }
+    }
+}

@@ -1,338 +1,52 @@
 @use './nav/navMedia' as nav;
+@use './body/bodyMedia' as bd;
 
-//Section 1
-@mixin welcome-title($fs-welcome) {
-    font: {
-        size: $fs-welcome;
-    }
-}
+// Fullpage slide arrow display, Nav font size, Welcome font size, Music title font size, Music link width,
+// Music link height, Corpo video width, Corpo header font size, Corpo text font size, YT header font size,
+// YT link font size, Contact img size, Contact title size, Contact svg width, Contact svg height
 
-@mixin section1($fs-welcome) {
-    #section1 {
-        #welcome-title {
-            @include welcome-title($fs-welcome);
-        }
-    }
-}
-
-//Section 2
-@mixin music-title($fs-music-title) {
-    font: {
-        size: $fs-music-title;
-    }
-}
-
-@mixin music-link-svg($music-link-width, $music-link-height) {
-    width: $music-link-width;
-    height: $music-link-height;
-}
-
-@mixin music-link($music-link-width, $music-link-height) {
-    margin: 15px 0;
-    
-    svg {
-        @include music-link-svg($music-link-width, $music-link-height);
-    }
-}
-
-@mixin section2($fs-music-title, $music-link-width, $music-link-height) {
-    #section2 {
-        #slide-2-1 {
-            #music-title1 {
-                @include music-title($fs-music-title);
-            }
-
-            #music-link1 {
-                @include music-link($music-link-width, $music-link-height);
-            }
-        }
-    
-        #slide-2-2 {
-            #music-title2 {
-                @include music-title($fs-music-title);
-            }
-
-            #music-link2 {
-                @include music-link($music-link-width, $music-link-height);
-            }
-        }
-    
-        #slide-2-3 {
-            #music-title3 {
-                @include music-title($fs-music-title);
-            }
-
-            #music-link3 {
-                @include music-link($music-link-width, $music-link-height);
-            }
-        }
-    }
-}
-
-//Section 3
-@mixin corpo-video($corpo-video-width) {
-    width: $corpo-video-width;
-}
-
-@mixin corpo-slide($corpo-flex-d, $corpo-video-width, $corpo-fs-header, $corpo-fs-text) {
-    .corpo-wrapper {
-        height: 90vh;
-        margin: auto;
-        flex-direction: $corpo-flex-d;
-        justify-content: center !important;
-        align-items: center !important;
-
-        .corpo-video {
-            @include corpo-video($corpo-video-width);
-        }
-
-        .corpo-text-wrapper {
-            margin: 0;
-
-            .corpo-title {
-                text-align: center !important;
-                font-size: $corpo-fs-header !important;
-
-                .corpo-image {
-                    height: 40px !important;
-                    width: auto;
-                }
-            }
-
-            .corpo-text {
-                text-align: center !important;
-                font-size: $corpo-fs-text !important;
-                margin-bottom: 30px !important;
-            }
-        }
-    }
-}
-
-@mixin section3($corpo-video-width, $corpo-fs-header, $corpo-fs-text) {
-    #section3 {
-        #slide-3-1 {
-            @include corpo-slide(column-reverse, $corpo-video-width, $corpo-fs-header, $corpo-fs-text);
-        }
-        #slide-3-2 {
-            @include corpo-slide(column, $corpo-video-width, $corpo-fs-header, $corpo-fs-text);
-        }
-        #slide-3-3 {
-            @include corpo-slide(column-reverse, $corpo-video-width, $corpo-fs-header, $corpo-fs-text);
-        }
-        #slide-3-4 {
-            @include corpo-slide(column-reverse, $corpo-video-width, $corpo-fs-header, $corpo-fs-text);
-        }
-    }
-}
-
-//Section 4
-@mixin section4($yt-fs-header, $yt-fs-link) {
-    #section4 {
-        .yt-slide {
-            .yt-wrapper {
-                .yt-title {
-                    font-size: $yt-fs-header !important;
-                }
-
-                .yt-link {
-                    font-size: $yt-fs-link !important;
-                }
-            }
-        }
-    }
-}
-
-//Section 6
-@mixin footer-p {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: translate(0, 0);
-    margin: 2.5px 0;
-}
-
-@mixin contact-links-svg($contact-svg-width, $contact-svg-height) {
-    width: $contact-svg-width;
-    height: $contact-svg-height;
-}
-
-@mixin social-svg-wrapper($contact-svg-width, $contact-svg-height) {
-    svg {
-        @include contact-links-svg($contact-svg-width, $contact-svg-height);
-    }
-}
-
-@mixin section6($contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
-    #section6 {
-        .contact-wrapper {
-            #contact-image {
-                height: $contact-img-size;
-                width: auto;
-            }
-
-            #contact-title {
-                font-size: $contact-title-size;
-                margin: 10px 0;
-            }
-
-            #contact-social-wrapper {
-                #social-svg-wrapper1 {
-                    @include social-svg-wrapper($contact-svg-width, $contact-svg-height);
-                }
-
-                #social-svg-wrapper2 {
-                    @include social-svg-wrapper(calc($contact-svg-width / 1.098), calc($contact-svg-height / 1.098));
-                }
-
-                #social-svg-wrapper3 {
-                    @include social-svg-wrapper(calc($contact-svg-width / 1.037), calc($contact-svg-height / 1.037));
-                }
-            }
-        }
-
-        .footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-    
-            #footer-credits, #footer-copy {
-                @include footer-p();
-                font-size: .75rem;
-                margin: 7.5px 0;
-            }
-
-            #footer-address {
-                display: none;
-            }
-        }
-    }
-}
-
-//Fullpage wrapper
-@mixin fullpage-wrapper($welcome-title, $music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, $corpo-fs-text, 
-$yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
-    #fullpage-wrapper {
-        @include section1($welcome-title);
-        @include section2($music-title, $music-link-width, $music-link-height);
-        @include section3($corpo-video-width, $corpo-fs-header, $corpo-fs-text);
-        @include section4($yt-fs-header, $yt-fs-link);
-        @include section6($contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
-    }
-}
-
-//Body
-@mixin body($arrow-display, $nav-ff-size, $fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, 
-$corpo-fs-text, $yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
-    .fp-arrow.fp-prev, .fp-arrow.fp-next {
-        display: $arrow-display;
-    }
-    
-    #nav-wrapper {
-        nav {
-            #nav-ul {
-                .nav-li {
-                    .nav-a {
-                        font-size: $nav-ff-size
-                    }
-                }
-            }
-        }
-    }
-    
-    @include fullpage-wrapper($fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, 
-    $corpo-fs-text, $yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
-}
-
-//Media
 @media screen and (max-width:1600px) {
     body {
-        @include body(block, 1rem, 5rem, 1rem, 64px, 44px, 480px !important, 3.5rem, 1.25rem, 2rem, 1.25rem, 125px, 2rem, 56px, 56px);
+        @include bd.body(block, 1rem, 5rem, 1rem, 64px, 
+        44px, 480px !important, 3.5rem, 1.25rem, 2rem, 
+        1.25rem, 125px, 2rem, 56px, 56px);
     }
 }
 
 @media screen and (max-width:1200px) {
     body {
-        @include body(block, .85rem, 5rem, 1rem, 64px, 44px, 360px !important, 3rem, 1.1rem, 1.75rem, 1rem, 75px, 1rem, 42px, 42px);
+        @include bd.body(block, .85rem, 5rem, 1rem, 64px, 
+        44px, 360px !important, 3rem, 1.1rem, 1.75rem, 
+        1rem, 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:767px) {
     body {
-        @include body(none, .85rem, 5rem, 1rem, 48px, 33px, 240px !important, 2rem, 1rem, 1.5rem, 1rem, 75px, 1rem, 42px, 42px);
+        @include bd.body(none, .85rem, 5rem, 1rem, 48px, 
+        33px, 240px !important, 2rem, 1rem, 1.5rem, 
+        1rem, 75px, 1rem, 42px, 42px);
     }
 }
 
 @media screen and (max-width:400px) {
     body {
-        @include body(none, .85rem, 5rem, 1rem, 48px, 33px, 240px !important, 1.5rem, .9rem, 1.25rem, 1rem, 75px, 1rem, 42px, 42px);
-    }
-}
-
-//Media for Mobile Menu & Photography section
-@mixin mobile-menu() {
-    body {
-        @include nav.nav();
-
-        #fullpage-wrapper {
-            #section5 {
-                .photos-image {
-                    content: url('../images/photos/photography-portrait.jpg');
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100vh;
-                    width: 100vw;
-                    object-fit: cover;
-                }
-            }
-        }
+        @include bd.body(none, .85rem, 5rem, 1rem, 48px, 
+        33px, 240px !important, 1.5rem, .9rem, 1.25rem, 
+        1rem, 75px, 1rem, 42px, 42px);
     }
 }
 
 //Media for Portrait
 @media screen and (orientation: portrait) {
-    @include mobile-menu();
+    body {
+        @include nav.nav();
+    }
 }
 
 //Media for Landscape
 @media screen and (orientation: landscape) and (max-height: 500px) {
-    @include mobile-menu();
-    
     body {
-        #nav-wrapper {
-            nav {
-                #nav-ul {
-                    #nav-li-img {display: none;}
-                }
-
-                #social-ul {display: none;}
-            }
-        }
-
-        #fullpage-wrapper {
-            #section3 {
-                .corpo-wrapper {
-                    .corpo-text-wrapper {
-                        margin: 0;
-
-                        .corpo-title {
-                            display: none;
-                        }
-                        
-                        .corpo-text {
-                            display: none;
-                        }
-                    }
-                }
-            }
-
-            #section5 {
-                .photos-image {
-                    content: url('../images/photos/photography-landscape.jpg');
-                }
-            }
-        }
+        @include nav.nav();
     }
 }

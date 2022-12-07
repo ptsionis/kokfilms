@@ -1,0 +1,16 @@
+@use '../sections/section1/section1Media' as s1;
+@use '../sections/section2/section2Media' as s2;
+@use '../sections/section3/section3Media' as s3;
+@use '../sections/section4/section4Media' as s4;
+@use '../sections/section6/section6Media' as s6;
+
+@mixin fullpage-wrapper($fs-welcome, $fs-music-title, $music-link-width, $music-link-height, $corpo-video-width, $corpo-fs-header, $corpo-fs-text, 
+$yt-fs-header, $yt-fs-link, $contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height) {
+    #fullpage-wrapper {
+        @include s1.section1($fs-welcome);
+        @include s2.section2($fs-music-title, $music-link-width, $music-link-height);
+        @include s3.section3($corpo-video-width, $corpo-fs-header, $corpo-fs-text);
+        @include s4.section4($yt-fs-header, $yt-fs-link);
+        @include s6.section6($contact-img-size, $contact-title-size, $contact-svg-width, $contact-svg-height);
+    }
+}

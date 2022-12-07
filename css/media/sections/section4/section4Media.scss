@@ -1,0 +1,15 @@
+@mixin section4($yt-fs-header, $yt-fs-link) {
+    #section4 {
+        .yt-slide {
+            .yt-wrapper {
+                .yt-title {
+                    font-size: $yt-fs-header !important;
+                }
+
+                .yt-link {
+                    font-size: $yt-fs-link !important;
+                }
+            }
+        }
+    }
+}
