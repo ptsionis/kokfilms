@@ -1,0 +1,47 @@
+@use '../../../abstracts/colors' as clr;
+@use '../../../abstracts/shadows' as sh;
+@use '../../../abstracts/fonts' as ff;
+
+@mixin mixinWelcomeText($fontSize, $fontFamily) {
+    color: clr.$clrSecondary;
+    font: {
+        family: $fontFamily;
+        size: $fontSize;
+    }
+    text: {
+        align: center;
+        shadow: sh.$blackShadow, sh.$blackShadow;
+    }
+}
+
+#section1 {
+    height: 100vh;
+    width: 100vw;
+    background: {
+        image: url('../../images/welcome/background.jpg');
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    }
+
+    #welcome-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        #welcome-title {
+            @include mixinWelcomeText(12.5vw, ff.$ffTitle);
+        }
+
+        #welcome-line {
+            @include mixinWelcomeText(1.5vw, ff.$ffText);
+        }
+    }
+
+    #explicit {
+        position: absolute;
+        bottom: 5vh;
+        right: 2vw;
+    }
+}

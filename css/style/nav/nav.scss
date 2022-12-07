@@ -1,0 +1,78 @@
+@use '../../abstracts/colors' as clr;
+@use '../../abstracts/fonts' as ff;
+
+#nav-icon {
+    display: none;
+}
+
+#nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: .5vh 0;
+    background-color: clr.$clrPrimary;
+    outline: 1px solid clr.$clrAlternative;
+    z-index: 99;
+
+    nav {
+        width: 85vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        
+        #nav-ul {
+            #nav-li-img {
+                margin-right: .75vw;
+            }
+
+            list-style: none;
+            display: flex;
+            justify-content: center;
+
+            .nav-li {
+                margin: 0 .75vw;
+                transform: translateY(25%);
+
+                .nav-a {
+                    color: clr.$clrSecondary;
+                    
+                    font: {
+                        size: .85vw;
+                        family: ff.$ffText;
+                    }
+
+                    text: {
+                        decoration: none;
+                        align: center;
+                    }
+
+                    &:hover {
+                        transition: all .3s ease;
+                        color: clr.$clrAlternative;
+                    }
+                }
+            }
+        }
+
+        #social-ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+
+            .social-li {
+                margin: 0 .5vw;
+                transform: translateY(25%);
+
+                .social-a {
+                    text-decoration: none;
+                    
+                    &:hover > svg path {
+                        transition: all .3s ease;
+                        fill: clr.$clrAlternative !important;
+                    }
+                }
+            }
+        }
+    }
+}

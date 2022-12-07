@@ -1,0 +1,9 @@
+@mixin wrapperWidth70($flexDir) {
+    height: 100vh;
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: $flexDir;
+    justify-content: center;
+    align-items: center;
+}

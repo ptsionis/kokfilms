@@ -1,0 +1,33 @@
+#section1 {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../images/welcome/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#section1 #welcome-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#section1 #welcome-wrapper #welcome-title {
+  color: #fafafa;
+  font-family: "a dripping marker", sans-serif;
+  font-size: 12.5vw;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000, 2px 2px 4px #000000;
+}
+#section1 #welcome-wrapper #welcome-line {
+  color: #fafafa;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.5vw;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000, 2px 2px 4px #000000;
+}
+#section1 #explicit {
+  position: absolute;
+  bottom: 5vh;
+  right: 2vw;
+}/*# sourceMappingURL=section1.css.map */

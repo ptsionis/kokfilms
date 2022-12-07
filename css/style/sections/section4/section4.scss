@@ -1,0 +1,76 @@
+@use '../../../abstracts/colors' as clr;
+@use '../../../abstracts/fonts' as ff;
+@use '../../../abstracts/shadows' as sh;
+@use '../../../abstracts/wrapperWidth70' as wr;
+
+$aBoxShadow: 1px 1px 4px clr.$clrPrimary;
+
+@mixin yt-slide($bg-url, $hasLink) {
+    background: {
+        image: url($bg-url);
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    }
+
+    .yt-wrapper {
+        @include wr.wrapperWidth70(column);
+
+        .yt-title {
+            width: 100%;
+            color: clr.$clrSecondary;
+            font: {
+                family: ff.$ffText;
+                size: 2vw;
+            }
+            text: {
+                align: center;
+                shadow: sh.$blackShadow, sh.$blackShadow;
+            }
+        }
+
+        @if $hasLink {
+            .yt-link {
+                padding: 1.25vh 2vw;
+                color: clr.$clrPrimary;
+                margin-top: 2vh;
+                transition: all .3s ease;
+                box-shadow: $aBoxShadow, $aBoxShadow, $aBoxShadow, $aBoxShadow, $aBoxShadow;
+                border: {
+                    radius: 20px;
+                }
+                background: {
+                    color: clr.$clrAlternative;
+                }
+                text: {
+                    decoration: none;
+                    align: center;
+                }
+                font: {
+                    size: 1vw;
+                    family: ff.$ffText;
+                    weight: bold;
+                }
+    
+                &:hover {
+                    color: clr.$clrAlternative;
+                    background-color: clr.$clrPrimary;
+                }
+            }
+        }
+    }
+}
+
+#section4 {
+    #slide-4-1 {
+        @include yt-slide('../../images/yt-images/yt-bg1.jpg', $hasLink: false);
+    }
+
+    #slide-4-2 {
+        @include yt-slide('../../images/yt-images/yt-bg2.jpg', $hasLink: false);
+    }
+
+    #slide-4-3 {
+        @include yt-slide('../../images/yt-images/yt-bg-final.jpg', $hasLink: true);
+    }
+}

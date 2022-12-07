@@ -1,0 +1,59 @@
+#nav-icon {
+  display: none;
+}
+
+#nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0.5vh 0;
+  background-color: #1a1a1a;
+  outline: 1px solid #ff8f2e;
+  z-index: 99;
+}
+#nav-wrapper nav {
+  width: 85vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+#nav-wrapper nav #nav-ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+#nav-wrapper nav #nav-ul #nav-li-img {
+  margin-right: 0.75vw;
+}
+#nav-wrapper nav #nav-ul .nav-li {
+  margin: 0 0.75vw;
+  transform: translateY(25%);
+}
+#nav-wrapper nav #nav-ul .nav-li .nav-a {
+  color: #fafafa;
+  font-size: 0.85vw;
+  font-family: "Chakra Petch", sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+#nav-wrapper nav #nav-ul .nav-li .nav-a:hover {
+  transition: all 0.3s ease;
+  color: #ff8f2e;
+}
+#nav-wrapper nav #social-ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+#nav-wrapper nav #social-ul .social-li {
+  margin: 0 0.5vw;
+  transform: translateY(25%);
+}
+#nav-wrapper nav #social-ul .social-li .social-a {
+  text-decoration: none;
+}
+#nav-wrapper nav #social-ul .social-li .social-a:hover > svg path {
+  transition: all 0.3s ease;
+  fill: #ff8f2e !important;
+}/*# sourceMappingURL=nav.css.map */

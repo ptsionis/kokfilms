@@ -1,0 +1,177 @@
+@use '../../../abstracts/colors' as clr;
+@use '../../../abstracts/fonts' as ff;
+@use '../../../abstracts/shadows' as sh;
+@use '../../../abstracts/wrapperWidth70' as wr;
+
+$corpoTextMarginL: append($list: (0 0 0 2vw), $val: (), $separator: space);
+$corpoTextMarginR: append($list: (0 2vw 0 0), $val: (), $separator: space);
+
+@mixin slide3() {
+    background: {
+        image: url('../../images/corpoImages/background-lines.png');
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
+@mixin corpoWrapper($flexDir) {
+    @include wr.wrapperWidth70($flexDir);
+}
+
+@mixin corpoImage() {
+    width: 3.5vw !important;
+    height: auto;
+}
+
+@mixin corpoVideo() {
+    height: fit-content;
+    width: 35vw;
+    border-radius: 20px;
+}
+
+@mixin corpoTextWrapper($corpoTextMargin) {
+    margin: $corpoTextMargin;
+}
+
+@mixin corpoTitle($clr-value, $align-value) {
+    color: $clr-value;
+    margin: 0 0 1vh 0;
+    font: {
+        family: ff.$ffHeader;
+        size: 4vw;
+    }
+    text: {
+        align: $align-value;
+        shadow: 1px 1px 10px $clr-value;
+    }
+}
+
+@mixin corpoText($align-value) {
+    color: clr.$clrSecondary;
+    font: {
+        family: ff.$ffText;
+        size: 1vw;
+    }
+    text: {
+        align: $align-value;
+        shadow: sh.$blackShadow, sh.$blackShadow;
+    }
+    line: {
+        height: 1.75;
+    }
+}
+
+#section3 {
+    #slide-3-1 {
+        @include slide3();
+
+        .corpo-wrapper {
+            @include corpoWrapper(row);
+
+            #corpo-video1 {
+                @include corpoVideo();
+            }
+
+            .corpo-text-wrapper {
+                @include corpoTextWrapper($corpoTextMarginL);
+
+                #corpo-title1 {
+                    @include corpoTitle(#ff8f2e, end);
+
+                    #corpo-image1 {
+                        @include corpoImage();
+                    }
+                }
+
+                #corpo-text1 {
+                    @include corpoText(end);
+                }
+            }
+        }
+    }
+
+    #slide-3-2 {
+        @include slide3();
+
+        .corpo-wrapper {
+            @include corpoWrapper(row-reverse);
+
+            #corpo-video2 {
+                @include corpoVideo();
+            }
+
+            .corpo-text-wrapper {
+                @include corpoTextWrapper($corpoTextMarginR);
+
+                #corpo-title2 {
+                    @include corpoTitle(#ff8f2e, start);
+
+                    #corpo-image2 {
+                        @include corpoImage();
+                    }
+                }
+
+                #corpo-text2 {
+                    @include corpoText(start);
+                }
+            }
+        }
+    }
+
+    #slide-3-3 {
+        @include slide3();
+
+        .corpo-wrapper {
+            @include corpoWrapper(row);
+
+            #corpo-video3 {
+                @include corpoVideo();
+            }
+
+            .corpo-text-wrapper {
+                @include corpoTextWrapper($corpoTextMarginL);
+
+                #corpo-title3 {
+                    @include corpoTitle(#ff8f2e, end);
+
+                    #corpo-image3 {
+                        @include corpoImage();
+                    }
+                }
+
+                #corpo-text3 {
+                    @include corpoText(end);
+                }
+            }
+        }
+    }
+
+    #slide-3-4 {
+        @include slide3();
+
+        .corpo-wrapper {
+            @include corpoWrapper(row-reverse);
+
+            #corpo-video4 {
+                @include corpoVideo();
+            }
+
+            .corpo-text-wrapper {
+                @include corpoTextWrapper($corpoTextMarginR);
+
+                #corpo-title4 {
+                    @include corpoTitle(#ff8f2e, start);
+
+                    #corpo-image4 {
+                        @include corpoImage();
+                    }
+                }
+
+                #corpo-text4 {
+                    @include corpoText(start);
+                }
+            }
+        }
+    }
+}

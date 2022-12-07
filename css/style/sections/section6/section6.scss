@@ -1,0 +1,111 @@
+@use '../../../abstracts/colors' as clr;
+@use '../../../abstracts/fonts' as ff;
+@use '../../../abstracts/shadows' as sh;
+@use '../../../abstracts/wrapperWidth70' as wr;
+
+$contactTextShadow: 0 0 1rem clr.$clrAlternative;
+
+#section6 {
+    .contact-wrapper {
+        @include wr.wrapperWidth70(column);
+
+        #contact-image {
+            width: 7.5vw;
+            height: auto;
+            border: {
+                radius: 100%;
+                style: solid;
+                color: clr.$clrAlternative;
+                width: 4px;
+            }
+        }
+
+        #contact-title {
+            margin: 3.5vh 0;
+            color: clr.$clrAlternative;
+            font: {
+                family: ff.$ffHeader;
+                size: 2vw;
+            }
+            text: {
+                shadow: $contactTextShadow, $contactTextShadow, sh.$blackShadow, sh.$blackShadow, sh.$blackShadow;
+            }
+        }
+
+        #contact-social-wrapper {
+            display: flex;
+
+            .social-svg-wrapper {
+                margin: 0 .5vw;
+                cursor: pointer;
+
+                svg {
+                    width: 2.5vw;
+                    height: auto;
+                }
+
+                &:hover > svg path {
+                    transition: all .3s ease;
+                    fill: clr.$clrAlternative !important;
+                }
+            }
+        }
+
+        #back-top {
+            position: absolute;
+            bottom: 10vh;
+            right: 2.5vw;
+            cursor: pointer;
+
+            &:hover > a svg polygon, &:hover > a svg #rect {
+                transition: all .3s ease;
+                fill: clr.$clrAlternative !important;
+            }
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        padding: 3vh 0;
+        background-color: clr.$clrPrimary;
+        outline: 1px solid clr.$clrAlternative;
+
+        @mixin footer-p($left-value) {
+            position: absolute;
+            top: 50%;
+            left: $left-value;
+            transform: translate(-50%, -50%);
+            color: clr.$clrSecondary;
+            font: {
+                family: ff.$ffText;
+                size: .85vw;
+            }
+        }
+
+        #footer-credits {
+            @include footer-p(10%);
+
+            a {
+                text-decoration: none;
+                color: clr.$clrSecondary;
+
+                &:hover {
+                    color: clr.$clrAlternative;
+                    transition: all .3s ease;
+                }
+            }
+        }
+
+        #footer-copy {
+            @include footer-p(50%);
+        }
+
+        #footer-address {
+            @include footer-p(90%);
+        }
+    }
+}

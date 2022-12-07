@@ -1,0 +1,89 @@
+@use '../../../abstracts/colors' as clr;
+@use '../../../abstracts/fonts' as ff;
+@use '../../../abstracts/shadows' as sh;
+
+$numOfMusicPages: 3;
+$pctOfMusicPages: calc(100% / $numOfMusicPages);
+
+$clrFlicker1: #f229d7;
+$clrFlicker2: #ff2626;
+$clrFlicker3: #1e90ff;
+
+@mixin music-video($left) {
+    position: absolute;
+    top: 0;
+    left: $left;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+@mixin music-title($left, $color) {
+    $flickerShadow: 0 0 1rem $color;
+
+    position: absolute;
+    width: fit-content;
+    top: 50%;
+    left: $left;
+    color: $color;
+    transform: translate(-50%, -50%);
+    text: {
+        align: center;
+        shadow: $flickerShadow, $flickerShadow, sh.$blackShadow, sh.$blackShadow, sh.$blackShadow;
+    }
+    font: {
+        size: 2rem;
+        family: ff.$ffHeader;
+    }
+}
+
+@mixin music-link($left, $clr-value) {
+    position: absolute;
+    top: 57.5%;
+    left: $left;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+
+    &:hover > svg .music-link-path1 {
+        transition: all .3s ease;
+        fill: clr.$clrAlternative;
+    }
+}
+
+#section2 {
+    #slide-2-1 {
+        #music-video1 {
+            @include music-video(calc($pctOfMusicPages*0));
+        }
+        #music-title1 {
+            @include music-title(calc(16.66%*1), $clrFlicker1);
+        }
+        #music-link1 {
+            @include music-link(calc(16.66%*1), $clrFlicker1);
+        }
+    }
+    
+    #slide-2-2 {
+        #music-video2 {
+            @include music-video(calc($pctOfMusicPages*1));
+        }
+        #music-title2 {
+            @include music-title(calc(16.66%*3), $clrFlicker2);
+        }
+        #music-link2 {
+            @include music-link(calc(16.66%*3), $clrFlicker3);
+        }
+    }
+
+    #slide-2-3 {
+        #music-video3 {
+            @include music-video(calc($pctOfMusicPages*2));
+        }
+        #music-title3 {
+            @include music-title(calc(16.66%*5), $clrFlicker3);
+        }
+        #music-link3 {
+            @include music-link(calc(16.66%*5), $clrFlicker3);
+        }
+    }
+}
