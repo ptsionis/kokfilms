@@ -28,7 +28,7 @@
             #nav-ul {
                 #nav-li-img {
                     position: absolute;
-                    top: 20%;
+                    top: 15vh;
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
@@ -37,13 +37,13 @@
                 align-items: center;
     
                 .nav-li {
-                    margin: 15px 0;
+                    margin: 1.5vh 0;
                 }
             }
     
             #social-ul {
                 position: absolute;
-                bottom: 15%;
+                bottom: 5vh;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }

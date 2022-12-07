@@ -152,12 +152,12 @@
     font-size: 1.25rem !important;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-image {
-    height: 125px;
-    width: auto;
+    width: 125px;
+    height: auto;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-title {
-    font-size: 2rem;
-    margin: 10px 0;
+    font-size: 2.5vw;
+    margin: 2.5vh 0;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper1 svg {
     width: 56px;
@@ -183,9 +183,9 @@
     top: auto;
     left: auto;
     transform: translate(0, 0);
-    margin: 2.5px 0;
+    margin: 2.5vh 0;
     font-size: 0.75rem;
-    margin: 7.5px 0;
+    margin: 0.85vh 0;
   }
   body #fullpage-wrapper #section6 .footer #footer-address {
     display: none;
@@ -345,12 +345,12 @@
     font-size: 1rem !important;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-image {
-    height: 75px;
-    width: auto;
+    width: 75px;
+    height: auto;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-title {
-    font-size: 1rem;
-    margin: 10px 0;
+    font-size: 3.75vw;
+    margin: 2.5vh 0;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper1 svg {
     width: 42px;
@@ -376,9 +376,9 @@
     top: auto;
     left: auto;
     transform: translate(0, 0);
-    margin: 2.5px 0;
+    margin: 2.5vh 0;
     font-size: 0.75rem;
-    margin: 7.5px 0;
+    margin: 0.85vh 0;
   }
   body #fullpage-wrapper #section6 .footer #footer-address {
     display: none;
@@ -538,12 +538,12 @@
     font-size: 1rem !important;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-image {
-    height: 75px;
-    width: auto;
+    width: 75px;
+    height: auto;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-title {
-    font-size: 1rem;
-    margin: 10px 0;
+    font-size: 5vw;
+    margin: 2.5vh 0;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper1 svg {
     width: 42px;
@@ -569,9 +569,9 @@
     top: auto;
     left: auto;
     transform: translate(0, 0);
-    margin: 2.5px 0;
+    margin: 2.5vh 0;
     font-size: 0.75rem;
-    margin: 7.5px 0;
+    margin: 0.85vh 0;
   }
   body #fullpage-wrapper #section6 .footer #footer-address {
     display: none;
@@ -731,12 +731,12 @@
     font-size: 1rem !important;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-image {
-    height: 75px;
-    width: auto;
+    width: 75px;
+    height: auto;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-title {
-    font-size: 1rem;
-    margin: 10px 0;
+    font-size: 6.5vw;
+    margin: 2.5vh 0;
   }
   body #fullpage-wrapper #section6 .contact-wrapper #contact-social-wrapper #social-svg-wrapper1 svg {
     width: 42px;
@@ -762,9 +762,9 @@
     top: auto;
     left: auto;
     transform: translate(0, 0);
-    margin: 2.5px 0;
+    margin: 2.5vh 0;
     font-size: 0.75rem;
-    margin: 7.5px 0;
+    margin: 0.85vh 0;
   }
   body #fullpage-wrapper #section6 .footer #footer-address {
     display: none;
@@ -802,16 +802,16 @@
   }
   body #nav-wrapper nav #nav-ul #nav-li-img {
     position: absolute;
-    top: 20%;
+    top: 15vh;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   body #nav-wrapper nav #nav-ul .nav-li {
-    margin: 15px 0;
+    margin: 1.5vh 0;
   }
   body #nav-wrapper nav #social-ul {
     position: absolute;
-    bottom: 15%;
+    bottom: 5vh;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -819,7 +819,7 @@
     content: url("../../images/photos/photography-portrait.jpg");
   }
 }
-@media screen and (orientation: landscape) and (max-height: 500px) {
+@media screen and (orientation: landscape) and (max-height: 550px) {
   body #nav-icon {
     display: block;
     position: absolute;
@@ -851,17 +851,23 @@
   }
   body #nav-wrapper nav #nav-ul #nav-li-img {
     position: absolute;
-    top: 20%;
+    top: 15vh;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   body #nav-wrapper nav #nav-ul .nav-li {
-    margin: 15px 0;
+    margin: 1.5vh 0;
   }
   body #nav-wrapper nav #social-ul {
     position: absolute;
-    bottom: 15%;
+    bottom: 5vh;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  body #fullpage-wrapper #section3 .slide .corpo-wrapper .corpo-text-wrapper .corpo-title {
+    display: none;
+  }
+  body #fullpage-wrapper #section3 .slide .corpo-wrapper .corpo-text-wrapper .corpo-text {
+    display: none;
   }
 }/*# sourceMappingURL=media.css.map */

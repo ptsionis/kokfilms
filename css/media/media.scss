@@ -16,7 +16,7 @@
             1rem, 64px, 44px, 
             37.5vw !important, 3.5rem, 4vw, 1.25rem, 
             2rem, 1.25rem, 
-            125px, 2rem, 56px, 56px
+            125px, 2.5vw, 56px, 56px
         );
     }
 }
@@ -29,7 +29,7 @@
             1rem, 64px, 44px, 
             40vw !important, 3rem, 4.5vw, 1.1rem, 
             1.75rem, 1rem, 
-            75px, 1rem, 42px, 42px
+            75px, 3.75vw, 42px, 42px
         );
     }
 }
@@ -42,7 +42,7 @@
             1rem, 48px, 33px, 
             47.5vw !important, 2rem, 6.5vw, 1rem, 
             1.5rem, 1rem, 
-            75px, 1rem, 42px, 42px
+            75px, 5vw, 42px, 42px
         );
     }
 }
@@ -55,7 +55,7 @@
             1rem, 48px, 33px, 
             55vw !important, 1.5rem, 8vw, .9rem, 
             1.25rem, 1rem, 
-            75px, 1rem, 42px, 42px
+            75px, 6.5vw, 42px, 42px
         );
     }
 }
@@ -74,8 +74,26 @@
 }
 
 //Media for Mobile Landscape
-@media screen and (orientation: landscape) and (max-height: 500px) {
+@media screen and (orientation: landscape) and (max-height: 550px) {
     body {
         @include nav.nav();
+
+        #fullpage-wrapper {
+            #section3 {
+                .slide {
+                    .corpo-wrapper {
+                        .corpo-text-wrapper {
+                            .corpo-title {
+                                display: none;
+                            }
+
+                            .corpo-text {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

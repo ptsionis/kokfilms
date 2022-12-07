@@ -42,6 +42,7 @@
   bottom: 10vh;
   right: 2.5vw;
   cursor: pointer;
+  z-index: 999;
 }
 #section6 .contact-wrapper #back-top:hover > a svg polygon, #section6 .contact-wrapper #back-top:hover > a svg #rect {
   transition: all 0.3s ease;

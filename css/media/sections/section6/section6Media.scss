@@ -3,7 +3,7 @@
     top: auto;
     left: auto;
     transform: translate(0, 0);
-    margin: 2.5px 0;
+    margin: 2.5vh 0;
 }
 
 @mixin contact-links-svg($contact-svg-width, $contact-svg-height) {
@@ -21,13 +21,13 @@
     #section6 {
         .contact-wrapper {
             #contact-image {
-                height: $contact-img-size;
-                width: auto;
+                width: $contact-img-size;
+                height: auto;
             }
 
             #contact-title {
                 font-size: $contact-title-size;
-                margin: 10px 0;
+                margin: 2.5vh 0;
             }
 
             #contact-social-wrapper {
@@ -55,7 +55,7 @@
             #footer-credits, #footer-copy {
                 @include footer-p();
                 font-size: .75rem;
-                margin: 7.5px 0;
+                margin: .85vh 0;
             }
 
             #footer-address {

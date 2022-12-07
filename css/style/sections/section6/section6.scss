@@ -56,6 +56,7 @@ $contactTextShadow: 0 0 1rem clr.$clrAlternative;
             bottom: 10vh;
             right: 2.5vw;
             cursor: pointer;
+            z-index: 999;
 
             &:hover > a svg polygon, &:hover > a svg #rect {
                 transition: all .3s ease;
